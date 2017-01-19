@@ -8,8 +8,8 @@ A Collection of various german translations for a bunch of Spigot/Bukkit plugins
 
 Folgende Plugins sind im Paket enthalten:
 
-<a href="https://www.spigotmc.org/resources/bank-updated-for-1-11.3556/" target="_blank">Bank</a>                   Version: 2.5b
-<a href="https://hub.spigotmc.org/jenkins/job/spigot-essentials/" target="_blank">Spigot Essentials</a>             Version: 2.X (Voll kompatibel mit <a href="https://www.spigotmc.org/resources/essentialsx.9089/" target="_blank">EssentialsX-2.0.1</a> und, eventuell, anderen Essentials ablegern.)
-<a href="https://www.spigotmc.org/resources/griefprevention.1884/" target="_blank">GriefPrevention</a>             Version: 1.65
+<a href="https://www.spigotmc.org/resources/bank-updated-for-1-11.3556/" target="_blank">Bank</a>                   Version: 2.5b  
+<a href="https://hub.spigotmc.org/jenkins/job/spigot-essentials/" target="_blank">Spigot Essentials</a>             Version: 2.X   (Voll kompatibel mit <a href="https://www.spigotmc.org/resources/essentialsx.9089/" target="_blank">EssentialsX-2.0.1</a> und, eventuell, anderen Essentials ablegern.)  
+<a href="https://www.spigotmc.org/resources/griefprevention.1884/" target="_blank">GriefPrevention</a>             Version: 1.65  
 
 
