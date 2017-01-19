@@ -25,7 +25,7 @@ Als kleinen Bonus gint es eine vorgefüllte bannedWords.txt dazu, welche Schimpf
 
 # Direkt implementierte Übersetzungen
 
-Übersetzungen für folgende Plugins sind bereits im Download inkludiert:
+Übersetzungen für folgende Plugins sind bereits in diese implementiert:
 
 <a href="https://www.spigotmc.org/resources/pockets.34310/" target="_blank">Pockets</a>             Version: 1.0.9  
 <a href="https://www.spigotmc.org/resources/bounty-signs.31476/" target="_blank">Bounty Signs</a>             Version: 1.0.6  
