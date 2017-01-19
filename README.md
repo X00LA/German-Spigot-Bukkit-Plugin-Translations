@@ -15,7 +15,9 @@ Folgende Plugins sind im Paket enthalten:
 
 <a href="https://www.spigotmc.org/resources/bank-updated-for-1-11.3556/" target="_blank">Bank</a>                   Version: 2.5b  
 <a href="https://hub.spigotmc.org/jenkins/job/spigot-essentials/" target="_blank">Spigot Essentials</a>             Version: 2.X   (Voll kompatibel mit <a href="https://www.spigotmc.org/resources/essentialsx.9089/" target="_blank">EssentialsX-2.0.1</a> und, eventuell, anderen Essentials ablegern.)  
+Als kleinen Bonus gibt es für Essentials die worth.yml dazu. Diese ist für MC 1.11.2 aktualisiert und man braucht sie nur einzufügen. Die Preise sind ausgewogen kalkuliert und ermöglichen so, ein ausgewogenes Finanzsystem.
 <a href="https://www.spigotmc.org/resources/griefprevention.1884/" target="_blank">GriefPrevention</a>             Version: 1.65  
+Als kleinen Bonus gint es eine vorgefüllte bannedWords.txt dazu, welche Schimpfwörter in Englisch und Deutsch enthält. (gesamt über 1400 Wörter)
 <a href="https://www.spigotmc.org/resources/quickboard-free-scoreboard-plugin-scroller-changeable-text-placeholderapi-anti-flicker.15057/" target="_blank">QuickBoard</a>             Version: 3.5  
 <a href="https://www.spigotmc.org/resources/tab.1448/" target="_blank">Tab</a>             Version: 5.14.0  
 <a href="https://dev.bukkit.org/projects/worldborder" target="_blank">WorldBorder</a>             Version: 1.8.6  

@@ -1,0 +1,4 @@
+# In Zeile 739, bei Bedarf einfügen.
+
+announce-format: 'Willkommen {DISPLAYNAME} auf unserem Server!'
+announce-format: 'Willkommen {DISPLAYNAME} auf meinem Server!'

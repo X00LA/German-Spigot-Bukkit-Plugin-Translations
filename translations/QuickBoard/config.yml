@@ -1,0 +1,8 @@
+scoreboard:
+  onjoin:
+    use: true
+messages:
+  noperms: 'Du hast keine Berechtigung für diesen Befehl!'
+  ontoggle:
+    'true': 'Du hast das Scoreboard &aaktiviert!'
+    'false': 'Du hast das Scoreboard &cdeaktiviert!'

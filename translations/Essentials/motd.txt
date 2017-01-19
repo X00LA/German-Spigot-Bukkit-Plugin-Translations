@@ -1,0 +1,4 @@
+Willkommen, {PLAYER}!
+Tippe &c/help&6 für eine Liste von Befehlen.
+Tippe &c/list&6 um zu sehen, wer aller online ist.
+Spieler online:&c {ONLINE} &6- Weltzeit:&c {WORLDTIME12}
