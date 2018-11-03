@@ -74,8 +74,8 @@ Messages:
     Text: Basis Claimmodus wieder aktiviert.
   SubdivisionMode:
     Text: Unterteilungs-Modus.  Lege mit der Schaufel Subclaims in bestehenden Claims an.  Zum Beenden /basicclaims eingeben.
-  SubdivisionDemo:
-    Text: 'Klicke für die Land Claim Hilfe: \nhttp://bit.ly/landclaimhelp'
+  SubdivisionVideo2:
+    Text: 'Klicke für die Land Claim Hilfe: {0}'
     Notes: '0: Video URL'
   DeleteClaimMissing:
     Text: Hier ist kein Claim.
@@ -93,8 +93,7 @@ Messages:
   AllAdminDeleted:
     Text: Alle Adminclaims wurden gelöscht.
   AdjustBlocksSuccess:
-    Text: '{0}''s Claim Bonusblöcke angepasst zu {1}.
-      Neue Gesamtmenge an Blöcken: {2}.'
+    Text: '{0}''s Claim Bonusblöcke angepasst zu {1}. Neue Gesamtmenge an Blöcken: {2}.'
     Notes: '0: Spieler; 1: Anpassung; 2: Neue Gesamtmenge'
   NotTrappedHere:
     Text: Du darfst hier bauen.  Rette dich selbst.
@@ -197,10 +196,10 @@ Messages:
     Notes: '0: Verbleibende Blöcke'
   CreativeBasicsVideo2:
     Text: 'Land Claim Hilfe: http://tinyurl.com/c7bajb8'
-    Notes: '{0}: Video URL'
+    Notes: '{0}: video URL'
   SurvivalBasicsVideo2:
     Text: 'Land Claim Hilfe: http://tinyurl.com/6nkwegj'
-    Notes: '{0}: Video URL'
+    Notes: '{0}: video URL'
   TrappedChatKeyword:
     Text: gefangen
     Notes: Wenn im Chat erwähnt, erhalten Spieler Informationen über das /trapped Kommando.
@@ -371,8 +370,7 @@ Messages:
   PlayerInPvPSafeZone:
     Text: Dieser Spieler ist in einer PVP-Sicherheits-Zone.
   NoPistonsOutsideClaims:
-    Text: 'Warnung: Kolben bewegen keine Blöcke ausserhalb
-      des Claims.'
+    Text: 'Warnung: Kolben bewegen keine Blöcke ausserhalb des Claims.'
   SoftMuted:
     Text: Soft-muted {0}.
     Notes: '0: Name des gemuteten Spielers.'
@@ -448,6 +446,8 @@ Messages:
     Text:  Container
   Access:
     Text:  Zugriff/Zutritt
+  HasSubclaimRestriction:
+    Text: Dieser Sub-Claim erbt keine Berechtigungen vom übergeordneten Claim.
   StartBlockMath:
     Text: {0} Blöcke durch Spielen + {1} Bonus = {2} Gesamt.
   ClaimsListHeader:
@@ -473,8 +473,8 @@ Messages:
   BookUsefulCommands:
     Text: 'Hilfreiche Befehle:'
   BookLink:
-    Text: 'Click: {0}'
-    Notes: '{0}: Video URL'
+    Text: 'Klicke: {0}'
+    Notes: '{0}: video URL'
   BookTools:
     Text: Unsere Claimwerkzeuge sind {0} und {1}.
     Notes: '0: Claim-Modifikations-Werkzeug; 1: Claim-Informations-Werkzeug'
@@ -518,11 +518,12 @@ Messages:
     Notes: '0: Anpassungsmenge'
   TooMuchIpOverlap:
     Text: Entschuldige, aber mit dieser IP Adresse sind bereits zu viele Accounts eingeloggt.
-  SubdivisionVideo2:
-    Text: 'Klicke hier für die Unterteilungs-Hilfe: {0}'
-    Notes: '0: Video URL'
-  PlayerTooCloseForFire2:
-    Text: Du kannst, so nah an einem anderen Spieler, kein Feuer entfachen.
-  NewClaimTooNarrow:
-    Text: Dieser Claim ist zu klein.  Jeder Claim muss mindestens {0} Blöcke groß sein.
-    Notes: '0: Claim Mindestgröße'
+  StandInSubclaim:
+    Text: Du musst in einem Sub-Claim stehen um ihn einzuschränken.
+  SubclaimRestricted:
+    Text: Die Berechtigungen dieses Sub-Claims werden nicht mehr von dem übergeordneten Claim übernommen.
+  SubclaimUnrestricted:
+    Text: Die Berechtigungen dieses Sub-Claims werden jetzt vom übergeordneten Claim geerbt
+  NetherPortalTrapDetectionMessage:
+    Text: Es scheint, als würdest du in einem Netherportal stecken. Wir werden dich in wenigen Sekunden retten, wenn dies der Fall ist!
+    Notes: Wird beim Beitritt an den Spieler gesendet, wenn er sich in einem Netherportal befindet.
