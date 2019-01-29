@@ -1,6 +1,8 @@
 # Use a YAML editor like NotepadPlusPlus to edit this file.  
 # After editing, back up your changes before reloading the server in case you made a syntax error.  
 # Use dollar signs ($) for formatting codes, which are documented here: http://minecraft.gamepedia.com/Formatting_codes
+# Updated: 29.01.2019 // Escaping korrigiert.
+# By GH05TF4C3
 Messages:
   RespectingClaims:
     Text: Claims werden respektiert.
@@ -10,22 +12,27 @@ Messages:
     Text: Claims aufgegeben.  Du hast jetzt {0} Claimblöcke zur Verfügung.
     Notes: '0: Verfügbare Claimblöcke'
   RestoreNatureActivate:
-    Text: Fertig um die Natur wieder herzustellen!  Mit Rechtsklick starten. Der Befehl /basicclaims beendet den Vorgang.
+    Text: Fertig um die Natur wieder herzustellen!  Mit Rechtsklick starten. Der Befehl
+      /basicclaims beendet den Vorgang.
   RestoreNatureAggressiveActivate:
-    Text: Aggressiver Modus aktiviert.  Benutze ihn auf keinen Fall unter etwas, das du behalten willst!! Der Befehl /basicclaims beendet den Vorgang.
+    Text: Aggressiver Modus aktiviert.  Benutze ihn auf keinen Fall unter etwas, das
+      du behalten willst!! Der Befehl /basicclaims beendet den Vorgang.
   FillModeActive:
-    Text: Füllmodus mit dem Radius {0} aktiviert.  Rechtsklick auf das Gebiet füllt es.
+    Text: Füllmodus mit dem Radius {0} aktiviert.  Rechtsklick auf das Gebiet füllt
+      es.
     Notes: '0: Füllradius'
   TransferClaimPermission:
     Text: Dieser Befehl setzt Administrative-Claims Berechtigung voraus.
   TransferClaimMissing:
-    Text: Hier gibt es keinen Claim.  Stell dich in den Adminclaim der transferiert werden soll.
+    Text: Hier gibt es keinen Claim.  Stell dich in den Adminclaim der transferiert
+      werden soll.
   TransferClaimAdminOnly:
     Text: Nur administrative Claims können an Spieler übertragen werden.
   PlayerNotFound2:
     Text: Kein Spieler mit diesem Namen hat sich kürzlich eingeloggt.
   TransferTopLevel:
-    Text: Nur Toplevelclaims (keine Subclaims) können übertragen werden.  Stell dich ausserhalb des Subclaims und versuch es erneut.
+    Text: Nur Toplevelclaims (keine Subclaims) können übertragen werden.  Stell dich
+      ausserhalb des Subclaims und versuch es erneut.
   TransferSuccess:
     Text: Claim übertragen.
   TrustListNoClaim:
@@ -33,17 +40,21 @@ Messages:
   ClearPermsOwnerOnly:
     Text: Nur der Claimbesitzer kann alle Berechtigungen widerrufen.
   UntrustIndividualAllClaims:
-    Text: Widerrufen - {0} hat keinen Zugriff mehr auf ALLE Deine Claims.  Um Rechte für einen einzelnen Claim zu vergeben, musst du darin stehen.
+    Text: Widerrufen - {0} hat keinen Zugriff mehr auf ALLE Deine Claims.  Um Rechte
+      für einen einzelnen Claim zu vergeben, musst du darin stehen.
     Notes: '0: Vertrauensunwürdiger Spieler'
   UntrustEveryoneAllClaims:
-    Text: Rechte für ALLE deine Claims wiederrufen.  Um Rechte für einen einzelnen Claim zu vergeben, musst du darin stehen.
+    Text: Rechte für ALLE deine Claims wiederrufen.  Um Rechte für einen einzelnen
+      Claim zu vergeben, musst du darin stehen.
   NoPermissionTrust:
     Text: Dir fehlt {0}'s Erlaubnis um hier Rechte zu Verwalten.
     Notes: '0: Claimbesitzer'
   ClearPermissionsOneClaim:
-    Text: Rechte in diesem Claim widerrufen.  Um die Rechte für alle Claims zu managen stell dich ausserhalb deiner Claims.
+    Text: Rechte in diesem Claim widerrufen.  Um die Rechte für alle Claims zu managen
+      stell dich ausserhalb deiner Claims.
   UntrustIndividualSingleClaim:
-    Text: {0}'s Zugang zu diesem Claim widerrufen.  Um die Rechte für alle Claims zu Verwalten, stell dich ausserhalb deiner Claims.
+    Text: '{0}''s Zugang zu diesem Claim widerrufen.  Um die Rechte für alle Claims
+      zu Verwalten, stell dich ausserhalb deiner Claims.'
     Notes: '0: Vertrauensunwürdiger Spieler'
   OnlySellBlocks:
     Text: Claimblöcke können nur verkauft aber nicht gekauft werden.
@@ -51,7 +62,8 @@ Messages:
     Text: Jeder Claimblock kostet {0}.  Dein Guthaben beträgt {1}.
     Notes: '0: Kosten für 1 Block; 1: Kontostand des Spielers'
   ClaimBlockLimit:
-    Text: Du hast dein Claimblocklimit erreicht.  Du kannst keine weiteren Blöcke kaufen.
+    Text: Du hast dein Claimblocklimit erreicht.  Du kannst keine weiteren Blöcke
+      kaufen.
   InsufficientFunds:
     Text: Du hast nicht genügend Geld.  Du benötigst {0}, aber du hast nur {1}.
     Notes: '0: Gesamtkosten; 1: Kontostand des Spielers'
@@ -66,21 +78,25 @@ Messages:
   NotEnoughBlocksForSale:
     Text: Du hast nicht genügend Claimblöcke, die du verkaufen kannst.
   BlockSaleConfirmation:
-    Text: Deinem Konto wurden {0} gutgeschrieben.  Du hast noch {1} Claimblöcke zur Verfügung.
+    Text: Deinem Konto wurden {0} gutgeschrieben.  Du hast noch {1} Claimblöcke zur
+      Verfügung.
     Notes: '0: Gutgeschriebener Betrag; 1: Verbleibende Blöcke'
   AdminClaimsMode:
-    Text: Administrativer Claimmodus aktiviert.  Alle Claims sind von jedem Administrator frei editierbar.
+    Text: Administrativer Claimmodus aktiviert.  Alle Claims sind von jedem Administrator
+      frei editierbar.
   BasicClaimsMode:
     Text: Basis Claimmodus wieder aktiviert.
   SubdivisionMode:
-    Text: Unterteilungs-Modus.  Lege mit der Schaufel Subclaims in bestehenden Claims an.  Zum Beenden /basicclaims eingeben.
-  SubdivisionVideo2:
-    Text: 'Klicke für die Land Claim Hilfe: {0}'
+    Text: Unterteilungs-Modus.  Lege mit der Schaufel Subclaims in bestehenden Claims
+      an.  Zum Beenden /basicclaims eingeben.
+  SubdivisionDemo:
+    Text: 'Klicke für die Land Claim Hilfe: \nhttp://bit.ly/landclaimhelp'
     Notes: '0: Video URL'
   DeleteClaimMissing:
     Text: Hier ist kein Claim.
   DeletionSubdivisionWarning:
-    Text: Dieser Claim beinhaltet Subclaims.  Wenn du ihn wirklich löschen willst bestätige dies mit /deleteclaim.
+    Text: Dieser Claim beinhaltet Subclaims.  Wenn du ihn wirklich löschen willst
+      bestätige dies mit /deleteclaim.
   DeleteSuccess:
     Text: Claim gelöscht.
   CantDeleteAdminClaim:
@@ -93,18 +109,20 @@ Messages:
   AllAdminDeleted:
     Text: Alle Adminclaims wurden gelöscht.
   AdjustBlocksSuccess:
-    Text: '{0}''s Claim Bonusblöcke angepasst zu {1}. Neue Gesamtmenge an Blöcken: {2}.'
+    Text: '{0}''s Claim Bonusblöcke angepasst zu {1}. Neue Gesamtmenge an Blöcken:
+      {2}.'
     Notes: '0: Spieler; 1: Anpassung; 2: Neue Gesamtmenge'
   NotTrappedHere:
     Text: Du darfst hier bauen.  Rette dich selbst.
   RescuePending:
-    Text: Wenn du 10 Sekunden still stehst, werden wir dich herausholen. Die Zeit läuft...
+    Text: Wenn du 10 Sekunden still stehst, werden wir dich herausholen. Die Zeit
+      läuft...
   NonSiegeWorld:
     Text: Belagerungsmodus ist in dieser Welt deaktiviert.
   AlreadySieging:
     Text: Du nimmst bereits an einer Belagerung teil.
   NotSiegableThere:
-    Text: {0} ist dort nicht geschützt.
+    Text: '{0} ist dort nicht geschützt.'
     Notes: '0: Verteidigender Spieler'
   SiegeTooFarAway:
     Text: Du bist zu weit von der Belagerung entfernt.
@@ -113,7 +131,7 @@ Messages:
   NoSiegeDefenseless:
     Text: Dieser Spieler ist wehrlos.  Such dir einen anderen Gegner.
   AlreadyUnderSiegePlayer:
-    Text: {0} wird bereits belagert.  Tritt der Partei bei!
+    Text: '{0} wird bereits belagert.  Tritt der Partei bei!'
     Notes: '0: Verteidigender Spieler'
   AlreadyUnderSiegeArea:
     Text: Diese Gegend wird bereits belagert.  Tritt der Partei bei!
@@ -122,17 +140,20 @@ Messages:
   SiegeOnCooldown:
     Text: Dieser Claim ist noch im Wiederaufbau.  Such Dir ein anderes Opfer.
   SiegeAlert:
-    Text: Du wirst belagert!  Wenn du dich jetzt ausloggst, stirbst du!  Du musst {0} besiegen. Warte bis er/sie aufgibt oder entkommt.
+    Text: Du wirst belagert!  Wenn du dich jetzt ausloggst, stirbst du!  Du musst
+      {0} besiegen. Warte bis er/sie aufgibt oder entkommt.
     Notes: '0: Angreifer Name'
   SiegeConfirmed:
-    Text: Die Belagerung hat begonnen!  Wenn du dich jetzt ausloggst, stirbst du.  Du musst {0} besiegen, ihn/sie verjagen, oder deine Niederlage eingestehen.
+    Text: Die Belagerung hat begonnen!  Wenn du dich jetzt ausloggst, stirbst du.  Du
+      musst {0} besiegen, ihn/sie verjagen, oder deine Niederlage eingestehen.
     Notes: '0: Verteidiger Name'
   AbandonClaimMissing:
     Text: Stell dich in den Claim, den du löschen möchtest oder versuche /abandonallclaims.
   NotYourClaim:
     Text: Das ist nicht dein Claim.
   DeleteTopLevelClaim:
-    Text: Um einen Subclaim zu löschen, musst du darin stehen.  Andernfalls, nutze /abandontoplevelclaim um den Claim mit allen Subclaims zu löschen.
+    Text: Um einen Subclaim zu löschen, musst du darin stehen.  Andernfalls, nutze
+      /abandontoplevelclaim um den Claim mit allen Subclaims zu löschen.
   AbandonSuccess:
     Text: Claim aufgegeben.  Du hast nun {0} verfügbare Claimblöcke.
     Notes: '0: Verfügbare Blöcke'
@@ -144,9 +165,11 @@ Messages:
     Text: An {0} folgende Rechte vergeben {1} {2}.
     Notes: '0: Ziel Spieler; 1: Berechtigungserklärung; 2: Umfang (Geänderte Claims)'
   ManageUniversalPermissionsInstruction:
-    Text: Um die Rechte für alle deine Claims zu verwalten, musst du ausserhalb der Claims stehen.
+    Text: Um die Rechte für alle deine Claims zu verwalten, musst du ausserhalb der
+      Claims stehen.
   ManageOneClaimPermissionsInstruction:
-    Text: Um die Rechte für einen bestimmten Claim zu verwalten, musst du innerhalb des Claim stehen.
+    Text: Um die Rechte für einen bestimmten Claim zu verwalten, musst du innerhalb
+      des Claim stehen.
   CollectivePublic:
     Text: die Öffentlichkeit
     Notes: wie in 'Öffentliche Rechte gewährt für...'
@@ -163,11 +186,13 @@ Messages:
   LocationAllClaims:
     Text: in all deinen Claims
   PvPImmunityStart:
-    Text: Du bist vor den Agriffen anderer Spieler geschützt, solange dein Inventar leer ist.
+    Text: Du bist vor den Agriffen anderer Spieler geschützt, solange dein Inventar
+      leer ist.
   SiegeNoDrop:
     Text: Du kannst während einer Belagerung keine Gegenstände weitergeben.
   DonateItemsInstruction:
-    Text: Um den Gegenstand in Deiner Hand weiterzugeben, klicke mit links nochmals auf die Truhe.
+    Text: Um den Gegenstand in Deiner Hand weiterzugeben, klicke mit links nochmals
+      auf die Truhe.
   ChestFull:
     Text: Diese Truhe ist voll.
   DonationSuccess:
@@ -175,13 +200,17 @@ Messages:
   PlayerTooCloseForFire:
     Text: Du kannst kein Feuer so nah bei {0} anzünden.
   TooDeepToClaim:
-    Text: Diese Truhe kann nicht geschützt werden, weil sie zu tief unter der Erde ist.
+    Text: Diese Truhe kann nicht geschützt werden, weil sie zu tief unter der Erde
+      ist.
   ChestClaimConfirmation:
     Text: Diese Truhe ist geschützt.
   AutomaticClaimNotification:
-    Text: Diese Truhe und angrenzende Blöcke sind gegen Zerstörung und Diebstahl geschützt.  Die temporären Gold und Glowstone Blöcke markieren das geschützte Areal.  Mit dem Stock kannst du sie durch rechtsklick ein- oder ausblenden.
+    Text: Diese Truhe und angrenzende Blöcke sind gegen Zerstörung und Diebstahl geschützt.  Die
+      temporären Gold und Glowstone Blöcke markieren das geschützte Areal.  Mit dem
+      Stock kannst du sie durch rechtsklick ein- oder ausblenden.
   UnprotectedChestWarning:
-    Text: Diese Truhe ist NICHT geschützt.  Denk darüber nach einen Claim anzulegen oder einen bestehenden zu vergrößern.
+    Text: Diese Truhe ist NICHT geschützt.  Denk darüber nach einen Claim anzulegen
+      oder einen bestehenden zu vergrößern.
   ThatPlayerPvPImmune:
     Text: Du kannst keine wehrlosen Spieler verletzen.
   CantFightWhileImmune:
@@ -196,13 +225,14 @@ Messages:
     Notes: '0: Verbleibende Blöcke'
   CreativeBasicsVideo2:
     Text: 'Land Claim Hilfe: http://tinyurl.com/c7bajb8'
-    Notes: '{0}: video URL'
+    Notes: '{0}: Video URL'
   SurvivalBasicsVideo2:
     Text: 'Land Claim Hilfe: http://tinyurl.com/6nkwegj'
-    Notes: '{0}: video URL'
+    Notes: '{0}: Video URL'
   TrappedChatKeyword:
     Text: gefangen
-    Notes: Wenn im Chat erwähnt, erhalten Spieler Informationen über das /trapped Kommando.
+    Notes: Wenn im Chat erwähnt, erhalten Spieler Informationen über das /trapped
+      Kommando.
   TrappedInstructions:
     Text: Bist du im Claim eines anderen gefangen?  Versuch mal das /trapped Kommando.
   PvPNoDrop:
@@ -243,39 +273,49 @@ Messages:
     Text: Du hast zu wenig Blöcke um die Größe zu ändern.  Du benötigst {0} weitere.
     Notes: '0: Benötigte Blöcke'
   NoCreativeUnClaim:
-    Text: Du kannst Diesen Claim nicht aufgeben.  Du kannst Den Claim nur vergrössern oder weitere Claims anlegen.
+    Text: Du kannst Diesen Claim nicht aufgeben.  Du kannst Den Claim nur vergrössern
+      oder weitere Claims anlegen.
   ClaimResizeSuccess:
     Text: Claimgröße angepasst.  Du hast nun noch {0} Claimblöcke zur Verfügung.
     Notes: '0: Verbleibende Blöcke'
   ResizeFailOverlap:
     Text: Änderung nicht möglich, da es einen Nachbarclaim überlappen würde.
   ResizeStart:
-    Text: Größenänderung des Claim.  Lege mit der Schaufel den neuen Ort für diese Ecke fest.
+    Text: Größenänderung des Claim.  Lege mit der Schaufel den neuen Ort für diese
+      Ecke fest.
   ResizeFailOverlapSubdivision:
-    Text: Du kannst hier keinen Subclaim anlegen, er würde einen anderen überlappen.  Versuche /abandonclaim um ihn zu löschen oder verändere mit der Schaufel zuerst seine Größe.
+    Text: Du kannst hier keinen Subclaim anlegen, er würde einen anderen überlappen.  Versuche
+      /abandonclaim um ihn zu löschen oder verändere mit der Schaufel zuerst seine
+      Größe.
   SubdivisionStart:
-    Text: Ecke des Subclaims gesetzt!  Lege nun mit der Schaufel die gegenüberliegende Ecke fest.
+    Text: Ecke des Subclaims gesetzt!  Lege nun mit der Schaufel die gegenüberliegende
+      Ecke fest.
   CreateSubdivisionOverlap:
     Text: Das gewählte Gebiet überlappt einen bestehenden Subclaim.
   SubdivisionSuccess:
     Text: Subclaim angelegt!  Gibt ihn mit /trust für deine Freunde frei.
   CreateClaimFailOverlap:
-    Text: Du kannst hier keinen Claim anlegen, er würde einen anderen überlappen.  Versuche /abandonclaim um ihn zu löschen oder verändere mit der Schaufel zuerst seine Größe.
+    Text: Du kannst hier keinen Claim anlegen, er würde einen anderen überlappen.  Versuche
+      /abandonclaim um ihn zu löschen oder verändere mit der Schaufel zuerst seine
+      Größe.
   CreateClaimFailOverlapOtherPlayer:
     Text: Hier kannst Du keinen Claim mehr anlegen. {0} war schneller.
     Notes: '0: Anderer Claimbesitzer'
   ClaimsDisabledWorld:
     Text: Landclaims sind in dieser Welt nicht erlaubt.
   ClaimStart:
-    Text: Eckpunkt gesetzt!  Benutze die Schaufel an der gegenüberliegenden Ecke um ein Rechteck festzulegen.  Um abzubrechen, musst du die Schaufel nur weg legen.
+    Text: Eckpunkt gesetzt!  Benutze die Schaufel an der gegenüberliegenden Ecke um
+      ein Rechteck festzulegen.  Um abzubrechen, musst du die Schaufel nur weg legen.
   NewClaimTooSmall:
     Text: Dieser Claim ist zu klein.  Ein Claim muss mindestens {0} x {0} Blöcke umfassen.
     Notes: '0: Minimale Claim Größe'
   CreateClaimInsufficientBlocks:
-    Text: Du hast zu wenig Claimblöcke um das gesamte Gebiet zu claimen.  Du brauchst {0} weitere Blöcke.
+    Text: Du hast zu wenig Claimblöcke um das gesamte Gebiet zu claimen.  Du brauchst
+      {0} weitere Blöcke.
     Notes: '0: Benötigte Blöcke'
   AbandonClaimAdvertisement:
-    Text: Benutze /abandonclaim um einen anderen Claim zu löschen und so Claimblöcke zu erhalten.
+    Text: Benutze /abandonclaim um einen anderen Claim zu löschen und so Claimblöcke
+      zu erhalten.
   CreateClaimFailOverlapShort:
     Text: Das gewählte Areal überlappt einen bestehenden Claim.
   CreateClaimSuccess:
@@ -318,22 +358,28 @@ Messages:
   ClaimTooSmallForEntities:
     Text: Dieser Claim ist dafür nicht groß genug.  Versuche ihn zu vergrössern.
   TooManyEntitiesInClaim:
-    Text: Auf diesem Claim sind bereits zu viele Dinge und Tiere.  Versuche ihn zu vergössern oder entferne einige Tiere, Monster, Gemälde oder Loren.
+    Text: Auf diesem Claim sind bereits zu viele Dinge und Tiere.  Versuche ihn zu
+      vergössern oder entferne einige Tiere, Monster, Gemälde oder Loren.
   YouHaveNoClaims:
     Text: Du besitzt keine Claims.
   ConfirmFluidRemoval:
-    Text: All dein Wasser und deine Lava wird bei Aufgabe des Claims entfernt.  Wenn du sicher bist, bestätige erneut mit /abandonclaim.
+    Text: All dein Wasser und deine Lava wird bei Aufgabe des Claims entfernt.  Wenn
+      du sicher bist, bestätige erneut mit /abandonclaim.
   AutoBanNotify:
-    Text: §c[ChilledGaming§c] {0}({1}) Automatisch gebannt.  Schaue in die Logs für mehr Informationen.
+    Text: §c[ChilledGaming§c] {0}({1}) Automatisch gebannt.  Schaue in die Logs für
+      mehr Informationen.
   AdjustGroupBlocksSuccess:
-    Text: 'Bonusclaimblöcke für Spieler mit der Berechtigung
-      {0} um {1} angepasst.  Neuer Bonus: {2}.'
+    Text: 'Bonusclaimblöcke für Spieler mit der Berechtigung {0} um {1} angepasst.  Neuer
+      Bonus: {2}.'
     Notes: '0: Berechtigung; 1: Anpassungsmenge; 2: Neuer Gesamtbonus'
   InvalidPermissionID:
-    Text: Bitte gib einen Spielernamen oder alternativ eine Berechtigung, in eckigen Klammern, an.
+    Text: Bitte gib einen Spielernamen oder alternativ eine Berechtigung, in eckigen
+      Klammern, an.
   HowToClaimRegex:
     Text: (^|.*\W)how\W.*\W(claim|protect|lock)(\W.*|$)
-    Notes: Dies ist ein regulärer Java Ausdruck.  Schau ihn dir, vor der Bearbeitung, an!  Er wird verwendet, um Spieler über die Demo-Videos zu informieren, wenn sie im Chat fragen, wie man Land beanspruchen kann.'
+    Notes: Dies ist ein regulärer Java Ausdruck.  Schau ihn dir, vor der Bearbeitung,
+      an!  Er wird verwendet, um Spieler über die Demo-Videos zu informieren, wenn
+      sie im Chat fragen, wie man Land beanspruchen kann.'
   NoBuildOutsideClaims:
     Text: Um zu bauen, musst du zuerst das Gebiet beanspruchen.
   PlayerOfflineTime:
@@ -342,11 +388,13 @@ Messages:
   BuildingOutsideClaims:
     Text: Deine Bauten sind hier nicht geschützt!  Du solltest das Gebiet beanspruchen.
   TrappedWontWorkHere:
-    Text: Sorry, aber wir haben keinen sicheren Ort für dich gefunden.  Kontaktiere einen Admin oder denk über Selbstmord, /kill, nach.
+    Text: Sorry, aber wir haben keinen sicheren Ort für dich gefunden.  Kontaktiere
+      einen Admin oder denk über Selbstmord, /kill, nach.
   CommandBannedInPvP:
     Text: Du kannst diesen Befehl während eines PvP Kampfes nicht benutzen.
   UnclaimCleanupWarning:
-    Text: Dein aufgegebener Claim kann von anderen verändert werden.  Wenn du einige Bauten behalten möchtest, solltest du diese wieder claimen.
+    Text: Dein aufgegebener Claim kann von anderen verändert werden.  Wenn du einige
+      Bauten behalten möchtest, solltest du diese wieder claimen.
   BuySellNotConfigured:
     Text: Sorry, Kauf und Verkauf von Claimblöcken ist deaktiviert.
   NoTeleportPvPCombat:
@@ -360,13 +408,17 @@ Messages:
   NoPermissionForCommand:
     Text: Du hast keine Berechtigung um das zu tun.
   ClaimsListNoPermission:
-    Text: Du bist nicht berechtigt, Informationen über die Landansprüche eines anderen Spielers zu erhalten.
+    Text: Du bist nicht berechtigt, Informationen über die Landansprüche eines anderen
+      Spielers zu erhalten.
   ExplosivesDisabled:
-    Text: Dieser Claim ist nun gegen Explosionen geschützt.  Verwende nochmals /claimexplosions zum Deaktivieren.
+    Text: Dieser Claim ist nun gegen Explosionen geschützt.  Verwende nochmals /claimexplosions
+      zum Deaktivieren.
   ExplosivesEnabled:
-    Text: Dieser Claim ist nun ungeschützt gegenüber Explosionen.  Verwende nochmals /claimexplosions um den Schutz zu erneuern.
+    Text: Dieser Claim ist nun ungeschützt gegenüber Explosionen.  Verwende nochmals
+      /claimexplosions um den Schutz zu erneuern.
   ClaimExplosivesAdvertisement:
-    Text: Um Sprengstoff zu erlauben, Blöcke in diesem Claim zu zerstören, verwende /claimexplosions.
+    Text: Um Sprengstoff zu erlauben, Blöcke in diesem Claim zu zerstören, verwende
+      /claimexplosions.
   PlayerInPvPSafeZone:
     Text: Dieser Spieler ist in einer PVP-Sicherheits-Zone.
   NoPistonsOutsideClaims:
@@ -378,19 +430,23 @@ Messages:
     Text: Un-soft-muted {0}.
     Notes: '0: Der Name des ungemuteten Spielers.'
   DropUnlockAdvertisement:
-    Text: Andere Spieler können deine hingeworfenen Gegenstände nicht aufheben bevor du /unlockdrops verwendest.
+    Text: Andere Spieler können deine hingeworfenen Gegenstände nicht aufheben bevor
+      du /unlockdrops verwendest.
   PickupBlockedExplanation:
     Text: Du kannst das nicht aufheben bevor {0} /unlockdrops verwendet hat.
     Notes: '0: Besitzer des Gegenstandhaufens.'
   DropUnlockConfirmation:
-    Text: Deine weggeworfenen Gegenstände sind nun freigegeben und andere Spieler können sie aufheben bis du das nächste mal stirbst.
+    Text: Deine weggeworfenen Gegenstände sind nun freigegeben und andere Spieler
+      können sie aufheben bis du das nächste mal stirbst.
   DropUnlockOthersConfirmation:
-    Text: {0}'s Drops freigegeben.
+    Text: '{0}''s Drops freigegeben.'
     Notes: '0: Besitzer der freigegebenen Drops.'
   AdvertiseACandACB:
-    Text: Verwende /acb um dir selbst mehr Claimblöcke zu geben, oder /adminclaims um einen freien administrativen Claim zu erstellen.
+    Text: Verwende /acb um dir selbst mehr Claimblöcke zu geben, oder /adminclaims
+      um einen freien administrativen Claim zu erstellen.
   AdvertiseAdminClaims:
-    Text: Du kannst einen administrativen Claim erstellen wenn du /adminclaims verwendest, welchen du mit anderen Administratoren teilst.
+    Text: Du kannst einen administrativen Claim erstellen wenn du /adminclaims verwendest,
+      welchen du mit anderen Administratoren teilst.
   AdvertiseACB:
     Text: Du kannst /acb verwenden um dir selbst mehr Claimblöcke zu geben.
   NotYourPet:
@@ -401,25 +457,32 @@ Messages:
   PetTransferCancellation:
     Text: Haustierabgabe abgebrochen.
   ReadyToTransferPet:
-    Text: Bereit für Transfer!  Rechtsklicke das Haustier, welches du abgeben willst, oder verwende /givepet, zum Abbrechen.
+    Text: Bereit für Transfer!  Rechtsklicke das Haustier, welches du abgeben willst,
+      oder verwende /givepet, zum Abbrechen.
   AvoidGriefClaimLand:
-    Text: Verhindere Griefen!  Wenn du dein Land beanspruchst, wirst du griefsicher sein.
+    Text: Verhindere Griefen!  Wenn du dein Land beanspruchst, wirst du griefsicher
+      sein.
   BecomeMayor:
     Text: Unterteile dein Land und werde Bürgermeister!
   ClaimCreationFailedOverClaimCountLimit:
-    Text: Du hast dein Limit an Land Beanspruchungen erreicht.  Verwende /abandonclaim, um einen anderen Claim zu entfernen bevor du einen anderen beanspruchst.
+    Text: Du hast dein Limit an Land Beanspruchungen erreicht.  Verwende /abandonclaim,
+      um einen anderen Claim zu entfernen bevor du einen anderen beanspruchst.
   CreateClaimFailOverlapRegion:
-    Text: Du kannst das alles hier nicht beanspruchen, da dir die Berechtigung hier zu bauen fehlt.
+    Text: Du kannst das alles hier nicht beanspruchen, da dir die Berechtigung hier
+      zu bauen fehlt.
   ResizeFailOverlapRegion:
-    Text: Du hast keine Berechtigung hier zu bauen, also kannst du das Land auch nicht beanspruchen.
+    Text: Du hast keine Berechtigung hier zu bauen, also kannst du das Land auch nicht
+      beanspruchen.
   NoBuildPortalPermission:
-    Text: Du kannst dieses Portal nicht benutzen, da du keine Erlaubnis von {0} hast, das Ausgangsportal auf dem Zielclaim zu bauen.
+    Text: Du kannst dieses Portal nicht benutzen, da du keine Erlaubnis von {0} hast,
+      das Ausgangsportal auf dem Zielclaim zu bauen.
     Notes: '0: Besitzer des Zielclaims.'
   ShowNearbyClaims:
-    Text: {0} beanspruchte Grundstücke gefunden.
+    Text: '{0} beanspruchte Grundstücke gefunden.'
     Notes: '0: Zahl der gefundenen Grundstücke.'
   NoChatUntilMove:
-    Text: Entschuldigung, aber du musst dich etwas bewegen bevor du im Chat schreiben kannst.  Wir haben hier eine Menge Spambots.  :)
+    Text: Entschuldigung, aber du musst dich etwas bewegen bevor du im Chat schreiben
+      kannst.  Wir haben hier eine Menge Spambots.  :)
   SiegeImmune:
     Text: Dieser Spieler ist immun gegen /siege.
   SetClaimBlocksSuccess:
@@ -439,23 +502,21 @@ Messages:
   TrustListHeader:
     Text: 'Explizite Berechtigung hier:'
   Manage:
-    Text:  Verwalten
+    Text: Verwalten
   Build:
-    Text:  Bauen
+    Text: Bauen
   Containers:
-    Text:  Container
+    Text: Container
   Access:
-    Text:  Zugriff/Zutritt
-  HasSubclaimRestriction:
-    Text: Dieser Sub-Claim erbt keine Berechtigungen vom übergeordneten Claim.
+    Text: Zugriff/Zutritt
   StartBlockMath:
-    Text: {0} Blöcke durch Spielen + {1} Bonus = {2} Gesamt.
+    Text: '{0} Blöcke durch Spielen + {1} Bonus = {2} Gesamt.'
   ClaimsListHeader:
     Text: 'Grundstücke:'
   ContinueBlockMath:
-    Text:   (-{0} Blöcke)
+    Text: (-{0} Blöcke)
   EndBlockMath:
-    Text:   = {0} Blöcke zur freien Verwendung übrig.
+    Text: = {0} Blöcke zur freien Verwendung übrig.
   NoClaimDuringPvP:
     Text: Du kannst kein Land während eines PVP-Kampfes beanspruchen.
   UntrustAllOwnerOnly:
@@ -467,14 +528,15 @@ Messages:
   BookTitle:
     Text: Wie man Land Claimed
   BookIntro:
-    Text: Claime Land, um dein Eigentum zu schützen!  Klicke den obigen Link, um in 3 Minuten, oder weniger, zu lernen, wie man Land claimed.  :)
+    Text: Claime Land, um dein Eigentum zu schützen!  Klicke den obigen Link, um in
+      3 Minuten, oder weniger, zu lernen, wie man Land claimed.  :)
   BookDisabledChestClaims:
     Text: Auf diesem Server claimed das Platzieren einer Truhe KEIN Land für dich.
   BookUsefulCommands:
     Text: 'Hilfreiche Befehle:'
   BookLink:
-    Text: 'Klicke: {0}'
-    Notes: '{0}: video URL'
+    Text: 'Click: {0}'
+    Notes: '{0}: Video URL'
   BookTools:
     Text: Unsere Claimwerkzeuge sind {0} und {1}.
     Notes: '0: Claim-Modifikations-Werkzeug; 1: Claim-Informations-Werkzeug'
@@ -482,14 +544,17 @@ Messages:
     Text: Die neue Größe ist zu klein.  Claims müssen mindestens {0} Blöcke groß sein.
     Notes: '0: minimum claim width'
   ResizeClaimInsufficientArea:
-    Text: Dieser Claim ist zu klein.  Jeder Claim muss mindestens {0} Claimblöcke groß sein.
+    Text: Dieser Claim ist zu klein.  Jeder Claim muss mindestens {0} Claimblöcke
+      groß sein.
     Notes: '0: minimum claim area'
   NoProfanity:
     Text: Bitte mäßige deine Aussprache.
   PlayerNotIgnorable:
     Text: Du kannst diesen Spieler nicht ignorieren.
   NoEnoughBlocksForChestClaim:
-    Text: Weil du keine Claimblöcke mehr hast, wurde kein Claim, automatisch, für dich erstellt.  Du kannst mit /claimlist deine dir zur Verfügung stehenden Claimblöcke anzeigen lassen.
+    Text: Weil du keine Claimblöcke mehr hast, wurde kein Claim, automatisch, für
+      dich erstellt.  Du kannst mit /claimlist deine dir zur Verfügung stehenden Claimblöcke
+      anzeigen lassen.
   IsIgnoringYou:
     Text: Dieser Spieler ignoriert dich.
   MustHoldModificationToolForThat:
@@ -499,16 +564,20 @@ Messages:
   ClaimsExtendToSky:
     Text: Claims reichen immer bis zur maximalen Bauhöhe.
   ClaimsAutoExtendDownward:
-    Text: Claims erweitern sich automatisch nach unten, wenn du Blöcke unter ihnen platzierst.
+    Text: Claims erweitern sich automatisch nach unten, wenn du Blöcke unter ihnen
+      platzierst.
   MinimumRadius:
     Text: Minimaler Radius beträgt {0}.
     Notes: '0: Mindestradius'
   RadiusRequiresGoldenShovel:
     Text: Du musst eine goldene Schaufel halten, wenn du den Radius spezifizierst.
   ClaimTooSmallForActiveBlocks:
-    Text: Dieser Claim ist nicht groß genug, um aktive Blöcke zu unterstützen (Trichter, Spawner, Leuchtfeuer...).  Erweitere erst den Claim.
+    Text: Dieser Claim ist nicht groß genug, um aktive Blöcke zu unterstützen (Trichter,
+      Spawner, Leuchtfeuer...).  Erweitere erst den Claim.
   TooManyActiveBlocksInClaim:
-    Text: Dieser Claim hat sein Limit, um aktive Blöcke (Trichter, Spawner, Leuchtfeuer...) zu unterstützen, erreicht.  Entweder erweiterst du den Claim, oder du entfernst andere aktive Blöcke.
+    Text: Dieser Claim hat sein Limit, um aktive Blöcke (Trichter, Spawner, Leuchtfeuer...)
+      zu unterstützen, erreicht.  Entweder erweiterst du den Claim, oder du entfernst
+      andere aktive Blöcke.
   ConsoleOnlyCommand:
     Text: Dieser Befehl kann nur von der Serverkonsole aus aktiviert werden.
   WorldNotFound:
@@ -517,13 +586,26 @@ Messages:
     Text: Alle Online-Spieler-Bonus-Claimblöcke auf {0} angepasst.
     Notes: '0: Anpassungsmenge'
   TooMuchIpOverlap:
-    Text: Entschuldige, aber mit dieser IP Adresse sind bereits zu viele Accounts eingeloggt.
+    Text: Entschuldige, aber mit dieser IP Adresse sind bereits zu viele Accounts
+      eingeloggt.
+  SubdivisionVideo2:
+    Text: 'Klicke hier für die Unterteilungs-Hilfe: {0}'
+    Notes: '0: Video URL'
+  PlayerTooCloseForFire2:
+    Text: Du kannst, so nah an einem anderen Spieler, kein Feuer entfachen.
+  NewClaimTooNarrow:
+    Text: Dieser Claim ist zu klein.  Jeder Claim muss mindestens {0} Blöcke groß
+      sein.
+    Notes: '0: Claim Mindestgröße'
+  HasSubclaimRestriction:
+    Text: This subclaim does not inherit permissions from the parent
   StandInSubclaim:
-    Text: Du musst in einem Sub-Claim stehen um ihn einzuschränken.
+    Text: You need to be standing in a subclaim to restrict it
   SubclaimRestricted:
-    Text: Die Berechtigungen dieses Sub-Claims werden nicht mehr von dem übergeordneten Claim übernommen.
+    Text: This subclaim's permissions will no longer inherit from the parent claim
   SubclaimUnrestricted:
-    Text: Die Berechtigungen dieses Sub-Claims werden jetzt vom übergeordneten Claim geerbt
+    Text: This subclaim's permissions will now inherit from the parent claim
   NetherPortalTrapDetectionMessage:
-    Text: Es scheint, als würdest du in einem Netherportal stecken. Wir werden dich in wenigen Sekunden retten, wenn dies der Fall ist!
-    Notes: Wird beim Beitritt an den Spieler gesendet, wenn er sich in einem Netherportal befindet.
+    Text: It seems you might be stuck inside a nether portal. We will rescue you in
+      a few seconds if that is the case!
+    Notes: Sent to player on join, if they left while inside a nether portal.
