@@ -1,184 +1,306 @@
-MESSAGE:
-  BANK_IS_FULL: '&b[Bank] &aBank ist voll!'
-  INVALID_MONEY: '&b[Bank] &aBetrag wurde nicht erkannt!'
-  NOT_ENOUGH_MONEY_IN_BANK: '&b[Bank] &aDu hast nicht genug Geld auf deinem Konto
-    um das zu tun!'
-  NOT_ENOUGH_MONEY: '&b[Bank] &aDu hast nicht genug Geld um das zu tun!'
-  MONEY_DEPOSIT: '&b[Bank] &aDu hast <a>€ auf dein Konto eingezahlt.'
-  MONEY_WITHDRAW: '&b[Bank] &aDu hast <a>€ von deinem Konto abgehoben.'
-  MONEY_DEPOSIT_CHAT: '&b[Bank] &aGib im Chat ein, wieviel du einzahlen willst.'
-  MONEY_WIHDRAW_CHAT: '&b[Bank] &aGib im Chat ein, wieviel du abheben willst.'
-  NO_CREATIVE_MODE: '&b[Bank] &aDu kannst dein Bankkonto nicht im Kreativmodus öffnen.'
-  MONEY_BALANCE_CHAT: '&b[Bank] &aDu hast ein Guthaben von <a>$ auf deinem Konto.'
-  SLOTS_BOUGHT: '&b[Bank] &aGekauft <i> für $<p>'
-  SLOTS_FAILED: '&b[Bank] &aDu hast nicht genug Geld, um diese Slots zu kaufen!'
-  INTEREST_GAINED: '&b[Bank] &aDu bekommst <a>€ Zinsen.'
-  INTEREST_GAINED_OFFLINE: '&b[Bank] &aDu bekommst <a>$ Zinsen für die Zeit während
-    du offline warst.'
-  EXP_INTEREST_GAINED: '&b[Bank] &aDu bekommst <a> XP Zinsen.'
-  EXP_INTEREST_GAINED_OFFLINE: '&b[Bank] &aDu bekommst <a> XP Zinsen für die Zeit
-    während du offline warst.'
-  BANK_LOADING: '&b[Bank] &aDeine Bank wird gerade geladen...'
-  BANK_DISABLED: '&b[Bank] &cDein Bankkonto wurde von einem Sdmin entfernt.'
-  PIN_WRONG: '&b[Bank] &cFalsche Pin!'
-  PIN_MUST: '&b[Bank] &aBevor du das tun kannst, musst du deinen Pin eingeben.'
-  PIN_REMOVED: '&b[Bank] &cPin entfernt'
-  PIN_NEW: '&b[Bank] &aNeue Pin gesetzt'
-  INVALID_EXP: '&b[Bank] &aKann Betrag nicht analysieren.'
-  NOT_ENOUGH_EXP_IN_BANK: '&b[Bank] &aDu hast nicht genügen XP auf deinem Konto um
-    das zu tun.'
-  NOT_ENOUGH_EXP: '&b[Bank] &aDu hast nicht genügend XP um das zu tun.'
-  EXP_DEPOSIT: '&b[Bank] &aDu hast <a> XP auf dein Konto eingezahlt.'
-  EXP_WITHDRAW: '&b[Bank] &aDu hast <a> XP von deinem konto abgehoben.'
-  EXP_DEPOSIT_CHAT: '&b[Bank] &aTippe im Chat den Wert ein, den du einzahlen willst:'
-  EXP_WIHDRAW_CHAT: '&b[Bank] &aTippe im Chat den Wert ein, den du abheben willst:'
-  EXP_BALANCE_CHAT: '&b[Bank] &aDu hast <a> XP auf deinem Konto.'
-  MONEY_WITHDRAW_CHAT: '&b[Bank] &aEnter into chat the amount you wish to withdraw:'
-  EXP_WITHDRAW_CHAT: '&b[Bank] &aEnter into chat the amount you wish to withdraw:'
-GLOBAL:
-  MINUS: '&c-'
-  ADD: '&a+'
-  BACK: '&cZurück'
-  BACK_LORE: '&cGehe zurück'
-  ENTITY_NAME: '&aBankangestellter'
-CHOOSE:
-  PIN: '&bPin Optionen'
-  PIN_LORE: '&aKlicke hier um deinen Pin zu setzen oder zu ändern.'
-  BALANCE: '&bKontostand $<a>'
-  BALANCE_LORE: '&aKlicke zum Abheben/Einzahlen'
-  BANK: '&bItems'
-  BANK_LORE: '&aKlicke um deine Items zu sehen'
-  EXP: '&b<a> XP'
-  EXP_LORE: '&aDein derzeitiges XP Guthaben'
-PIN:
-  SET: '&bSetze deinen Pin'
-  SET_LORE: '&aKlicke um deinen Pin zu setzen.'
-  REMOVE: '&bEntferne deinen Pin'
-  REMOVE_LORE: '&aKlicke hier um deinen Pin zu entfernen.'
-BALANCE:
-  BALANCE_LORE: '&aDein aktuelles Kontoguthaben.'
-  WITHDRAW: '&bKlicke zum Geld abheben'
-  WITHDRAW_LORE: '&aDu musst einen Betrag im Chat eingeben, um ihn auszahlen zu lassen.'
-  WITHDRAW_ALL: '&bKlicke um alles abzuheben'
-  WITHDRAW_ALL_LORE: '&aHebe alles Geld von deinem Konto ab.'
-  DEPOSIT: '&bKlicke zum Geld einzahlen'
-  DEPOSIT_LORE: '&aDu musst einen Betrag im Chat eingeben, um ihn einzuzahlen.'
-  DEPOSIT_ALL: '&bKlicke um alles einzuzahlen'
-  DEPOSIT_ALL_LORE: '&aZahle alles Geld auf dein Konto ein.'
-  CHEQUE: '&bScheckbuch'
-  CHEQUE_LORE: '&aKlicke um ein Scheckbuch zu erhalten.'
-BANK:
-  TAB: '&bRegister <i>'
-  TAB_CHANGE: '&9Klicke rechts um das Item zu ändern'
-  TAB_CURRENT: '&aAktuell'
-  TAB_ITEMS: '&9<i> Items'
-  SLOTS: '&bSlots'
-  USED_SLOTS: '&aBenutzte Slots: <i>'
-  AVAILABLE_SLOTS: '&aVerfügbare Slots: <i>'
-  TOTAL_SLOTS: '&aGesamte Slots: <i>'
-  CLICK_TO_BUY: '&aKlicke um mehr Slots zu kaufen'
-  SCROLL_UP: '&bHochscrollen'
-  SCROLL_UP_LORE: '&aRegister hochscrollen.'
-  SCROLL_DOWN: '&bRunterscrollen'
-  SCROLL_DOWN_LORE: '&aRegister runterscrollen.'
-  SORT: '&bDieses Register sortieren'
-  SORT_LORE: '&aSortierungs Optionen'
-  REMOVE_ITEMS: '&bAus Register entfernen'
-  REMOVE_ITEMS_LORE: '&aÜbertragungs Optionen'
-  ADD_ITEMS: '&bDiesem Register hizufügen'
-  ADD_ITEMS_LORE: '&aÜbertragungs Optionen'
-TABITEMPICKER:
-  SCROLL_UP: '&bScrolle rauf'
-  SCROLL_DOWN: '&bScrolle runter'
-  RESET: '&cZurücksetzen'
-  RESET_LORE: '&cSetzt den Item-Tab zurück'
-SLOTS:
-  BUY: '&bKaufe <i> für $<p>'
-SORT:
-  ALPHABETICALLY_MATERIAL: '&bAlphabetisch nach Material'
-  ALPHABETICALLY_MATERIAL_LORE: '&aSortiert das Register nach dem Material der Items.'
-  ALPHABETICALLY_NAME: '&bAlphabetisch nach Namen'
-  ALPHABETICALLY_NAME_LORE: '&aSortiert das Register nach Item Namen.'
-  AMOUNT: '&bNach Item Anzahl'
-  AMOUNT_LORE: '&aSortiert Items nach ihrer Anzahl.'
-ADD:
-  INVENTORY: '&bAus Inventar hinzufügen'
-  INVENTORY_LORE: '&aFügt alle Items aus deinem Inventar hinzu.'
-  HOTBAR: '&bAus Hotbar hinzufügen'
-  HOTBAR_LORE: '&aFügt alle Items aus deiner Hotbar hinzu.'
-  ALL: '&Alles hinzufügen'
-  ALL_LORE: '&aFügt alle Items aus deinem kompletten Inventar hinzu.'
-REMOVE:
-  HOTBAR: '&bZur Hotbar übertragen'
-  HOTBAR_LORE: '&aÜberträgt die Items zu deiner Hotbar.'
-  INVENTORY: '&bÜbertrage in dein Inventar'
-  INVENTORY_LORE: '&aÜberträgt die Items in dein Inventar.'
-  ALL: '&bÜbertrage alles'
-  ALL_LORE: '&aEntfernt alle Items aus deinem Inventar.'
-EXP:
-  EXP_LORE: '&aKlicke zum abheben/einzahlen'
-  WITHDRAW: '&bKlicke um XP abzuheben'
-  WITHDRAW_LORE: '&aDu musst einen Wert im Chat eingeben um etwas abzuheben.'
-  WITHDRAW_ALL: '&bKlicke um alle XP abzuheben'
-  WITHDRAW_ALL_LORE: '&aHebt alle XP von deinem Konto ab.'
-  DEPOSIT: '&bKlicke um XP einzuzahlen'
-  DEPOSIT_LORE: '&aDu musst einen Wert im Chat eingeben um etwas einzuzahlen.'
-  DEPOSIT_ALL: '&bKlicke um alle XP einzuzahlen'
-  DEPOSIT_ALL_LORE: '&aZahlt alle XP auf deinem Konto ein.'
-MONEY:
-  MILLION: Million
-  BILLION: Billion
-  TRILLION: Trillion
-  QUADRILLION: Quadrillion
-  QUINTILLION: Quintillion
-  SEXTILLION: Sextillion
-  SEPTILLION: Septillion
-  OCTILLION: Octillion
-  NONILLION: Nonillion
-  DECILLION: Decillion
-  UNDECILLION: Undecillion
-  DUODECILLION: Duodecillion
-  TREDECILLION: Tredecillion
-  QUATTUORDECILLION: Quattuordecillion
-  QUINQUADECILLION: Quinquadecillion
-  SEDECILLION: Sedecillion
-  SEPTENDECILLION: Septendecillion
-  OCTODECILLION: Octodecillion
-  NOVENDECILLION: Novendecillion
-  VIGINTILLION: Vigintillion
-  UNVIGINTILLION: Unvigintillion
-  DUOVIGINTILLION: Duovigintillion
-  TRESVIGINTILLION: Tresvigintillion
-  QUATTUORVIGINTILLION: Quattuorvigintillion
-  QUINQUAVIGINTILLION: Quinquavigintillion
-  SESVIGINTILLION: Sesvigintillion
-  SEPTEMVIGINTILLION: Septemvigintillion
-  OCTOVIGINTILLION: Octovigintillion
-  NOVEMVIGINTILLION: Novemvigintillion
-  TRIGINTILLION: Trigintillion
-  UNTRIGINTILLION: Untrigintillion
-  DUOTRIGINTILLION: Duotrigintillion
-  TRESTRIGINTILLION: Trestrigintillion
-  QUATTUORTRIGINTILLION: Quattuortrigintillion
-  QUINQUATRIGINTILLION: Quinquatrigintillion
-  SESTRIGINTILLION: Sestrigintillion
-  SEPTENTRIGINTILLION: Septentrigintillion
-  OCTOTRIGINTILLION: Octotrigintillion
-  NOVENTRIGINTILLION: Noventrigintillion
-  QUADRAGINTILLION: Quadragintillion
-TITLE:
-  BANK: '&bBank'
-  ADMIN: '&bBank - Admin'
-  CHOOSE: '&bBank - Wähle'
-  SORT: '&bBank - Sortierung'
-  BUY_SLOTS: '&bBank - Kaufe Slots'
-  ADD_ITEMS: '&bBank - Füge Gegenstände hinzu'
-  REMOVE_ITEMS: '&bBank - Entferne Gegenstände'
-  BALANCE: '&bBank - Kontostand'
-  EXP: '&bBank - Exp'
-  PIN: '&bBank - Pin'
-  PIN_SET: '&bBank - Pin Setzen'
-  PIN_OPTIONS: '&bBank - Pin Optionen'
-  TABITEMPICKER: '&bBank - Item-Wähler'
-SIGN:
-  TEXT: '&2[Bank]'
+Message:
+  Bank_Is_Full: '&b[Bank] &aDie Bank ist voll.'
+  Money_Is_Full: '&b[Bank] &aKein Guthaben mehr einzahlbar.'
+  Exp_Is_Full: '&b[Bank] &aKeine Exp mehr einzahlbar.'
+  Invalid_Money: '&b[Bank] &aDie Menge konnte nicht erkannt werden.'
+  Not_Enough_Money_In_Bank: '&b[Bank] &aDu hast in der Bank zu wenig Geld, um das zu tun.'
+  Not_Enough_Money: '&b[Bank] &aDu hast nicht genug Geld auf der bank, um das zu tun.'
+  Money_Deposit: '&b[Bank] &aDu hast $<a> auf dein Bankkonto überwiesen.'
+  Money_Withdraw: '&b[Bank] &aDu hast $<a> von deinem Bankkonto abgehoben.'
+  Money_Deposit_Chat: '&b[Bank] &aSchreib in den Chat, wie viel zu überweisen möchtest: '
+  Money_Withdraw_Chat: '&b[Bank] &aSchreib in den Chat, wie viel zu abheben möchtest: '
+  Money_Interest_Time: '&b[Bank] &aZinsen in <a> Sekunden.'
+  Money_Sent: '&b[Bank] &aDu hast $<d> an <n> gesendet.'
+  Money_Received: '&b[Bank] &a$<d> von <n> erhalten.'
+  Exp_Sent: '&b[Bank] &aDu hast <d> an <n> gesendet.'
+  Exp_Received: '&b[Bank] <d> von <n> &aerhalten.'
+  No_Creative_Mode: '&b[Bank] &aDu darfst deine Bank nicht im Kreativmodus öffnen.'
+  Money_Balance_Chat: '&b[Bank] &aDu hast $<a> in deiner Bank.'
+  Slots_Bought: '&b[Bank] &aDu hast <i> für $<p> gekauft.'
+  Tabs_Bought: '&b[Bank] &aDu hast <i> für $<p> gekauft.'
+  Slots_Failed: '&b[Bank] &aDu hast nicht genug Geld um das zu kaufen.'
+  Tabs_Failed: '&b[Bank] &aDu hast nicht genug Geld um das zu kaufen.'
+  Interest_Gained: '&b[Bank] &aDu hast nur bisschen Zinsen erhalten: $<a>'
+  Interest_Gained_Offline: '&b[Bank] &aDu hast $<a> Zinsen erhalten, während du Offline warst.'
+  Exp_Interest_Gained: '&b[Bank] &aDu hast nur bisschen XP-Zinsen erhalten: <a> .'
+  Exp_Interest_Gained_Offline: '&b[Bank] &aDu hast <a> in exp interest whilst offline.'
+  Bank_Loading: '&b[Bank] &aDeine Bank wird immernoch geladen.'
+  Bank_Disabled: '&b[Bank] &cDeine Bank wurde von einem Admin deaktiviert.'
+  Pin_Wrong: '&b[Bank] &cFalscher Pin.'
+  Pin_Must: '&b[Bank] &aDu musst zuerst deinen Ping angeben.'
+  Pin_Removed: '&b[Bank] &cPin entfernt.'
+  Pin_New: '&b[Bank] &aNeuer Pin erstellt.'
+  Invalid_Exp: '&b[Bank] &aDie Menge ist nicht erkennbar.'
+  Invalid_Loan: '&b[Bank] &aDie Menge ist nicht erkennbar.'
+  Not_Enough_Exp_In_Bank: '&b[Bank] &aDu nicht nicht genug Erfahrungspunkte auf der Bank, um das zu tun.'
+  Not_Enough_Exp: '&b[Bank] &aDu hast nicht genug Erfahrungspunkte, um das zu tun.'
+  Exp_Deposit: '&b[Bank] &aDu hast <a> Erfahrungspunkte auf deine Bank überwiesen.'
+  Exp_Withdraw: '&b[Bank] &aDu hast <a> Erfahrungspunkte auf deine Bank abgehoben.'
+  Exp_Deposit_Chat: '&b[Bank] &aSchreib in den Chat die Menge, die du einzahlen möchtest:'
+  Exp_Withdraw_Chat: '&b[Bank] &aSchreib in den Chat die Menge, die du abheben möchtest:'
+  Exp_Balance_Chat: '&b[Bank] &aDu hast <a> Erfahrungspunkte in der Bank.'
+  Exp_Interest_Time: '&b[Bank] &aExp-Zinsen in <a> Sekunden.'
+  Loan_Interest_Time: '&b[Bank] &aDarlehenszinsen in <a> Sekunden.'
+  Loan_Payback_Time: '&b[Bank] &aDarlehenrückzahlung in <a> Sekunden.'
+  Loan_Take_Out: '&b[Bank] &aDu hast ein Darlehen in Höhen von $<a> aufgenommen.'
+  Loan_Take_Out_Deadline: '&b[Bank] &aDu hast ein Darlehen in Höhen von $<a> aufgenommen. Du hast <d> Tage Zeit es zurückzuzahlen.'
+  Loan_Payback: '&b[Bank] &aDu hast $<a> von deinem Darlehen zurückgezahlt.'
+  Unable_To_Find: '&b[Bank] &cSpieler konnte nicht gefunden werden <n>.'
+  Info_Border: '&a-----------------------------------------------------'
+  Info:
+  - '&b Kontostand: $<bank_money>.'
+  - '&b BankXP: <bank_exp>, <bank_exp_level> levels.'
+  - '&b Geldzinsen in <bank_money_interest_minutes> Minuten (<bank_money_interest_seconds> Sekunden)'
+  - '&b Expzinsen in <bank_exp_interest_minutes> Minuten (<bank_exp_interest_seconds> Sekunden)'
+  Info_Loans:
+  - '&a Loans:.'
+  - '&b Total: $<bank_loan_total>.'
+  - '&b Bisher bezahlt: $<bank_loan_paid>.'
+  - '&b Offener Betrag: $<bank_loan_left>.'
+  - '&b Zinsen: $<bank_loan_interest>.'
+  - '&b Darlehenszinsen in <bank_loan_interest_minutes> Minuten (<bank_loan_interest_seconds> Sekunden)'
+  - '&b Gesamter Rückzahlungswert: $<bank_loan_payback>'
+  - '&b Darlehenrückzahlung in <bank_loan_payback_minutes> Minuten (<bank_loan_payback_seconds> Sekunden)'
+  - '&b Du hast <bank_loan_deadline_days_formatted> Tage Zeit zurückzuzahlen.'
+  Info_Other:
+  - '&b Bank Kontostand: $<bank_money>.'
+  - '&b Bank exp: <bank_exp>, <bank_exp_level> Level.'
+  - '&b Geldzinsen in <bank_money_interest_minutes> Minuten (<bank_money_interest_seconds> Sekunden)'
+  - '&b Exp-Zinsen in <bank_exp_interest_minutes> Minuten (<bank_exp_interest_seconds> Sekunden)'
+  Info_Other_Loans:
+  - '&a Darlehen:'
+  - '&b Gesamtschuld: $<bank_loan_total>.'
+  - '&b Getilgt: $<bank_loan_paid>.'
+  - '&b Restschuld: $<bank_loan_left>.'
+  - '&b Zins: $<bank_loan_interest>.'
+  - '&b Darlehenszinsen in <bank_loan_interest_minutes> Minuten (<bank_loan_interest_seconds> Sekunden)'
+  - '&b Gesamte Rückzahlung: $<bank_loan_payback>.'
+  - '&b Rückzahlung der Darlehen in <bank_loan_payback_minutes> Minuten (<bank_loan_payback_seconds> Sekunden)'
+  - '&b <name> noch <bank_loan_deadline_days_formatted> Tage für die Rückzahlung Zeit.'
+  Item_Is_Blacklisted: '&b[Bank] &cGegenstand ist auf der schwarzen Liste.'
+  Loans_Unable_To_Take_Out: '&cDu kannst kein Darlehen aufnehmen.'
+  Loans_Unable_To_Amount: '&cDu kannst für <a> kein Darlehen aufnehmen.'
+  Loans_Interest_Gained: '&b[Bank] &cDeine Darlehen generierten $<a> an Zinsen.'
+  Loans_Request_Amount_Chat: '&b[Bank] &aGib im Chat die Menge ein, die du verlangen möchtest: '
+  Loans_Payback_Amount_Chat: '&b[Bank] &aGib im Chat die Menge ein, die du zahlen möchtest: '
+  Loans_Payback_Chat: '&b[Bank] &aDu hast bereits $<a> von deinem Darlehen getilgt und noch eine Restschuld von $<r>.'
+Global:
+  Minus: '&c-'
+  Add: '&a+'
+  Back: '&cZurück'
+  Back_Lore: '&cGeh zurück'
+  Entity_Name: '&aBankier'
+Choose:
+  Pin: '&bPin Optionen'
+  Pin_Lore: '&aKlicke um den Pin zu setzen/bearbeiten.'
+  Balance: '&bGuthaben: $<a>'
+  Balance_Lore: '&aKlicke um einzuzahlen/abzuheben.'
+  Bank: '&bItems'
+  Bank_Lore: '&aKlicke um Items anzusehen.'
+  Loans: '&bDarlehen'
+  Loans_Lore: '&aKlicke hier, um aktuelle Kredite aufzunehmen und anzuzeigen.'
+  Exp: '&b<a> exp'
+  Exp_Lore: '&aDeine momentane Menge an Erfahrungspunkten.'
+Loans:
+  Scroll_Up: '&bHochscrollen'
+  Scroll_Up_Lore: '&aBis ganz hoch scrollen.'
+  Scroll_Down: '&bRunterscrollen'
+  Scroll_Down_Lore: '&aBis nach unten scrollen.'
+  Take_Out_Loan: '&bDarlehen aufnehmen'
+  Take_Out_Loan_Lore: '&aKlicke um ein Darlehen aufzunehmen.'
+  View_Loans: '&bDarlehen ansehen'
+  View_Loans_Lore: '&aKlicke um aktive Darlehen anzusehen.'
+  Pay_Back_All: '&bAlle Darlehen tilgen'
+  Pay_Back_All_Lore: '&aKlicke um alle aktiven Darlehen zu tilgen.'
+  Take_Out_Confirm: '&bBestätige'
+  Take_Out_Confirm_Lore: '&aKlicke um Darlehen zu bestätigen.'
+  Take_Out_Amount: '&bHöhe: $<a>'
+  Take_Out_Amount_Lore_Max: '&aMaximale Darlehenshöhe: <a>'
+  Take_Out_Amount_Lore_Interest: '&aSteuersatz: <a>'
+  Take_Out_Amount_Lore_Minimum: '&aMinimum: <a>'
+  Take_Out_Amount_Lore_Fee: '&aGebühr: <a>'
+  Take_Out_Amount_Lore_Payback: '&aTilgung: <a>'
+  Take_Out_Amount_Lore_Deadline: '&aDeadline: <d> days'
+  View_Loan: '&bAnzahl: $<a>'
+  View_Loan_Lore_Admin_Info:
+  - '&7Benutzername: <name>'
+  - '&7UUID: <uuid>'
+  View_Loan_Lore_Interest: '&aZinssatz: <a>'
+  View_Loan_Lore_Original: '&aOriginal: <a>'
+  View_Loan_Lore_Created: '&aErstellt: <d>'
+  View_Loan_Lore_Deadline: '&aFrist: <d> Tage'
+  View_Loan_Lore_Payback: '&aRückzahlung: <a>'
+  View_Loan_Lore_Click: '&aKlicke zum Tilgen/Bearbeiten.'
+  View_Payback: '&bTilgung'
+  View_Payback_Lore: '&aEinen Teil des Darlehens tilgen.'
+  Payback_Custom: '&bIndividuelle Tilgung'
+  Payback_Custom_Lore: '&aKlicke um eine individuelle Tilgung zu erstellen.'
+  Sort: '&bSortiere: <sort>'
+  Sort_Lore: '&aKlicke um Sortierung zu ändern.'
+Pin:
+  Set: '&bDeinen Pin setzen'
+  Set_Lore: '&aKlicke um den Pin zu setzen.'
+  Remove: '&bDeinen Pin entfernen'
+  Remove_Lore: '&aKlicke um den Pin zu entfernen.'
+  Reset: '&cZurücksetzen'
+  Progress: '&b<i>/4'
+  Number: '&b<i>'
+Balance:
+  Balance_Lore: '&aDein momentaner Kontostand beträgt $$.'
+  Withdraw: '&bKlicke um abzuheben $.'
+  Withdraw_Lore: '&aGib die Menge, die du abheben möchtest, ein.'
+  Withdraw_All: '&bKlicke um alles abzuheben $.'
+  Withdraw_All_Lore: '&a$ abheben?'
+  Deposit: '&bKlicke um $ einzuzahlen.'
+  Deposit_Lore: '&aGib die Menge, die du einzahlen möchtest, ein.'
+  Deposit_All: '&bKlicke um alles einzuzahlen $.'
+  Deposit_All_Lore: '&a$ einzahlen?'
+  Cheque: '&bScheckbuch'
+  Cheque_Lore: '&aKlicke um ein Scheckbuch zu erhalten.'
+  Send_Other: '&bSende $ an einen anderen Spieler.'
+  Send_Other_Lore: '&aGib den Spieler ein, dem du $ senden möchtest, dann die Menge.'
+  Top_Format: '&b<pos>. <name>: &a$<a>'
+  Top_Blacklist_Add: '&a<name> / <uuid> zur schwarzen Liste hinzugefügt.'
+  Top_Blacklist_Remove: '&a<name> / <uuid> aus der schwarzen Liste entfernt.'
+Bank:
+  Tab: '&bTab <i>'
+  Tab_Change: '&9Rechtsklicken um das Item zu ändern.'
+  Tab_Current: '&aMomentan'
+  Tab_Items: '&9<i> Gegenstände'
+  Tab_Disabled: '&cDeaktiviert'
+  Tab_Locked: '&cGesperrt'
+  Tabs: '&bTabs'
+  Available_Tabs: '&aVerfügbare Tabs: <i>'
+  Buy_Tabs: '&aKlicke um mehr Tabs zu kaufen.'
+  Slots: '&bSlots'
+  Used_Slots: '&aVerwendete Slots: <i>'
+  Available_Slots: '&aVerfügbare Slots: <i>'
+  Total_Slots: '&aGesamte Slots: <i>'
+  Click_To_Buy: '&aKlicke um mehr Slots zu kaufen.'
+  Scroll_Up: '&bHochscrollen'
+  Scroll_Up_Lore: '&aBis ganz hoch scrollen.'
+  Scroll_Down: '&bRunterscrollen'
+  Scroll_Down_Lore: '&aBis nach unten scrollen.'
+  Sort: '&bDiesen Tab sortieren'
+  Sort_Lore: '&aOptionen für´s sortieren.'
+  Remove_Items: '&bVon diesem Tab entfernen'
+  Remove_Items_Lore: '&aItem-Optionen entfernen.'
+  Add_Items: '&bDiesem Tab hinzufügen.'
+  Add_Items_Lore: '&aItem-Optionen hinzufügen.'
+  Trashcan: '&cAbfalleimer'
+  Trashcan_Lore: '&cGegenstände werden zerstört.'
+Tabitempicker:
+  Scroll_Up: '&bHochscrollen'
+  Scroll_Up_Lore: '&aBis ganz hoch scrollen.'
+  Scroll_Down: '&bRunterscrollen'
+  Scroll_Down_Lore: '&aBis nach unten scrollen.'
+  Reset: '&cZurücksetzen'
+  Reset_Lore: '&cTab-Item zurücksetzen.'
+Slots:
+  Buy: '&bKaufe <i> für $<p>.'
+Tabs:
+  Buy: '&bKaufe <i> für $<p>.'
+Sort:
+  Alphabetically_Material: '&bSortiert das Material nach dem Alphabet.'
+  Alphabetically_Material_Lore: '&aSortiert den Tab nach dem Material der Items.'
+  Alphabetically_Name: '&bSortiert alphabetisch nach Itemnamen.'
+  Alphabetically_Name_Lore: '&aSortiert den Tab nach Itemnamen.'
+  Amount: '&bSortiert nach Itemmenge.'
+  Amount_Lore: '&aSortiert den Tab nach Itemmenge.'
+Add:
+  Inventory: '&bDem Inventar hinzufügen'
+  Inventory_Lore: '&aAlle Items zu deinem Inventar hinzufügen.'
+  Hotbar: '&bDer Hotbar hinzufügen'
+  Hotbar_Lore: '&aAlle Items in deine Hotbar hinzufügen.'
+  All: '&bAlles hinzufügen'
+  All_Lore: '&aAlle Items zu deinem Inventar hinzufügen.'
+Remove:
+  Hotbar: '&bVon Hotbar entfernen'
+  Hotbar_Lore: '&aEntfernt alle Items in deiner Hotbar.'
+  Inventory: '&bAus Inventar entfernen'
+  Inventory_Lore: '&aEntfernt alle Items in deinem Inventar.'
+  All: '&bAlles entfernen'
+  All_Lore: '&aEntfernt das gesamte Inventar.'
+Exp:
+  Exp_Lore: '&aKlicke um einzuzahlen/abzuheben.'
+  Withdraw: '&bKlicke um Exp abzuheben.'
+  Withdraw_Lore: '&aGib die Menge ein, die du abheben möchtest.'
+  Withdraw_All: '&bKlicke um alle EXP abzuheben.'
+  Withdraw_All_Lore: '&aAlle EXP abheben'
+  Deposit: '&bKlicke um EXP einzuzahlen.'
+  Deposit_Lore: '&aGib die Menge ein, die du einzahlen möchtest.'
+  Deposit_All: '&bKlicke um all deine EXP einzuzahlen.'
+  Deposit_All_Lore: '&aAlle EXP einzahlen'
+  Send_Other: '&bErfahrungspunkte an einen anderen Spieler schicken.'
+  Send_Other_Lore: '&aGib den Spielernamen ein, dem du die EXP schicken möchtest, danach die Menge.'
+Command:
+  Title_Format: '&7[&a<base>&b<args>&7]'
+  Commands_Format: '&f/&7<base>&b<args>'
+  Message_Format: '&7[&aBank&7] <message>'
+  Unknown_Format: '&cUnbekannter Befehl /<base><args>'
+  Unknown_Player: '&cUnbekannter Spieler <name>.'
+  No_Permission: '&cDu jast keine Berechtigung, diesen Befehl auszuführen.'
+  Admin_Removed: '&a<uuid> aus Dantenbank entfernt.'
+  Time: '&b-=-=-=-=-=[Bank Zeit]-=-=-=-=-'
+  Top: '&b-=-=-=-=-=[Bank Top]-=-=-=-=-'
+Money:
+  Million: Million
+  Billion: Billion
+  Trillion: Trillion
+  Quadrillion: Quadrillion
+  Quintillion: Quintillion
+  Sextillion: Sextillion
+  Septillion: Septillion
+  Octillion: Octillion
+  Nonillion: Nonillion
+  Decillion: Decillion
+  Undecillion: Undecillion
+  Duodecillion: Duodecillion
+  Tredecillion: Tredecillion
+  Quattuordecillion: Quattuordecillion
+  Quinquadecillion: Quinquadecillion
+  Sedecillion: Sedecillion
+  Septendecillion: Septendecillion
+  Octodecillion: Octodecillion
+  Novendecillion: Novendecillion
+  Vigintillion: Vigintillion
+  Unvigintillion: Unvigintillion
+  Duovigintillion: Duovigintillion
+  Tresvigintillion: Tresvigintillion
+  Quattuorvigintillion: Quattuorvigintillion
+  Quinquavigintillion: Quinquavigintillion
+  Sesvigintillion: Sesvigintillion
+  Septemvigintillion: Septemvigintillion
+  Octovigintillion: Octovigintillion
+  Novemvigintillion: Novemvigintillion
+  Trigintillion: Trigintillion
+  Untrigintillion: Untrigintillion
+  Duotrigintillion: Duotrigintillion
+  Trestrigintillion: Trestrigintillion
+  Quattuortrigintillion: Quattuortrigintillion
+  Quinquatrigintillion: Quinquatrigintillion
+  Sestrigintillion: Sestrigintillion
+  Septentrigintillion: Septentrigintillion
+  Octotrigintillion: Octotrigintillion
+  Noventrigintillion: Noventrigintillion
+  Quadragintillion: Quadragintillion
+Title:
+  Bank: '&bBank'
+  Admin: '&bBank - Admin'
+  Blacklist: '&bBank - Schwarze Liste'
+  Choose: '&bBank'
+  Sort: '&bBank'
+  Buy_Slots: '&bBank'
+  Buy_Tabs: '&bBank'
+  Add_Items: '&bBank'
+  Remove_Items: '&bBank'
+  Balance: '&bBank'
+  Exp: '&bBank'
+  Pin: '&bBank'
+  Pin_Set: '&bBank'
+  Pin_Options: '&bBank'
+  Tabitempicker: '&bBank'
+  Loans: '&bBank'
+  Trashcan: '&cAbfalleimer'
+Sign:
+  Text: '&2[Bank]'
