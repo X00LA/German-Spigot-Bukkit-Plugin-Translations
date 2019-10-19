@@ -1,0 +1,5 @@
+chances: 0.05
+only_in_beach_biome: false
+notify_on_shell_find: false
+shell_find_message: '&6Du hast eine Muschel gefunden!'
+find_needs_permission: false

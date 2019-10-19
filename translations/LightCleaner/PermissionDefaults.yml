@@ -1,0 +1,36 @@
+#> Below are the default permissions set for plugin 'LightCleaner'.
+#> These permissions are ignored if the permission is set for a group or player.
+#> Use the defaults as a base to keep the permissions file small
+#> Need help with this file? Please visit:
+#> http://dev.bukkit.org/server-mods/bkcommonlib/pages/general/permission-defaults/
+lightcleaner:
+  clean:
+    default: op
+    description: 'Ermöglicht einem Spieler, Beleuchtungsprobleme zu beheben. Alle 
+      Befehle erfordern diese Genehmigung.'
+    area:
+      default: op
+      description: 'Ermöglicht einem Spieler, Beleuchtungsprobleme in Chunks um 
+        ihn herum, in einem beliebigen Radius, zu beheben.'
+    world:
+      default: op
+      description: 'Ermöglicht einem Spieler, Beleuchtungsprobleme in allen Chunks, 
+        einer ganze Welt, zu beheben.'
+  status:
+    default: op
+    description: 'Ermöglicht einem Spieler, den Status der laufenden 
+      Beleuchtungsvorgänge zu überprüfen.'
+  abort:
+    default: op
+    description: 'Ermöglicht einem Spieler, alle aktuellen Beleuchtungsvorgänge 
+      abzubrechen.'
+  pause:
+    default: op
+    description: 'Ermöglicht einem Spieler, Beleuchtungsvorgänge anzuhalten und 
+      fortzusetzen.'
+  dirty:
+    debug:
+      default: false
+      description: 'Ermöglicht einem Spieler, die Beleuchtung zu beschädigen,
+        anstatt sie zu bereinigen (für Debugging-Zwecke)'
+

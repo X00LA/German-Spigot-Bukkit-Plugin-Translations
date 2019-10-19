@@ -1,0 +1,81 @@
+# showOffItems spawns a display item above each shop.
+# confirmTransactions shows the buyer a preview the transaction via a book GUI before committing to the purchase.
+# showBuyPrompt prompts the buyer to input the quantity they wish to buy in chat, instead of requiring them to use the /buy command.
+# shopBlocks contains blocks you allow to be used as shops. Only blocks that are a Nameable Container can be used as a shop.
+# Valid Material names can be found here https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# Block types that are Containers are listed as subinterfaces here (some are not Nameable, you can check by clicking the subinterface of interest) https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Container.html
+showOffItems: true
+showItemDetailsInActionBar: true
+useWorldWhitelist: false
+confirmTransactions: true
+useBuyPrompt: true
+alwaysShowBuyPrompt: true
+worldWhitelist:
+- mall
+shopBlocks:
+- CHEST
+- TRAPPED_CHEST
+- GRAY_SHULKER_BOX
+- LIGHT_GRAY_SHULKER_BOX
+- GREEN_SHULKER_BOX
+- BLUE_SHULKER_BOX
+- YELLOW_SHULKER_BOX
+- BLACK_SHULKER_BOX
+- RED_SHULKER_BOX
+- ORANGE_SHULKER_BOX
+- SHULKER_BOX
+- LIGHT_BLUE_SHULKER_BOX
+- PURPLE_SHULKER_BOX
+- BROWN_SHULKER_BOX
+- MAGENTA_SHULKER_BOX
+- WHITE_SHULKER_BOX
+- CYAN_SHULKER_BOX
+- LIME_SHULKER_BOX
+- PINK_SHULKER_BOX
+messages:
+  shopName: '&3Shop'
+  price: 'Preis:'
+  sales: 'Umsatz:'
+  saleInfo: '&d{0} &6zu &d{1}&6. &d{2} &6verfügbar.'
+  noPrice: '&4Dieser Shop ist noch nicht zum Verkauf geöffnet! &6Wenn du der Eigentümer 
+    bist, öffne diesen Shop mit &5/Setprice <Preis>&6.'
+  noStock: '&4Dieser Shop ist ausverkauft!'
+  noMoney: '&4Transaktion abgebrochen: Unzureichend &5/Money&4. &6Versuche es mit einer 
+    kleineren Menge erneut.'
+  noSpace: '&4Warnung&6: Möglicherweise verfügst du über nicht genügend Lagerplatz, um 
+    diesen Gegenstand zu lagern.'
+  noShopSelected: '&6Wähle einen Shop aus, indem du mit der linken Maustaste auf eine 
+    Truhe klickst.'
+  shopModified: '&4Transaktion abgebrochen: Shop wurde geändert. Bitte versuche es erneut.'
+  transactionCanceled: '&4Transaktion abgebrochen.'
+  transactionCompleted: '&5{0} {1} &6für &d{2} &6gekauft.'
+  transactionCompletedWindow: '&5{0} {1} &6für &d{2} &6gekauft.'
+  applyPrice: '&6Öffne den Shop, um deinen glänzenden neuen Preis anzuwenden, oder verwende 
+    &5/Setprice &6erneut, um abzubrechen.'
+  setPriceCanceled: '&5/Setprice &4abgebrochen'
+  priceApplied: '&6Preis auf &d{0} &6geändert.'
+  collectRevenue: '&d{0} &6aus Verkäufen von diesem Shop eingenommen.'
+  tooFar: '&4Du bist von diesem Shop zu weit weg.'
+  noShopThere: '&4Dieser Shop wurde bewegt oder zerstört.'
+  buyPrompt: '&8&l[&3Shop&8&l] &r&6Wie viele &5{0} &6möchtest du kaufen?'
+  TotalCost: '&6Für einen Gesamtpreis von &d{0}&6.'
+  currentBalanceAndCost: '&6Du hast derzeit &d{0} &6und nach der Bestätigung &d{1}&6.'
+  shopCommand: |
+    '&3Verkaufen:'
+    '&6Um einen Shop zu erstellen, lege alle Gegenstände des gleichen Typs in eine Truhe 
+      und lege mit &5/Setprice &6den Preis pro Gegenstand fest.'
+    '&6Stelle sicher, dass dein Shop vor Zugriff oder Zerstörung geschützt ist, um 
+      Diebstahl zu verhindern!'
+    '&3Kaufen:'
+    '&6Schlage auf einen Shop, um den Artikel anzuzeigen. Bewege den Mauszeiger im Chat 
+      darüber, um die Artikeldetails zu sehen.'
+    '&6Klicke auf die Nachricht. Mit &5/Buy&6, oder einem Doppelschlag auf den Shop, schließt 
+      du den Handel ab.'
+  Confirm: '&8&l[&2Bestätigen&8&l]&r'
+  Cancel: '&8&l[&2Abbrechen&8&l]&r'
+  buyCommandForConfirmationBook: /buy
+tips:
+  saleInfo: '&6Fahre mit dem Zeiger über die Nachricht für Artikeldetails. Klicke um 
+    zu kaufen.'
+  noStock: 'Wenn du der Besitzer bist, vergewissere dich, dass sich nur ein einziger 
+    Gegenstandstyp in der Truhe befindet.'

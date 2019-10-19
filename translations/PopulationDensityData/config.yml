@@ -1,0 +1,172 @@
+PopulationDensity:
+  NewPlayersSpawnInHomeRegion: true
+  RespawnInHomeRegion: true
+  CityWorldName: ''
+  AllowTeleportation: true
+  TeleportFromAnywhere: false
+  MaxDistanceFromSpawnToUseHomeRegion: 25
+  ManagedWorldName: world
+  DensityRatio: 1.0
+  MaxIdleMinutes: 10
+  LoginQueueEnabled: true
+  ReservedSlotsForAdministrators: 1
+  LoginQueueMessage: '%queuePosition% von %queueLength% in der Warteschlange. 
+    Stelle die Verbindung innerhalb von 3 Minuten wieder her, 
+    um deinen Platz zu behalten..  :)'
+  HoursBetweenScans: 6
+  BuildRegionPosts: true
+  NewestRegionRequiresPermission: false
+  GrassRegrows: true
+  AnimalsRespawn: true
+  TreesRegrow: true
+  Max Monsters Nearby For More To Spawn: 2
+  ThinOvercrowdedAnimalsAndMonsters: true
+  ThinOvercrowdedIronGolems: false
+  Abandoned Farm Animals Die: true
+  Unused Minecarts Vanish: true
+  MarkRemovedAnimalLocationsWithShrubs: true
+  Remove Wild Skeletal Horses: true
+  Disable Monster Grinders When Lagging: true
+  Maximum Hoppers Per Chunk: 10
+  Boot Idle Players When Lagging: true
+  Capture Spigot Timings When Lagging: false
+  KeepSpawnRegionPostLoaded: true
+  KeepAllRegionPostsLoaded: false
+  LaunchAndDropPlayers: true
+  LaunchAndDropNewPlayers: true
+  TeleportAnimals: true
+  MinimumRegionPostY: 62
+  PreciseWorldSpawn: false
+  MinimumWoodAvailableToPlaceNewPlayers: 200
+  MinimumResourceScoreToPlaceNewPlayers: 200
+  PostProtectionDistance: 2
+  Maximum Region Name Length: 10
+  PostDesign:
+    TopBlock: GLOWSTONE
+    MidTopBlock: GLOWSTONE
+    MidBottomBlock: GLOWSTONE
+    BottomBlock: GLOWSTONE
+    PlatformOuterRing: STONE_BRICKS
+    PlatformInnerRing: STONE_BRICKS
+  Region Name List:
+  - redstone
+  - tau
+  - creeper
+  - schwert
+  - winterland
+  - fjord
+  - vista
+  - briese
+  - tide
+  - strom
+  - glenwood
+  - reise
+  - felsenstein
+  - spitzhacke
+  - axt
+  - hammer
+  - amboss
+  - nebel
+  - sonnenaufgang
+  - sonnenuntergang
+  - kupfer
+  - kohle
+  - schaufel
+  - minenwagen
+  - eisenbahn
+  - graben
+  - kluft
+  - basalt
+  - achat
+  - boot
+  - gras
+  - 'böen'
+  - rubin
+  - smaragd
+  - stein
+  - gipfel
+  - erz
+  - felsbrocken
+  - hügel
+  - horizont
+  - nebel
+  - wolke
+  - himmel
+  - schotter
+  - fackel
+  - obsidian
+  - baumspitze
+  - sturm
+  - gold
+  - zelt
+  - blatt
+  - gipfel
+  - lichtung
+  - pfad
+  - samen
+  - diamant
+  - 'rüstung'
+  - sand
+  - feuerstein
+  - feld
+  - stahl
+  - helm
+  - schlucht
+  - lagerfeuer
+  - werkstatt
+  - schutt
+  - eisen
+  - 'meißel'
+  - mond
+  - strauch
+  - zombie
+  - stengel
+  - tal
+  - 'kürbis'
+  - laterne
+  - kupfer
+  - mondschein
+  - erde
+  - staub
+  Signs:
+    Top:
+    - ''
+    - '%regionName%'
+    - Region
+    - ''
+    Side:
+    - <--
+    - '%regionName%'
+    - Region
+    - <--
+    Instructions:
+    - Teleportiere
+    - Von Hier!
+    - Shlage für
+    - Instruktionen
+  CustomSigns:
+    Main:
+    - ''
+    - Population
+    - Density
+    - ''
+    North:
+    - ''
+    - ''
+    - ''
+    - ''
+    South:
+    - ''
+    - ''
+    - ''
+    - ''
+    East:
+    - ''
+    - ''
+    - ''
+    - ''
+    West:
+    - ''
+    - ''
+    - ''
+    - ''

@@ -1,0 +1,93 @@
+# ServerListPlus v3.5.0-SNAPSHOT - https://git.io/slp
+# More information is available in the wiki: https://git.io/slp-wiki
+
+
+# This is the section where you can customize your server status ping!
+#  - Default is the section for the status used when the player name is unknown.
+#    Personalized is used if the client has already joined the server once.
+#    Use %player% as placeholder for the player's name.
+# 
+# Features:
+#  - Description (MotD): A short status message for your server, max. 2 lines.
+#  - Players:
+#    - Hover: The player hover message that is displayed if you hover the player count.
+#    - Slots: Custom player slot formatting, see http://git.io/slp-slots
+#  - Favicon:
+#    - Use multiple server icons or the player's head as favicon, see http://git.io/oMhJlg
+#    - Possible favicon sources: Files, Folders, URLs, Heads, Helms, Encoded
+# 
+#  More features are explained in the Wiki: http://git.io/slp-config
+# 
+# Usage:
+#  - Add multiple entries for random messages.
+#  - Save the file with valid UTF-8 encoding for special characters.
+#  - Available placeholders:
+#    - Player name: %player%
+#    - Player count: %online%, %max%, %online@server% %online@world%
+#    - Random online player name: %random_player%
+#    - Ban reason: %ban_reason%
+#    - Ban operator: %ban_operator%
+#    - Ban experiation date: %ban_expiration_date%, %ban_expiration_datetime%
+--- !Status
+Default:
+  Description:
+  - |-
+    &aEin Minecraft Server.
+    &7Jetzt mit [&a&lPvP&7], [&a&lMinigames&7], und vielem mehr!
+  - |-
+    &aEin Minecraft Server.
+    &eWir haben unseren Server auf &lMinecraft 1.14.4&e aktualisiert!
+  Players:
+    Hover:
+    - |-
+      &aWillkommen auf einem &l Minecraft Server&a!
+      &aDerzeit spielen &e&l%online% &aSpieler auf unserem Server!
+Personalized:
+  Description:
+  - |-
+    &aEin Minecraft Netzwerk. &7|  &eHallo, &l%player%!
+    &7Jetzt mit [&a&lPvP&7], [&a&lMinigames&7], und vielem mehr!
+  - |-
+    &aEin Minecraft Netzwerk. &7|  &eHallo, &l%player%!
+    &eWir haben unseren Server auf &lMinecraft 1.14.4&e aktualisiert!
+  Players:
+    Hover:
+    - |-
+      &aWillkommen zurück, &l%player%&a!
+      &aDerzeit spielen &e&l%online% &aSpieler auf unserem Server!
+
+# Stats: Enable/disable sending plugin statistics.
+# PlayerTracking: Enable/disable tracking of player names to their IP-Addresses.
+#   - Persistence can be disabled with the toggle in the Storage section.
+# Samples: Toggle using multiple player infos for the player hover message.
+#     May prevent the annoying ... and x more ... message for bigger servers
+#     DynamicPlayers is special and aligns the number with the number of
+#     random players used in placeholders.
+# Unknown: Placeholder replacement if the real value is unknown.
+# Favicon: Options for the creation / downloading of favicons:
+#  - RecursiveFolderSearch: Also search for favicons in sub directories.
+#  - SkinSource: The URL to get the Minecraft Skins from. (%s -> player name)
+#  - ResizeStrategy: The strategy used to resize too small or too big favicons.
+#      NONE (keep them as is, will probably fail), SCALE (scale them to the correct size)
+--- !Plugin
+Stats: true
+PlayerTracking:
+  Enabled: true
+  Storage: !JSONStorage
+    Enabled: true
+    SaveDelay: 5m
+Samples:
+  Multiple: false
+  DynamicPlayers: false
+Unknown:
+  PlayerName: player
+  PlayerCount: ???
+  Date: ???
+  BanReason: some reason
+  BanOperator: somebody
+  BanExpirationDate: never
+Favicon:
+  Timeout: 10s
+  RecursiveFolderSearch: false
+  ResizeStrategy: SCALE
+

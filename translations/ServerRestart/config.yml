@@ -1,0 +1,39 @@
+# Run at 04:20:00 every day.
+schedule:
+- "0 20 4 * * ?"
+
+# Actions to execute N seconds before restart.
+# All fiels are optional, you can choose what do you want at each step.
+# Available fields:
+# - chat [MESSAGE]
+# - title [TITLE :: SUBTITLE :: FADE_IN_TICKS :: STAY_TICKS :: FADE_OUT_TICKS]
+# - sound [SOUND_NAME]
+# - command [CONSOLE_COMMAND]
+actions:
+  60:
+  - "chat | §7[§eServer§7] §eServerneustart in §c1 Minute!"
+  30:
+  - "chat | §7[§eServer§7] §eServerneustart in §c30 Sekunden!"
+  - "title | §c-= §8[§eRestart§8] §c=- :: §7Noch 30 Sekunden :: 40 40 40"
+  5:
+  - "chat | §7[§eServer§7] eServerneustart in §c5 Sekunden!"
+  - "title | §c-= §8[§eRestart§8] §c=- :: §7Noch 5 Sekunden :: 15 40 1"
+  - "sound | UI_BUTTON_CLICK"
+  4:
+  - "chat | §7[§eServer§7] eServerneustart in §c4 Sekunden!"
+  - "title | §c-= §8[§eRestart§8] §c=- :: §7Noch 4 Sekunden :: 15 40 1"
+  - "sound | UI_BUTTON_CLICK"
+  3:
+  - "chat | §7[§eServer§7] eServerneustart in §c3 Sekunden!"
+  - "title | §c-= §8[§eRestart§8] §c=- :: §7Noch 3 Sekunden :: 15 40 1"
+  - "sound | UI_BUTTON_CLICK"
+  2:
+  - "chat | §7[§eServer§7] eServerneustart in §c2 Sekunden!"
+  - "title | §c-= §8[§eRestart§8] §c=- :: §7Noch 2 Sekunden :: 15 40 1"
+  - "sound | UI_BUTTON_CLICK"
+  1:
+  - "chat | §7[§eServer§7] eServerneustart in §c1 Sekunde!"
+  - "title | §c-= §8[§eRestart§8] §c=- :: §7Noch 1 Sekunde :: 15 40 1"
+  - "sound | UI_BUTTON_CLICK"  
+  0:
+  - "command | restart"

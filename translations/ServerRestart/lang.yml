@@ -1,0 +1,13 @@
+command._def.no-permission: "§4Du hast nicht die Berechtigung diesen Befehl zu verwenden."
+command.srt.help: |-
+  "§8§l[§6ServerRestart§8§l]§r §5/srt §6..."
+      "§5check §6- Nächste geplante Zeit anzeigen."
+      "§5reload §6- Plugin Konfiguration neu laden."
+      "§5skip §6- Nächste geplante Zeit überspringen."
+      "§5frestart [seconds] §6- Neustart des Servers erzwingen."
+command.srt.check.info: "§8§l[§3Server§8§l]§r §6Nächster Neustart: §d{time}"
+command.srt.reload.info: "§8§l[§3Server§8§l]§r §6Konfiguration neu geladen!"
+command.srt.skip.info: "§8§l[§3Server§8§l]§r §6Nächsten Neustart übersprungen: §d{time}"
+command.srt.frestart.invalid-seconds: "§8§l[§3Server§8§l]§r §4Argument §d`Sekunden`\n
+  §4 sollte eine Nummer sein §d>= 0§4!"
+command.srt.frestart.info: "§8§l[§3Server§8§l]§r §6Erzwinge Neustart: §d{time}"

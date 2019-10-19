@@ -1,0 +1,15 @@
+#> Below are the localization nodes set for plugin 'LightCleaner'.
+#> For colors, use the & character followed up by 0 - F
+#> Need help with this file? Please visit:
+#> http://dev.bukkit.org/server-mods/bkcommonlib/pages/general/localization/
+commands:
+  cleanlight:
+    description: 'Bereinigt fehlerhafte Beleuchtung in Blöcken oder ganzen Welten.'
+    usage:
+    - /cleanlight
+    - /cleanlight [chunk_radius]
+    - /cleanlight world [world_name]
+    - /cleanlight abort
+    - /cleanlight status
+    - ''
+

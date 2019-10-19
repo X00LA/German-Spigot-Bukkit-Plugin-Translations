@@ -1,0 +1,127 @@
+Messages:
+  NoManagedWorld:
+    Text: '&4Das PopulationDensity-Plugin wurde nicht richtig konfiguriert.  Bitte 
+      aktualisiere deine &5config.yml um eine zu verwaltende Welt anzugeben.'
+  NoBreakPost:
+    Text: '&4Du kannst keine Blöcke, in der Nähe des Regionspfostens nicht 
+      zerstören.'
+  NoBreakSpawn:
+    Text: '&4Du kannst keine Blöcke so nahe an einem Spawnpunkt eines Spielers 
+      zerstören.'
+  NoBuildPost:
+    Text: '&4Du kannst keine Blöcke in der Nähe des Regionspfostens platzieren.'
+  NoBuildSpawn:
+    Text: '&4Du kannst keine Blöcke in der Nähe eines Spawnpunkts platzieren.'
+  BuildingAwayFromHome:
+    Text: '&6Du baust außerhalb deiner Heimatregion. Wenn du diese Region zu 
+      deinem neuen Zuhause machen möchtest, damit du später wieder hierher 
+      zurückkehren kannst, verwende: &5/MoveIn'
+  NoTeleportThisWorld:
+    Text: '&4Du kannst dich nicht von dieser Welt teleportieren.'
+  OnlyHomeCityHere:
+    Text: '&6Du bist hier auf &5/HomeRegion &6und &5/CityRegion &6beschränkt.'
+  NoTeleportHere:
+    Text: '&cEntschuldigung, du kannst dich von hier aus nicht teleportieren.'
+  NotCloseToPost:
+    Text: '&cDu bist nicht nah genug an einem Regionspfosten, um dich zu 
+      teleportieren.'
+  InvitationNeeded:
+    Text: '&4{0} &6lebt in der Wildnis. Er oder sie muss dich &5/invite&6 (einladen).'
+    Notes: '0: target player'
+  VisitConfirmation:
+    Text: '&6Zu &4{0}'s &6Heimregion teleportiert.'
+    Notes: '0: target player'
+  DestinationNotFound:
+    Text: '&cEs gibt keine Region oder einen Online-Player mit dem Namen &4"{0}"&c. 
+      Verwende &5/ListRegions&c, um mögliche Ziele aufzulisten.'
+    Notes: '0: specified destination'
+  NeedNewestRegionPermission:
+    Text: '&4Du hast nicht die Berechtigung diesen Befehl zu verwenden.'
+  NewestRegionConfirmation:
+    Text: '&6Zum aktuellen, neuen, Spielerbereich teleportiert.'
+  NotInRegion:
+    Text: '&cDu bist in keiner Region.'
+  UnnamedRegion:
+    Text: '&6Du bist in der Wildnis! Diese Region hat keinen Namen.'
+  WhichRegion:
+    Text: '&6Du befindest dich in der &b{0} Region&6.'
+  RegionNamesNoSpaces:
+    Text: '&4Regionsnamen dürfen keine Leerzeichen enthalten.'
+  RegionNameConflict:
+    Text: '&4Es gibt bereits eine Region mit diesem Namen.'
+  NoMoreRegions:
+    Text: 'Entschuldigung, du bist in der einzigen Region. Mit der Zeit werden sich 
+      weitere Regionen öffnen.'
+  InviteAlreadySent:
+    Text: '&4{0} &6kann jetzt &5/Visit &4{1} &6verwenden, um sich zu deinem 
+      Heimatpfosten zu teleportieren.'
+    Notes: '0: invitee''s name, 1: inviter''s name'
+  InviteConfirmation:
+    Text: '&4{0} &6kann jetzt &5/Visit &4{1} &6verwenden, um sich zu deinem 
+      Heimatpfosten zu teleportieren.'
+    Notes: '0: invitee''s name, 1: inviter''s name'
+  InviteNotification:
+    Text: '&4{0} &6hat dich zu einem Besuch eingeladen!'
+    Notes: '0: inviter''s name'
+  InviteInstruction:
+    Text: '&6Benutze &5/Visit &4{0}&6, um dich dorthin zu teleportieren.'
+    Notes: '0: inviter''s name'
+  PlayerNotFound:
+    Text: '&cDerzeit ist kein Spieler mit dem Namen &4"{0}" &conline.'
+    Notes: '0: specified name'
+  SetHomeConfirmation:
+    Text: '&6Heimat auf den nächstgelegenen Regionspfosten gesetzt!'
+  SetHomeInstruction1:
+    Text: '&6Verwende &5/Home &6von einem beliebigen Regionspfosten, um dich zu 
+      deinem Heimatpfosten zu teleportieren.'
+  SetHomeInstruction2:
+    Text: '&6Verwende &5/Invite&6, um andere Spieler einzuladen, sich zu deinem 
+      Heimatpfosten zu teleportieren.'
+  AddRegionConfirmation:
+    Text: '&6Verwende &5/Invite&6, um andere Spieler zum Teleportieren in eine neue 
+      Region einzuladen und einen Ressourcenscan zu starten. Weitere Informationen 
+      findest du in den Konsolen- oder Serverprotokollen.'
+  ScanStartConfirmation:
+    Text: '&2Scan gestartet. &6Überprüfe die Konsolen- oder Serverprotokolle auf 
+      Ergebnisse.'
+  LoginPriorityCheck:
+    Text: '&6Anmeldepriorität von &4{0}&6: &d{1}'
+    Notes: '0: player name, 1: current priority'
+  LoginPriorityUpdate:
+    Text: '&6Priorität von &4{0} &6auf &d{1} &6festgelegt.'
+    Notes: '0: target player, 1: new priority'
+  ThinningConfirmation:
+    Text: '&6Ausdünnung läuft. Überprüfe die Protokolle auf detaillierte Ergebnisse.'
+  PerformanceScore:
+    Text: '&6Der aktuelle Serverleistungswert beträgt &d{0}&6%.'
+    Notes: '0: performance score'
+  PerformanceScore_Lag:
+    Text: 'Der Server arbeitet aktiv an der Reduzierung der Laggs - bitte hab etwas 
+      Geduld, während die automatische Verzögerungsreduzierung wirksam wird.'
+  PerformanceScore_NoLag:
+    Text: '&6Der Server läuft mit normaler Geschwindigkeit. Wenn du Laggs feststellst, 
+      überprüfe deine Grafikeinstellungen und die Internetverbindung.'
+  PlayerMoved:
+    Text: '&6Spieler ist umgezogen.'
+  HelpMessage1:
+    Text: '&3Hilfe und Befehle zu Regionspfosten:&r {0}'
+    Notes: '0: Help URL'
+  RegionNameLength:
+    Text: '&6Regionsnamen dürfen höchstens /d{0} &6Buchstaben lang sein.'
+    Notes: '0: maximum length specified in config.yml'
+  Lag:
+    Text: '&4Lagg'
+  RegionNamesOnlyLettersAndNumbers:
+    Text: '&4Regionsnamen dürfen keine Symbole oder Satzzeichen enthalten.'
+  RegionAlreadyNamed:
+    Text: '&4Diese Region hat bereits einen Namen. Verwende &5/RenameRegion &4zum 
+      Umbenennen.'
+  HopperLimitReached:
+    Text: '&6Um Server-Laggs zu vermeiden, sind die Hopper auf &d{0} &6pro Block 
+      begrenzt.'
+    Notes: '0: maximum hoppers per chunk'
+  OutsideWorldBorder:
+    Text: 'Die Region, in die du dich teleportieren möchtest, befindet sich außerhalb 
+      der Weltgrenze.'
+  Wilderness:
+    Text: Wilderness
