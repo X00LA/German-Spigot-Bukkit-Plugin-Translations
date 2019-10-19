@@ -1,4 +1,4 @@
-[![Discord](https://discordapp.com/api/guilds/240072919722622977/widget.png)](https://discord.gg/JKJU3Zd)		***[Donate a cup of coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QF69JHHKBYV9A)***
+[![Discord](https://discordapp.com/api/guilds/634014335542231058/widget.png)](https://discord.gg/5XN9BUc)		***[Donate a cup of coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QF69JHHKBYV9A)***
 
 # German-Spigot/Bukkit-Plugin-Translations
 
@@ -48,3 +48,21 @@ Als kleinen Bonus gibt es eine vorgefüllte bannedWords.txt dazu, welche Schimpf
 Weitere Plugins werden folgen und die vorhandenen werden natürlich auf dem Laufenden gehalten.  
   
 Hast du ein Plugin, welches du gerne übersetzt haben willst, oder bist du selbst Developer eines Plugins, dann erstelle ein Ticket mit der Anfrage und wir werden sehen, was ich tun kann.  
+  
+  
+# KOSTENLOSE VS. PREMIUM PLUGINS
+  
+# Für die Übersetzung von kostenlosen Pkugins werde ich nie etwas verlangen. Kann aber auch nicht garantieren, dass die Übersetzung immer auf dem letzten Stand ist.  
+# Für Premium Plugins verlange ich freien Zugang zum Plugin für mich selbst. So lange ich Zugang zum Plugin habe, werde ich die Übersetzung auf dem neuesten Stand halten.
+  
+   
+# Want your plugin to be translated  
+  
+You want your plugin translated into german and want it to be handmade and not with Google Translator?  
+I'm your man!  
+Open a ticket with your plugin(s) you wish to be translated and we will see what I can do for you.  
+  
+  
+# FREE VS. PREMIUM PLUGINS
+# There will be never any charges for translations of free plugins. No guarantee to keep the translation always up to date.  
+# For premium plugins I charge free access to the plugin for myself. As long as I have access, I will always keep the translation up to date.  
