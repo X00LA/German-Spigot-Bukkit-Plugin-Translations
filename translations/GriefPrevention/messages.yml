@@ -1,6 +1,10 @@
 # Use a YAML editor like NotepadPlusPlus to edit this file.  
 # After editing, back up your changes before reloading the server in case you made a syntax error.  
 # Use dollar signs ($) for formatting codes, which are documented here: http://minecraft.gamepedia.com/Formatting_codes
+#########################
+# Last Edit: 2019/19/10 #
+# Translated by X00LA   #
+#########################
 Messages:
   RespectingClaims:
     Text: Claims werden respektiert.
@@ -565,6 +569,5 @@ Messages:
   SubclaimUnrestricted:
     Text: Die Berechtigungen dieses Subclaims werden nun vom übergeordneten Claim übernommen.
   NetherPortalTrapDetectionMessage:
-    Text: Es sieht so aus, als ob du in einem Netherportal fest steckst.
-    Wir werden dich in wenigen Sekunden retten, wenn dies der Fall ist!
+    Text: Es sieht so aus, als ob du in einem Netherportal fest steckst. Wir werden dich in wenigen Sekunden retten, wenn dies der Fall ist!
     Notes: Wird beim Beitritt an den Spieler gesendet, wenn er sich in einem Netherportal befindet.
