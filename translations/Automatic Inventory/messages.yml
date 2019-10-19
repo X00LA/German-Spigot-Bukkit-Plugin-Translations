@@ -1,0 +1,36 @@
+# Use a YAML editor like NotepadPlusPlus to edit this file.  
+# After editing, back up your changes before reloading the server in case you made a syntax error.  
+# Use ampersands (&) for formatting codes, which are documented here: http://minecraft.gamepedia.com/Formatting_codes
+Messages:
+  AutoSortHelp:
+    Text: '&6Optionen sind &a/AutoSort Chests &6und &a/AutoSort Inventory&6.'
+  NoPermissionForFeature:
+    Text: '&4Du hast keine Berechtigung, diese Funktion zu verwenden.'
+  ChestSortEnabled:
+    Text: '&aAb jetzt werden alle, von dir benutzten Truhen, automatisch sortiert.'
+  ChestSortDisabled:
+    Text: '&cDas automatische Sortieren deiner Truhen wurde gestoppt.'
+  InventorySortEnabled:
+    Text: '&aAb jetzt wird dein persönliches Inventar automatisch sortiert.'
+  InventorySortDisabled:
+    Text: "&cDie automatische Sortierung deines persönlichen Inventars wurde gestoppt."
+  AutoRefillEducation:
+    Text: '&6Automatic Inventory ersetzt defekte Werkzeuge und verbrauchte Stapel aus deiner HotBar automatisch mit Ersatz aus deinem Inventar.'
+  InventorySortEducation:
+    Text: '&6Automatic Inventory hält dein Inventar sortiert. Willst du es jedoch deaktivieren, verwende: &a/AutoSort'
+  ChestSortEducation3:
+    Text: '&6Automatic Inventory hält den Inhalt der Truhen, auf welche du zugreifst, sortiert.  Verwende &a/AutoSort &6zum Umschalten. &d&lTIPP&6: Willst ein paar Truhen sortiert, andere aber nicht? Truhen, welche im Namen ein &5*&6 haben, werden nicht automatisch sortiert. Du kannst jede Truhe, mithilfe eines Ambosses, umbenennen.'
+  SuccessfulDeposit2:
+    Text: '&2&l{0} &6Gegenstände abgelegt.'
+  FailedDepositNoMatch:
+    Text: '&4Keine Gegenstände abgelegt - keiner deiner Inventargegenstände entspricht den Gegenständen in dieser Truhe.'
+  FailedDepositChestFull2:
+    Text: '&4Diese Truhe ist voll!'
+  SuccessfulDepositAll2:
+    Text: '&2&l{0} &6Gegenstände in nahegelegene Truhen abgelegt.'
+  ChestLidBlocked:
+    Text: '&4Diese Truhe ist nicht zugänglich.'
+  DepositAllAdvertisement:
+    Text: '&d&lTIPP&6: Lege augenblicklich alle Gegenstände aus deinem Inventar in die naheliegenden Truhe(n) mit: &a/DepositAll'
+  QuickDepositAdvertisement3:
+    Text: '&d&lTIPP&6: Willst du schnell etwas aus deiner Hotbar ablegen? Wähle einfach eine bestimmte Truhe und schleiche (halte die Umschalttaste gedrückt), während du sie schlägst.'

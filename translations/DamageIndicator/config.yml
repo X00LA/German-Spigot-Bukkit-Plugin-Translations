@@ -1,0 +1,80 @@
+# DamageIndicator Reborn, Minecraft plugin to show the damage taken by a entity
+# Source Code: https://github.com/Beelzebu/DamageIndicator
+# Issue Tracker: https://github.com/Beelzebu/DamageIndicator/issues
+
+# Config version, don't edit
+version: 4
+
+# Damage Indicator options, here you can define in what type of entities we
+# should show the damage indicators and completely disable this feature.
+Damage Indicator:
+  Enabled: true
+  Player: true
+  Monster: true
+  Animals: true
+  # Use %health% for the regain health you get
+  # Use %damage% for the damage you get
+  Format:
+    EntityRegain: '&2&l+%health%'
+    EntityDamage: '&4&l-%damage%'
+    # Here you define the decimal format for the damage and health
+    # See https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html
+    # for more information.
+    Decimal: '#,##'
+  # Distance in Y axis from the entity where we should spawn the damage indicator
+  # A distance of 2 is recommended for 1.8 servers
+  Distance: 2.0
+  # List of disabled entity types that shouldn't spawn damage indicators
+  # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+  # for all possible entities.
+  Disabled Entities:
+  #- GHAST
+  #- ZOMBIE
+  #- IRON_GOLEM
+  # List of spawn reasons that we must listen and mark entities so they won't spawn
+  # damage indicators.
+  # See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+  # for all possible spawn reasons.
+  Disabled Spawn Reasons:
+  - SPAWNER
+  # List of damage causes that we must ignore for damage indicators.
+  # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  # for all possible damage causes.
+  Disabled Damage Causes:
+  #- SUICIDE
+  # Enable or disable damage indicators for players who are sneaking, it is recommended to disable for PvP servers.
+  # true: damage indicators are shown even if you're sneaking.
+  # false: damage indicators aren't shown when you're sneaking.
+  Sneaking: true
+
+# Blood options, here you can configure this feature.
+Blood:
+  Enabled: false
+  Player: false
+  Monster: false
+  Animals: false
+  # List of disabled entity types that shouldn't bleed.
+  # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+  # for all possible entities.
+  Disabled Entities:
+  #- ZOMBIE
+  #- SKELETON
+  # List of spawn reasons that we must listen and mark entities so they won't bleed.
+  # See https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+  # for all possible spawn reasons.
+  Disabled Spawn Reasons:
+  - SPAWNER
+  # List of damage causes that we must ignore for blood.
+  # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  # for all possible damage causes.
+  Disabled Damage Causes:
+  #- DROWNING
+  # Enable or disable blood particles for players who are sneaking.
+  # true: blood particles are shown even if you're sneaking.
+  # false: blood particles aren't shown when you're sneaking.
+  Sneaking: true
+
+Messages:
+  Damage Indicator:
+    Enabled: '&6Deine Schadensanzeige wurde &aaktiviert&6.'
+    Disabled: '&6Deine Schadensanzeige wurde &cdeaktiviert&6.'

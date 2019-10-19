@@ -1,0 +1,120 @@
+# BetterRealism PRO by Cobwebster
+# Thank you for supporting my plugin!
+# Config explanation is on the dev page, it'll provide more info on each section.
+# Do not touch the version number
+Version: 15
+Worlds:
+  Enabled: true
+  WorldNames:
+   - Ascavaria
+   - Ascavaria_nether
+   - Ascavaria_the_end
+FrostBite:
+  Enabled: true
+  Effect: SLOW
+  Time: 60
+  Boost: 1
+  Biomes:
+   - ICE_FLATS
+   - ICE_MOUNTAINS
+   - FROZEN_RIVER
+   - FROZEN_OCEAN
+   - DEEP_OCEAN
+   - OCEAN
+RealisticLeaves:
+  Enabled: true
+  BirdEggs: true
+DirtTrails:
+  Enabled: false
+Realism:
+  RealisticSpider: true
+  SpiderWebsTime: 20
+  HotFurnace: true
+  BetterStone: true
+  BetterStoneYLvL: 15
+Recipes:
+  IronHorseA: true
+  GoldHorseA: true
+  DiamondHorseA: true
+  Saddle: true
+  StickPlank: false
+  Cobwebs: false
+  Nametags: true
+  BandageRecipe: true
+  DivingHelmets: true
+  LeatherFurnace: true
+DivingHelmet:
+  WaterBreathTime: 10650
+  NightVisionTime: 10650
+  ExtraClay: true
+  Name: "Taucherbrille"
+  Lore1: "Rechtsklick"
+  Lore2: "zum Verwenden"
+RealisticDrops:
+  DragonDrops: true
+  EmeraldVillagers: true
+  ChickenDrops: true
+  CowHeads: false
+  SheepHeads: false
+MobBones:
+  Mobs:
+  - COW
+  - CREEPER
+  - CHICKEN
+  - VILLAGER
+  - ZOMBIE
+  Enabled: true
+RealisticHunger:
+  Enabled: false
+  HungerRequirement: 5
+  Effect: CONFUSION
+  Time: 60
+  Boost: 1
+RealisticPunching:
+  Enabled: true
+  PunchSound: ENTITY_PLAYER_HURT
+  Blocks:
+   - STONE
+   - BEDROCK
+   - ANVIL
+   - ENCHANTMENT_TABLE
+   - OBSIDIAN
+   - FURNACE
+   - CACTUS
+Mechanics:
+  throwableTNT: false
+  EnderPearlRider: false
+  InkSquids: true
+  HeatStroke: true
+  HS-Effect: CONFUSION
+  HS-Time: 30
+  HS-Boost: 1
+  SugarRush: true
+  SugaryFoods:
+   - COOKIE
+   - PUMPKIN_PIE
+  HoeSeeds: true
+DeathBones:
+  Enabled: true
+  Skull: true
+  Blood: true
+Sounds:
+  ItemDrop: "ENTITY_ITEM_PICKUP"
+  FurnaceExtract: "BLOCK_ANVIL_USE"
+  BedLeave: "ENTITY_CHICKEN_EGG"
+  BedEnter: "ENTITY_CHICKEN_EGG"
+Language:
+  SkullFormat: "&4%player%'s &6Schädel. "
+  LegFormat: "&4%player%'s &6Bein. "
+  ArmFormat: "&4%player%'s Arm. "
+  RibCageFormat: "&4%player%'s Brustkorb. "
+  Reload: "&2Better Realism Pro neu geladen!"
+  MissingPerm: "&4Du hast nicht die Berechtigung dies zu tun."
+  PunchDamage: "&6Du hast dir deine Hand verletzt!"
+  FrostBite: "&9Dir wird langsam kalt!"
+  DivingHelmBreak: "&4Deine Taucherbrille ist kaputt!"
+  DivingHelmMove: "&6Du hast die Taucherbrille fallen lassen."
+  DivingHelmetsEffectWarn: "&6Bitte warte, bis die Effekte nachlassen."
+  BoneFormat: "&b%mob% Knochen"
+  SquidBlindMsg: "&4Ein Tintenfisch hat dich mit Tinte geblendet!"
+  StickDrop: "&bAst"

@@ -1,0 +1,6 @@
+permission_error: '&Dir fehlt die benötigte Berechtigung!'
+toggle_drops_on: '&63D Drops wurden &aaktiviert&6.'
+toggle_drops_off: '&63D Drops wurden &cdeaktiviert&6.'
+toggle_nametags_on: '&6Namensschilder wurden &aaktiviert&6. Ab jetzt kannst du die Gegenstandsnamen über den Gegenständen sehen.'
+toggle_nametags_off: '&6Namensschilder wurden &cdeaktiviert&6. Ab jetzt kannst du keine Gegenstandsnamen über den Gegenständen mehr sehen.'
+rejoin: '&6Möglicherweise musst du dich neu einloggen, damit der Effekt wirksam wird.'

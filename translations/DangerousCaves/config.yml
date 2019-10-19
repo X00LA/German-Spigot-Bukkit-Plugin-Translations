@@ -1,0 +1,269 @@
+'Enable Cave-Ins ': true
+'Enable Hungering Darkness ': true
+'Enable Ambient Sounds ': true
+'Enable Cave Temperature ': true
+'Enable Cave Aging ': true
+'Enable Cave Monsters ': true
+'Enable Cave Structures ': true
+'Enable Monster Fixing ': true
+'Enable Broken Monster Deletion ': true
+'Cave Skulls ': true
+'Enable Easter Egg ': true
+'::::Higher equals lower chance!::::': ''
+'Cave Aging Chance ': 2
+'Cave Aging Change Chance ': 39
+'Cave Ambience Chance ': 4
+'Cave Walk Temp Chance ': 1449
+'Cave Break Block Temp Chance ': 1450
+'Cave-In Chance ': 399
+'Darkness Spawn Chance ': 1
+'Cave Structure Chance ': 1
+'Hungering Darkness Damage ': 200
+'Monster Spawning Highest Y ': 50
+'Monster Spawning Lowest Y ': 0
+':::::::::::::::::::::::::::::::::::': ''
+'Traps Rate ': 750
+'Buildings Rate ': 500
+'Boulder Rate ': 450
+'Pillar Rate ': 200
+'Spawn Crying Bat ': true
+'Spawn Magma Monster ': true
+'Spawn Lava Creeper ': true
+'Spawn TnT Creeper ': true
+'Spawn Watcher ': true
+'Spawn Smoke Demon ': true
+'Spawn Alpha Spider ': true
+'Spawn Dead Miner ': true
+'Spawn Hexed Armor ': true
+':::::Monster Names - no Blanks:::::': ''
+'Crying Bat = ': 'Schrei-Fledermaus'
+'Magma Monster = ': 'Magozoid'
+'Lava Creeper = ': 'Lava Creeper'
+'TnT Creeper = ': 'Wütendender Creeper'
+'Watcher = ': 'Wächter'
+'Smoke Demon = ': 'Rauchdämon'
+'Alpha Spider = ': 'Wütende Höhlenspinne'
+'Dead Miner = ': 'Toter Bergarbeiter'
+'Hexed Armor = ': 'Verhexte Rüstung'
+'Crying Bat Chance ': 1750
+'Magma Monster Chance ': 950
+'Lava Creeper Chance ': 1200
+'TnT Creeper Chance ': 1200
+'Watcher Chance ': 750
+'Smoke Demon Chance ': 950
+'Alpha Spider Chance ': 500
+'Dead Miner Chance ': 350
+'Hexed Armor Chance ': 1100
+'Temperature Messages ':
+- 'Wow, es ist heiß hier unten. Ich bringe besser etwas mit, um mich beim nächsten Mal abzukühlen.'
+- 'Es ist wirklich heiß hier unten.'
+- 'Ich brauche etwas, um mich beim nächsten Mal abzukühlen.'
+- 'Ist es heiß hier oder bin es nur ich?'
+- 'Ich brauche wirklich etwas Eis.'
+'Enabled Worlds - If Left Blank Will Just Use default world ':
+- Ascavaria
+'Items that can spawn in chests ':
+- ACACIA_WOOD
+- ACACIA_PLANKS
+- ACACIA_LOG
+- ACTIVATOR_RAIL
+- ANVIL
+- APPLE
+- BAKED_POTATO
+- BARREL
+- BEETROOT_SOUP
+- BEETROOTS
+- BIRCH_LOG
+- BIRCH_PLANKS
+- BIRCH_WOOD
+- BONE
+- BONE_MEAL
+- BOW
+- BOWL
+- BREAD
+- BUCKET
+- CAKE
+- CAMPFIRE
+- CARROT
+- CARROT_ON_A_STICK
+- CHAINMAIL_BOOTS
+- CHAINMAIL_CHESTPLATE
+- CHAINMAIL_HELMET
+- CHAINMAIL_LEGGINGS
+- CHARCOAL
+- CHEST
+- CHEST_MINECART
+- COAL
+- COBBLESTONE
+- COMPASS
+- COOKED_BEEF
+- COOKED_CHICKEN
+- COOKED_COD
+- COOKED_MUTTON
+- COOKED_PORKCHOP
+- COOKED_RABBIT
+- COOKED_SALMON
+- COOKIE
+- CREEPER_HEAD
+- CRAFTING_TABLE
+- CROSSBOW
+- DAMAGED_ANVIL
+- DARK_OAK_LOG
+- DARK_OAK_PLANKS
+- DARK_OAK_WOOD
+- DIAMOND
+- DIAMOND_AXE
+- DIAMOND_BLOCK
+- DIAMOND_BOOTS
+- DIAMOND_CHESTPLATE
+- DIAMOND_HELMET
+- DIAMOND_HOE
+- DIAMOND_HORSE_ARMOR
+- DIAMOND_LEGGINGS
+- DIAMOND_ORE
+- DIAMOND_PICKAXE
+- DIAMOND_SHOVEL
+- DIAMOND_SWORD
+- EGG
+- EMERALD
+- ELYTRA
+- EMERALD_ORE
+- ENCHANTED_GOLDEN_APPLE
+- ENDER_EYE
+- ENDER_PEARL
+- FEATHER
+- FLINT
+- FLINT_AND_STEEL
+- FURNACE
+- GLASS_BOTTLE
+- GOLD_INGOT
+- GOLD_NUGGET
+- GOLD_ORE
+- GOLDEN_APPLE
+- GOLDEN_AXE
+- GOLDEN_BOOTS
+- GOLDEN_CARROT
+- GOLDEN_CHESTPLATE
+- GOLDEN_HELMET
+- GOLDEN_HOE
+- GOLDEN_HORSE_ARMOR
+- GOLDEN_LEGGINGS
+- GOLDEN_PICKAXE
+- GOLDEN_SHOVEL
+- GOLDEN_SWORD
+- GRINDSTONE
+- GUNPOWDER
+- ICE
+- IRON_AXE
+- IRON_BARS
+- IRON_BLOCK
+- IRON_BOOTS
+- IRON_CHESTPLATE
+- IRON_DOOR
+- IRON_HELMET
+- IRON_HOE
+- IRON_HORSE_ARMOR
+- IRON_INGOT
+- IRON_LEGGINGS
+- IRON_NUGGET
+- IRON_ORE
+- IRON_PICKAXE
+- IRON_SHOVEL
+- IRON_SWORD
+- JUNGLE_LOG
+- JUNGLE_PLANKS
+- JUNGLE_WOOD
+- LADDER
+- LANTERN
+- LAPIS_LAZULI
+- LAPIS_ORE
+- LEAD
+- LEATHER
+- LEATHER_BOOTS
+- LEATHER_CHESTPLATE
+- LEATHER_HELMET
+- LEATHER_HORSE_ARMOR
+- LEATHER_LEGGINGS
+- LOOM
+- MAP
+- MELON
+- MELON_SLICE
+- MILK_BUCKET
+- MINECART
+- MOSSY_COBBLESTONE
+- MUSIC_DISC_11
+- MUSHROOM_STEW
+- MUSIC_DISC_13
+- MUSIC_DISC_BLOCKS
+- MUSIC_DISC_CAT
+- MUSIC_DISC_CHIRP
+- MUSIC_DISC_FAR
+- MUSIC_DISC_MALL
+- MUSIC_DISC_MELLOHI
+- MUSIC_DISC_STAL
+- MUSIC_DISC_STRAD
+- MUSIC_DISC_WAIT
+- MUSIC_DISC_WARD
+- NAME_TAG
+- NETHER_WART
+- OAK_LOG
+- OAK_PLANKS
+- OAK_WOOD
+- PACKED_ICE
+- PAPER
+- POTATO
+- POWERED_RAIL
+- PUMPKIN
+- PUMPKIN_PIE
+- RABBIT_FOOT
+- RABBIT_HIDE
+- RABBIT_STEW
+- RAIL
+- REDSTONE_ORE
+- REDSTONE
+- ROTTEN_FLESH
+- SADDLE
+- SCAFFOLDING
+- SHEARS
+- SCUTE
+- SHIELD
+- SMOKER
+- SMITHING_TABLE
+- SPIDER_EYE
+- SPECTRAL_ARROW
+- SPRUCE_LOG
+- SPRUCE_PLANKS
+- SPRUCE_WOOD
+- STONE_AXE
+- STONE_HOE
+- STONE_PICKAXE
+- STONE_SHOVEL
+- STONE_SWORD
+- STONECUTTER
+- STRING
+- SUGAR
+- SUGAR_CANE
+- SWEET_BERRIES
+- SUSPICIOUS_STEW
+- TIPPED_ARROW
+- TNT
+- TORCH
+- TOTEM_OF_UNDYING
+- TRIPWIRE_HOOK
+- TURTLE_HELMET
+- WATER_BUCKET
+- WHEAT_SEEDS
+- WHEAT
+- WOODEN_AXE
+- WOODEN_HOE
+- WOODEN_PICKAXE
+- WOODEN_SHOVEL
+- WOODEN_SWORD
+- WRITABLE_BOOK
+- ZOMBIE_HEAD
+:Below is used to store information: 1
+:Do Not Modify Anything Below This: 1
+:Doing So Can Result in Messed up Worlds: 1
+002roomx: 13
+002roomy: 26
+002roomz: 631
