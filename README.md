@@ -1,4 +1,6 @@
-[![Discord](https://discordapp.com/api/guilds/634014335542231058/widget.png)](https://discord.gg/5XN9BUc)		***[Donate a cup of coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QF69JHHKBYV9A)***
+[![Discord](https://discordapp.com/api/guilds/634014335542231058/widget.png)](https://discord.gg/5XN9BUc)  
+  
+***[Donate a cup of coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QF69JHHKBYV9A)***
 
 # German-Spigot/Bukkit-Plugin-Translations
 
