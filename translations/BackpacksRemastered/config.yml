@@ -1,0 +1,99 @@
+# the configuration version (do not change this)
+version: 6
+
+# How long (in ticks, 20ticks/second) to wait after someone opens a backpack before they can open it again
+openBackpackCooldown: 8
+
+# Max number of backpacks that can be put into a combined backpack (cannot be more than 9)
+maxNumberOfCombinedBackpacks: 9
+
+# What language to set the plugin to. You can compile the plugin to support any languages you wish. For more info, see the github.
+# Current included languages are: en (English), es (Spanish), it (Italian), fr (French), zh (Chinese), pl (Polish)
+language: de
+
+recipes:
+  small:
+    display_name: "&aKleiner Rucksack"
+    lore:
+      - "Ein winziger kleiner Rucksack."
+      - "Ideal für Kurztrips und so."
+    ingredients:
+      A: OAK_PLANKS
+      B: LEATHER
+    shape:
+      - "AAA"
+      - "ABA"
+      - "AAA"
+  large:
+    display_name: "&aGroßer Rucksack"
+    lore:
+      - "Ein großer Junge, der in der Lage ist,"
+      - "viele Gegenstände aufzunehmen."
+    ingredients:
+      A: OAK_LOG
+      B: IRON_INGOT
+    shape:
+      - "AAA"
+      - "ABA"
+      - "AAA"
+  linked:
+    display_name: "&aVerknüpfter Rucksack"
+    lore:
+      - "Eine mystische Tasche, die in der Lage ist,"
+      - "Gegenstände über Dimensionen hinweg an einen"
+      - "vorbestimmten Ort zu transportieren. Die Legende"
+      - "besagt, dass die Tasche mit jedem Behälter"
+      - "verbunden wird, den du damit schlägst."
+    ingredients:
+      A: DIAMOND
+      B: LEATHER
+      C: ENDER_EYE
+      D: IRON_INGOT
+    shape:
+      - "ADA"
+      - "BCB"
+      - "ADA"
+  combined:
+    display_name: "&aKombinierter Rucksack"
+    lore:
+      - "Eine Tasche, in der mehrere Rucksäcke"
+      - "bequem verstaut werden können."
+    ingredients:
+      A: GOLD_INGOT
+      C: LEATHER
+    shape:
+      - "CAC"
+      - "A A"
+      - "CAC"
+  craft:
+    display_name: "&aBastelrucksack"
+    lore:
+      - "Eine tragbare Werkbank für alle Bastelbedürfnisse,"
+      - "die du unterwegs hast."
+    ingredients:
+      A: LEATHER
+      B: CRAFTING_TABLE
+    shape:
+      - " A "
+      - "ABA"
+      - " A "
+  ender:
+    display_name: "&aEnder Rucksack"
+    lore:
+      - "Eine Endertruhe in praktischer Rucksackform."
+    ingredients:
+      A: ENDER_EYE
+      B: OBSIDIAN
+      C: LEATHER
+    shape:
+      - "CBC"
+      - "BAB"
+      - "CBC"
+  backpack_key:
+    ingredients:
+      A: IRON_INGOT
+      B: FEATHER
+    shape:
+      - "  A"
+      - " BA"
+      - " AA"

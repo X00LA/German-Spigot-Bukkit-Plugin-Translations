@@ -1,0 +1,2535 @@
+# Guilds
+# Creator: Glare
+# Contributors: https://github.com/guilds-plugin/Guilds/graphs/contributors
+# Issues: https://github.com/guilds-plugin/Guilds/issues
+# Spigot: https://www.spigotmc.org/resources/66176/
+# Wiki: https://wiki.glaremasters.me/
+# Discord: https://glaremasters.me/discord
+settings:
+    announcements:
+        # This is used for the Guild's Announcement System, which allow me (The Author) to communicate to you guys without updating.
+        # The way this works is very simple. If you have "console" set to "true", you will see the announcement when the server starts.
+        # If you have "in-game" set to "true", your OPed players will see it the first time they login to the server.
+        console: true
+        in-game: true
+    # Choosing your language for the plugin couldn't be easier! The default language is english.
+    # If you speak another language but don't see it here, feel free to submit it via one of the links above to have it added to the plugin.
+    # If you try and use a different language than any in the list above, the plugin will not function in a normal manner.
+    # As you can see this is currently en-US, and there is a en-US.yml file in the language folder.
+    # If I wanted to switch to french, I would use fr-FR as the language instead.
+    messagesLanguage: en-US
+    # Would you like to check for plugin updates on startup? It's highly suggested you keep this enabled!
+    update-check: true
+    # What would you like the command aliases for the plugin to be?
+    # You can have as many as your want, just separate each with | and NO SPACES.
+    plugin-aliases: guild|guilds|g
+    # Would you like to run vault permission changes async? (Will be less stress on the main thread and prevent lag)
+    # Async is used by LuckPerms.
+    # Set this to false if you are using PEx.
+    # I do suggest you switch to LuckPerms so that you can keep it async, but ultimately the choice is yours.
+    run-vault-async: true
+storage:
+    # What storage method should be used? (MySQL, MariaDB, JSON, SQLite)
+    storage-type: json
+    # How often (in minutes) do you want all Guild Data to save?
+    save-interval: 1
+    sql:
+        # Define the address for the database. (Doesn't apply to SQLite)
+        host: 
+        # Define the port for the database. (Doesn't apply to SQLite)
+        port: '3306'
+        # The name of the database to store data in.
+        # This must be already created! (Doesn't apply to SQLite)
+        database: 
+        # The prefix for all Guilds tables.
+        table-prefix: 
+        # Define the credentials for the database. (Doesn't apply to SQLite)
+        username: 
+        password: ''
+        # Sets whether or not to use SSL for the remote SQL database connection (Doesn't apply to SQLite)
+        enable-ssl: false
+        # These settings change the SQL connection pool.
+        # The default settings are optimized for the majority of users.
+        # Do NOT change these settings unless you know what you are doing!
+        # For those looking to migrate data:
+        # IF YOU ARE MIGRATING FROM JSON OR SQLITE TO MYSQL THE SETTINGS MUST BE CONFIGURED EVEN IF THE DATA TYPE IS SET TO JSON OR MYSQL.
+        # When migrating to MySQL, it will attempt to use the MySQL backend (grab the login information here) in order to connect to the database.
+        # We are not responsible for data loss if you are too lazy to read the warnings.
+        # ALWAYS REMEMBER TO BACKUP DATA BEFORE MIGRATING.
+        # Lastly, remember to change your storage-type to the type you're migrating to before you reboot.
+        pool:
+            # Sets the maximum size of the SQL connection pool.
+            # This value will determine the maximum number of connections maintained. (Doesn't apply to SQLite)
+            maximum-pool-size: 10
+            # Sets the minimum number of idle connections that the pool will maintain.
+            # For maximum performance keep this value the same as 'maximum-pool-size' (Doesn't apply to SQLite)
+            minimum-idle: 10
+            # Sets the maximum lifetime of a connection in the pool in milliseconds. (Doesn't apply to SQLite)
+            maximum-lifetime: 1800000
+            # Sets the maximum number of milliseconds for a connection in the pool before timing out. (Doesn't apply to SQLite)
+            connection-timeout: 5000
+hooks:
+    # Do we want to hook into Essentials-Chat format to handle guild placeholders?
+    essentials-chat: true
+    # Do we want to hook into WorldGuard to allow claiming land?
+    worldguard-claims: false
+# Use the following website to get available materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# This can work across all MC versions and will attempt to use the proper material based on what version of MC you are using.
+guis:
+    # What time format should we use in the GUIs?
+    # You can use this site to build it https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+    time-format: d, MMM, yy hh:mm aaa
+    guild-list:
+        # What should the name of the inventory be?
+        gui-name: Gildenübersicht
+        # What should the name of the all the items be in the inventory?
+        # Currently supports {player} and {guild}.
+        item-name: '&f{player}''s Gilde'
+        # How should the menu be sorted?
+        # LOADED: In the order that the Guilds were loaded on startup
+        # TIER: In order from highest tier to lowest tier
+        # MEMBERS: In order from most members to least members
+        # BALANCE: In order from most in bank to least
+        # WINS: In order from most arena wins to least
+        sort: TIER
+        # What item should players click to go to the next page?
+        next-page-item: EMPTY_MAP
+        # What should the name of this item be?
+        next-page-item-name: '&fNächste Seite'
+        # What item should players click to go to the previous page?
+        previous-page-item: EMPTY_MAP
+        # What should the name of this item be?
+        previous-page-item-name: '&fVorherige Seite'
+        # What should be the default texture url for textures that fail to load in? Refer to the Guild Manage settings to see how to change the texture!
+        head-default-url: 7a2df315b43583b1896231b77bae1a507dbd7e43ad86c1cfbe3b2b8ef3430e9e
+        # You are free to design this to your liking
+        # This is just an example of all the available placeholders that you can use for the lore!
+        # Note: With v3.6.7 and on, you can now use {guild-tier-name} for the name of the tier.
+        # Also, from v3.6.7 and on, {guild-status} will now apply from what you set for the guild-info GUI for the status being public or private.
+        # In version 3.5.2.2, {guild-challenge-wins} and {guild-challenge-loses} have been added.
+        # In version 3.5.3.3, {creation} was added to display the creation date of the guild
+        head-lore: 
+        - '&3&lName&8: &6{guild-name}'
+        - '&3&lPrefix&8: &6{guild-prefix}'
+        - '&3&lOberhaupt&8: &6{guild-master}'
+        - '&3&lStatus&8: &6{guild-status}'
+        - '&3&lRang&8: &6{guild-tier}'
+        - '&3&lKontostand&8: &6{guild-balance}'
+        - '&3&lMitgliederanzahl&8: &6{guild-member-count}'
+        - '&3&lGründunsdatum&8: &6{creation}'
+    guild-buffs:
+        # What should the name of the inventory be?
+        gui-name: Gilden Buffs
+        # Do we want to allow users to have more than one buff at a time?
+        buff-stacking: false
+        # Do you want to enable requiring per-buff permissions?
+        # For example, if I wanted to buy the haste buff,
+        # I would need the permission guilds.buff.haste
+        per-buff-permissions: false
+        buffs:
+            haste:
+                # What do you want to name the buff?
+                name: '&a&lSubstanz des Redmod Graff'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: FEATHER
+                # What type of potion is this?
+                type: FAST_DIGGING
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Eile'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 0
+            speed:
+                # What do you want to name the buff?
+                name: '&a&lSegen des Geparden'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: SUGAR
+                # What type of potion is this?
+                type: SPEED
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Geschwindigkeit'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 1
+            fire-resistance:
+                # What do you want to name the buff?
+                name: '&a&lSchuppen des Drachen'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: BLAZE_POWDER
+                # What type of potion is this?
+                type: FIRE_RESISTANCE
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Feuerresistenz'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 2
+            night-vision:
+                # What do you want to name the buff?
+                name: '&a&lAugen des lauernden Dämons'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: REDSTONE_TORCH_ON
+                # What type of potion is this?
+                type: NIGHT_VISION
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Nachtsicht'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 3
+            invisibility:
+                # What do you want to name the buff?
+                name: '&a&lFüße des gespenstischen Wanderers'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: EYE_OF_ENDER
+                # What type of potion is this?
+                type: INVISIBILITY
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Unsichtbarkeit'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 4
+            strength:
+                # What do you want to name the buff?
+                name: '&a&lStärke des wütenden Elefanten'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: DIAMOND_SWORD
+                # What type of potion is this?
+                type: INCREASE_DAMAGE
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Stärke'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 5
+            jump:
+                # What do you want to name the buff?
+                name: '&a&lSprungkraft des schlagfertigen Kaninchens'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: DIAMOND_BOOTS
+                # What type of potion is this?
+                type: JUMP
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Sprungkraft'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 6
+            water-breathing:
+                # What do you want to name the buff?
+                name: '&a&lLungen des Albino-Hais'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: BUCKET
+                # What type of potion is this?
+                type: WATER_BREATHING
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Wasseratmung'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 7
+            regeneration:
+                # What do you want to name the buff?
+                name: '&a&lWissen des irren Arztes'
+                # How much do you want the buff to cost?
+                price: 60.0
+                # How long (in second) should the buff last?
+                time: 60
+                # How strong do you want the buff to be? 0 = Potion Level 1, 1 = Potion Level 2, etc...
+                amplifier: 0
+                # What item do you want to represent the buff?
+                icon: EMERALD
+                # What type of potion is this?
+                type: REGENERATION
+                # You can put as much as you want here
+                description: 
+                - '&aTyp » &7Regeneration'
+                - '&aDauer » &760 Sekunden'
+                - '&aPreis » &7₭60'
+                # Do you want this buff to show in-game?
+                display: true
+                commands:
+                    clicker:
+                        # Would you like to enable commands to be sent to the player who bought the buff?
+                        enabled: false
+                        # What commands would you like to execute on the player that clicked? (Supports {player})
+                        commands: 
+                        - ''
+                    guild:
+                        # Would you like to enable commands to be sent to all online players in the guild?
+                        enabled: false
+                        # What commands would you like to execute on all online players in guild? (Supports {player})
+                        commands: 
+                        - ''
+                # What slot would you like this to use?
+                slot: 8
+    # Here you can control what the GUI looks like that allows players to choose which vault to open
+    # You can do things like set the name of the gui, the material to use, material name, and lore!
+    vault-picker:
+        # What do you want the name of the gui to be?
+        # Currently supports {name} for the name of the guild.
+        name: '&8» &r{name}''s Tresore'
+        # How many rows would you like to display?
+        rows: 1
+        # What do you want the material of the vaults to be?
+        item-material: CHEST
+        # WHat do you want the name of the vault to be?
+        # I recommend keeping this blank so that we can put the vault number in the lore.
+        item-name: ' '
+        item-lore: 
+        - '&8• &7Tresor &9#{number}'
+        - '&8• &7Status: {status}'
+        - ''
+        # What do you want to show when a vault is unlocked?
+        unlocked: '&9Offen'
+        # What do you want to show when a vault is locked?
+        locked: '&c&mGesperrt&r'
+    vault:
+        # What do you want the name of the Vault to be?
+        # Note: This requires a restart to change the inventory names.
+        name: '&8» &rGildentresor'
+        blacklist:
+            # What materials would you like to blacklist from being put into the vaults?
+            materials: 
+            - ''
+            # What custom names of items would you like to blacklist from being put into the vaults?
+            names: 
+            - ''
+            # What custom lore do you want to blacklist from being put into the vaults?
+            # Please keep in mind this can be prove to false-positives so please let me know if you have issues.
+            # This will currently loop through your lore to check for any strings you have in the list to check.
+            # Improvements will be made over time. Thanks for your patience and suppport in advanced.
+            lores: 
+            - ''
+    # Welcome to the Guild Info GUI section of the config.
+    # Here you can modify the configuration of what the Guild Info GUI looks like.
+    # This can be used by any member of a Guild and shows key information of the Guild.
+    # You can see things like the members, the balance, tier, etc.
+    guild-info:
+        # What would you like the name of the GUI to be?
+        # Currently supports {name} for the name of the guild and {prefix} for the prefix of the guild
+        name: '&8» &r{name}''s Info'
+        # What material do you want the tier button to be?
+        tier-material: DIAMOND
+        # What do you want the name of the tier button to be?
+        tier-name: '&3Gildenrang'
+        # What do you want the lore of the tier button to be?
+        tier-lore: 
+        - '&8• &7Rang: &b{tier}'
+        # Would you like to display this button?
+        tier-display: true
+        # What material do you want the bank button to be?
+        bank-material: GOLD_INGOT
+        # What do you want the name of the bank button to be?
+        bank-name: '&6Gildenbank'
+        # What do you want the lore of the bank button to be?
+        bank-lore: 
+        - '&8• &7Kontostand: &e{current} &7/ &e{max}'
+        # Would you like to display this button?
+        bank-display: true
+        # What material do you want the members button to be?
+        members-material: IRON_HELMET
+        # What do you want the name of the members button to be?
+        members-name: '&5Gildenmitglieder'
+        # What do you want the lore of the members button to be?
+        members-lore: 
+        - '&8• &7Mitglieder: &d{current} &7/ &d{max}'
+        - '&8• &7Online: &d{online} &7/ &d{current}'
+        - ''
+        - '&7Hier klicken um Mitglieder anzuzeigen!'
+        # Would you like to display this button?
+        members-display: true
+        status-material:
+            # What material do you want the status button to be when a guild is public?
+            public: EMERALD
+            # What material do you want the status button to be when a guild is private?
+            private: REDSTONE
+        # What do you want the name of the status button to be?
+        status-name-item: '&2Gildenstatus'
+        status-name:
+            # What do you want the status to say if it's public?
+            public: '&aÖffentlich'
+            # What do you want the status to say if it's private?
+            private: '&cPrivat'
+        # What do you want the lore of the status button to be?
+        status-lore: 
+        - '&8• &7Status: &r{status}'
+        # Would you like to display this button?
+        status-display: true
+        # What material do you want the home button to be?
+        home-material: BED
+        # What do you want the name of the home button to be?
+        home-name: '&cGildenversteck'
+        # What do you want the lore of the home button to be?
+        home-lore: 
+        - '&8• &7Versteck: &f{coords}'
+        # Would you like to display this button?
+        home-display: true
+        # What do you want it to say when a guild doesn't have a home set?
+        home-empty: '&fNicht gesetzt'
+        # Do you want players to be teleported to their guild home when they click this?
+        home-teleport: false
+        # What material do you want the vault button to be?
+        vault-material: CHEST
+        # What do you want the name of the home button to be?
+        vault-name: '&9Gildentresore'
+        # What do you want the lore of the vault button to be?
+        vault-lore: 
+        - '&7Hier klicken um deine Gildentesore anzuzeigen!'
+        # Would you like to display this button?
+        vault-display: true
+        # What material do you want the motd button to be?
+        motd-material: SIGN
+        # What do you want the name of the motd button to be?
+        motd-name: '&6Gilden-MOTD'
+        # What do you want the lore of the motd button to be?
+        motd-lore: 
+        - '{motd}'
+        # Would you like to display this button?
+        motd-display: true
+    # This part of the config controls what the members gui looks like.
+    # You can get to this in game by clicking on the members icon via the guild info gui.
+    guild-info-members:
+        # What would you like the name of the GUI to be?
+        name: '&8» &rMitglieder von {name}'
+        item:
+            # What material do you want to use to represent members?
+            material: EMPTY_MAP
+            # What do you want the name of the item to be?
+            name: ' '
+            # What do you want the lore of the item to be?
+            lore: 
+            - '&8• &7Name: &a{name}'
+            - '&8• &7Rolle: &a{role}'
+            - '&8• &7Status: {status}'
+            - '&8• &7Eintrittsdatum: &a{join}'
+            - '&8• &7Letzter Login: &a{login}'
+            # What do you want to be what shows when a member is online?
+            online: '&aOnline'
+            # What do you want to be what shows when a member is offline?
+            offline: '&cOffline'
+guild:
+    requirements:
+        # With the default RegEx currently set, the minimum length of the prefix is 1 and the maximum is 64.
+        # To change this, adjust the number and you can refer to the link below on how to modify RegEx.
+        # RegEx (https://en.wikipedia.org/wiki/Regular_expression) used to only allow certain characters (default only allows alphanumeric characters).
+        # To turn off the ability to use colors, remove the & from the RegEx.
+        # Trying to use symbols such as Chinese ones? Try this Regex: [\u4E00-\u9FA5_a-zA-Z0-9&_\一-龥]{1,6}
+        name: '[a-zA-Z0-9-Ä-ä-Ö-ö-Ü-ü-ß&]{1,64}'
+        # Similar to the name, just refer above.
+        prefix: '[a-zA-Z0-9-Ä-ä-Ö-ö-Ü-ü-ß&]{1,20}'
+        # Would you like to include color codes signs (&b &l, etc) in the length check?
+        include-color-codes: true
+    # Would you like to allow players to make a guild without a prefix?
+    disable-prefix: false
+    blacklist:
+        # Do we want to enable the blacklist?
+        enabled: true
+        # Do we want the blacklist to be case sensitive?
+        case-sensitive: true
+        # What words would you like to blacklist from being used?
+        words: 
+        - a55
+		- a55hole
+		- aeolus
+		- ahole
+		- anal
+		- analprobe
+		- anilingus
+		- anus
+		- areola
+		- areole
+		- arian
+		- aryan
+		- ass
+		- assbang
+		- assbanged
+		- assbangs
+		- asses
+		- assfuck
+		- assfucker
+		- assh0le
+		- asshat
+		- assho1e
+		- ass hole
+		- assholes
+		- assmaster
+		- assmunch
+		- asswipe
+		- asswipes
+		- azazel
+		- azz
+		- b1tch
+		- babe
+		- babes
+		- ballsack
+		- bang
+		- banger
+		- barf
+		- bastard
+		- bastards
+		- bawdy
+		- beaner
+		- beardedclam
+		- beastiality
+		- beatch
+		- beater
+		- beaver
+		- beer
+		- beeyotch
+		- beotch
+		- biatch
+		- bigtits
+		- big tits
+		- bimbo
+		- bitch
+		- bitched
+		- bitches
+		- bitchy
+		- blow job
+		- blow
+		- blowjob
+		- blowjobs
+		- bod
+		- bodily
+		- boink
+		- bollock
+		- bollocks
+		- bollok
+		- bone
+		- boned
+		- boner
+		- boners
+		- bong
+		- boob
+		- boobies
+		- boobs
+		- booby
+		- booger
+		- bookie
+		- bootee
+		- bootie
+		- booty
+		- booze
+		- boozer
+		- boozy
+		- bosom
+		- bosomy
+		- bowel
+		- bowels
+		- bra
+		- brassiere
+		- breast
+		- breasts
+		- bugger
+		- bukkake
+		- bullshit
+		- bull shit
+		- bullshits
+		- bullshitted
+		- bullturds
+		- bung
+		- busty
+		- butt
+		- butt fuck
+		- buttfuck
+		- buttfucker
+		- buttfucker
+		- buttplug
+		- c.0.c.k
+		- c.o.c.k.
+		- c.u.n.t
+		- c0ck
+		- c-0-c-k
+		- caca
+		- cahone
+		- cameltoe
+		- carpetmuncher
+		- cawk
+		- cervix
+		- chinc
+		- chincs
+		- chink
+		- chink
+		- chode
+		- chodes
+		- cl1t
+		- climax
+		- clit
+		- clitoris
+		- clitorus
+		- clits
+		- clitty
+		- cocain
+		- cocaine
+		- cock
+		- c-o-c-k
+		- cockblock
+		- cockholster
+		- cockknocker
+		- cocks
+		- cocksmoker
+		- cocksucker
+		- cock sucker
+		- coital
+		- commie
+		- condom
+		- coon
+		- coons
+		- corksucker
+		- crabs
+		- crack
+		- cracker
+		- crackwhore
+		- crap
+		- crappy
+		- cum
+		- cummin
+		- cumming
+		- cumshot
+		- cumshots
+		- cumslut
+		- cumstain
+		- cunilingus
+		- cunnilingus
+		- cunny
+		- cunt
+		- cunt
+		- c-u-n-t
+		- cuntface
+		- cunthunter
+		- cuntlick
+		- cuntlicker
+		- cunts
+		- d0ng
+		- d0uch3
+		- d0uche
+		- d1ck
+		- d1ld0
+		- d1ldo
+		- dago
+		- dagos
+		- dammit
+		- damn
+		- damned
+		- damnit
+		- dawgie-style
+		- dick
+		- dickbag
+		- dickdipper
+		- dickface
+		- dickflipper
+		- dickhead
+		- dickheads
+		- dickish
+		- dick-ish
+		- dickripper
+		- dicksipper
+		- dickweed
+		- dickwhipper
+		- dickzipper
+		- diddle
+		- dike
+		- dildo
+		- dildos
+		- diligaf
+		- dillweed
+		- dimwit
+		- dingle
+		- dipship
+		- doggie-style
+		- doggy-style
+		- dong
+		- doofus
+		- doosh
+		- dopey
+		- douch3
+		- douche
+		- douchebag
+		- douchebags
+		- douchey
+		- drunk
+		- dumass
+		- dumbass
+		- dumbasses
+		- dummy
+		- dyke
+		- dykes
+		- ejaculate
+		- enlargement
+		- erect
+		- erection
+		- erotic
+		- essohbee
+		- extacy
+		- extasy
+		- f.u.c.k
+		- fack
+		- fag
+		- fagg
+		- fagged
+		- faggit
+		- faggot
+		- fagot
+		- fags
+		- faig
+		- faigt
+		- fannybandit
+		- fart
+		- fartknocker
+		- fat
+		- felch
+		- felcher
+		- felching
+		- fellate
+		- fellatio
+		- feltch
+		- feltcher
+		- fisted
+		- fisting
+		- fisty
+		- floozy
+		- foad
+		- fondle
+		- foobar
+		- foreskin
+		- freex
+		- frigg
+		- frigga
+		- fubar
+		- fuck
+		- f-u-c-k
+		- fuckass
+		- fucked
+		- fucked
+		- fucker
+		- fuckface
+		- fuckin
+		- fucking
+		- fucknugget
+		- fucknut
+		- fuckoff
+		- fucks
+		- fucktard
+		- fuck-tard
+		- fuckup
+		- fuckwad
+		- fuckwit
+		- fudgepacker
+		- fuk
+		- fvck
+		- fxck
+		- gae
+		- gai
+		- ganja
+		- gay
+		- gays
+		- gey
+		- gfy
+		- ghay
+		- ghey
+		- gigolo
+		- glans
+		- goatse
+		- godamn
+		- godamnit
+		- goddam
+		- goddammit
+		- goddamn
+		- goldenshower
+		- gonad
+		- gonads
+		- gook
+		- gooks
+		- gringo
+		- gspot
+		- g-spot
+		- gtfo
+		- guido
+		- h0m0
+		- h0mo
+		- handjob
+		- hard on
+		- he11
+		- hebe
+		- heeb
+		- hell
+		- hemp
+		- heroin
+		- herp
+		- herpes
+		- herpy
+		- hitler
+		- hiv
+		- hobag
+		- hom0
+		- homey
+		- homo
+		- homoey
+		- honky
+		- hooch
+		- hookah
+		- hooker
+		- hoor
+		- hootch
+		- hooter
+		- hooters
+		- horny
+		- hump
+		- humped
+		- humping
+		- hussy
+		- hymen
+		- inbred
+		- incest
+		- injun
+		- j3rk0ff
+		- jackass
+		- jackhole
+		- jackoff
+		- jap
+		- japs
+		- jerk
+		- jerk0ff
+		- jerked
+		- jerkoff
+		- jism
+		- jiz
+		- jizm
+		- jizz
+		- jizzed
+		- junkie
+		- junky
+		- kike
+		- kikes
+		- kill
+		- kinky
+		- kkk
+		- klan
+		- knobend
+		- kooch
+		- kooches
+		- kootch
+		- kraut
+		- kyke
+		- labia
+		- lech
+		- leper
+		- lesbians
+		- lesbo
+		- lesbos
+		- lez
+		- lezbian
+		- lezbians
+		- lezbo
+		- lezbos
+		- lezzie
+		- lezzies
+		- lezzy
+		- lmao
+		- lmfao
+		- loin
+		- loins
+		- lube
+		- lusty
+		- mams
+		- massa
+		- masterbate
+		- masterbating
+		- masterbation
+		- masturbate
+		- masturbating
+		- masturbation
+		- maxi
+		- menses
+		- menstruate
+		- menstruation
+		- meth
+		- m-fucking
+		- mofo
+		- molest
+		- moolie
+		- moron
+		- motherfucka
+		- motherfucker
+		- motherfucking
+		- mtherfucker
+		- mthrfucker
+		- mthrfucking
+		- muff
+		- muffdiver
+		- murder
+		- muthafuckaz
+		- muthafucker
+		- mutherfucker
+		- mutherfucking
+		- muthrfucking
+		- nad
+		- nads
+		- naked
+		- napalm
+		- nappy
+		- nazi
+		- nazism
+		- negro
+		- nigga
+		- niggah
+		- niggas
+		- niggaz
+		- nigger
+		- nigger
+		- niggers
+		- niggle
+		- niglet
+		- nimrod
+		- ninny
+		- nipple
+		- nooky
+		- nympho
+		- opiate
+		- opium
+		- oral
+		- orally
+		- organ
+		- orgasm
+		- orgasmic
+		- orgies
+		- orgy
+		- ovary
+		- ovum
+		- ovums
+		- p.u.s.s.y.
+		- paddy
+		- paki
+		- pantie
+		- panties
+		- panty
+		- pastie
+		- pasty
+		- pcp
+		- pecker
+		- pedo
+		- pedophile
+		- pedophilia
+		- pedophiliac
+		- pee
+		- peepee
+		- penetrate
+		- penetration
+		- penial
+		- penile
+		- penis
+		- perversion
+		- peyote
+		- phalli
+		- phallic
+		- phuck
+		- pillowbiter
+		- pimp
+		- pinko
+		- piss
+		- pissed
+		- pissoff
+		- piss-off
+		- pms
+		- polack
+		- pollock
+		- poon
+		- poontang
+		- porn
+		- porno
+		- pornography
+		- pot
+		- potty
+		- prick
+		- prig
+		- prostitute
+		- prude
+		- pube
+		- pubic
+		- pubis
+		- punkass
+		- punky
+		- puss
+		- pussies
+		- pussy
+		- pussypounder
+		- puto
+		- queaf
+		- queef
+		- queef
+		- queer
+		- queero
+		- queers
+		- quicky
+		- quim
+		- racy
+		- rape
+		- raped
+		- raper
+		- rapist
+		- raunch
+		- rectal
+		- rectum
+		- rectus
+		- reefer
+		- reetard
+		- reich
+		- retard
+		- retarded
+		- revue
+		- rimjob
+		- ritard
+		- rtard
+		- r-tard
+		- rum
+		- rump
+		- rumprammer
+		- ruski
+		- s.h.i.t.
+		- s.o.b.
+		- s0b
+		- sadism
+		- sadist
+		- scag
+		- scantily
+		- schizo
+		- schlong
+		- screw
+		- screwed
+		- scrog
+		- scrot
+		- scrote
+		- scrotum
+		- scrud
+		- scum
+		- seaman
+		- seamen
+		- seduce
+		- semen
+		- sex
+		- sexual
+		- sh1t
+		- s-h-1-t
+		- shamedame
+		- shit
+		- s-h-i-t
+		- shite
+		- shiteater
+		- shitface
+		- shithead
+		- shithole
+		- shithouse
+		- shits
+		- shitt
+		- shitted
+		- shitter
+		- shitty
+		- shiz
+		- sissy
+		- skag
+		- skank
+		- slave
+		- sleaze
+		- sleazy
+		- slut
+		- slutdumper
+		- slutkiss
+		- sluts
+		- smegma
+		- smut
+		- smutty
+		- snatch
+		- sniper
+		- snuff
+		- s-o-b
+		- sodom
+		- souse
+		- soused
+		- sperm
+		- spic
+		- spick
+		- spik
+		- spiks
+		- spooge
+		- spunk
+		- steamy
+		- stfu
+		- stiffy
+		- stoned
+		- strip
+		- stroke
+		- stupid
+		- suck
+		- sucked
+		- sucking
+		- sumofabiatch
+		- t1t
+		- tampon
+		- tard
+		- tawdry
+		- teabagging
+		- teat
+		- terd
+		- teste
+		- testee
+		- testes
+		- testicle
+		- testis
+		- thrust
+		- thug
+		- tinkle
+		- tit
+		- titfuck
+		- titi
+		- tits
+		- tittiefucker
+		- titties
+		- titty
+		- tittyfuck
+		- tittyfucker
+		- toke
+		- toots
+		- tramp
+		- transsexual
+		- trashy
+		- tubgirl
+		- turd
+		- tush
+		- twat
+		- twats
+		- ugly
+		- undies
+		- unwed
+		- urinal
+		- urine
+		- uterus
+		- uzi
+		- vag
+		- vagina
+		- valium
+		- viagra
+		- virgin
+		- vixen
+		- vodka
+		- vomit
+		- voyeur
+		- vulgar
+		- vulva
+		- wad
+		- wang
+		- wank
+		- wanker
+		- wazoo
+		- wedgie
+		- weed
+		- weenie
+		- weewee
+		- weiner
+		- weirdo
+		- wench
+		- wetback
+		- wh0re
+		- wh0reface
+		- whitey
+		- whiz
+		- whoralicious
+		- whore
+		- whorealicious
+		- whored
+		- whoreface
+		- whorehopper
+		- whorehouse
+		- whores
+		- whoring
+		- wigger
+		- womb
+		- woody
+		- wop
+		- wtf
+		- x-rated
+		- xxx
+		- yeasty
+		- yobbo
+		- ,zoophile
+		- Affenarsch
+		- Affenkotstück
+		- Affenmensch
+		- Allmachtsdackel
+		- Ameisenficker
+		- Analbaron
+		- Analraupe
+		- Analzone
+		- anorektische Fettsau
+		- Armee schwanzloser Primaten
+		- Arschbratze
+		- Arschforscher
+		- Arschfotzengesicht
+		- Arschgesicht
+		- Arschhaarbartfratze
+		- Arschkeks
+		- Arschkopf
+		- Arschlocke
+		- Ashley
+		- Aso
+		- Atomspast
+		- Auspuffbumser
+		- Bachel
+		- Badkapp
+		- bangen
+		- Berber
+		- Besen
+		- Birkenstockfotzenkopf
+		- Birl
+		- Blödfisch
+		- Blödmusiker
+		- Bodendompteuse
+		- Brunskuh
+		- Buckelhur
+		- Bumsnuss
+		- Buschmensch
+		- Butterkuh
+		- Cholerator
+		- Computerflüsterer
+		- Dauerlutscher
+		- Dollbohrer
+		- Donnerfotze
+		- Doofmannsgehilfe
+		- Doppeldepp
+		- Dreilochnutte
+		- Du Ast!
+		- Dumm-Rasseler
+		- Dünnschissgurgler
+		- Eibemme
+		- Eichelarschkopf
+		- Fitch
+		- Flachgeist
+		- Flattermuschi
+		- Flodder
+		- Fontanellenfick
+		- Fotze
+		- Fotzklotz
+		- Gargamel
+		- Gaylon
+		- Gebärfrau
+		- Geburtsfehlermiss
+		- geistiger Tiefflieger
+		- Gesichtseintopf
+		- Gesichtsgünter
+		- Gesichtsmorph
+		- Gnarf
+		- Gnogel
+		- Grasdackel
+		- Gratler
+		- Großhirnkastrat
+		- H2O-Kopf
+		- Hack ab!
+		- Hackfresse
+		- Halbaffe
+		- Halma
+		- Hannefatzke
+		- hartzig
+		- Hausschuhgesicht
+		- HDV
+		- hirnamputierter Rhinozerusarsch
+		- Hodenbussard
+		- Hodenkopf
+		- Hodenschrubbler
+		- Hohlbratze
+		- hohle Fritte
+		- Honk
+		- Hosenlottle
+		- Hosentaschen Godzilla
+		- HRSN
+		- Huru
+		- Hutze
+		- Hübi
+		- ins Hirn scheißen
+		- Intelligenzverweigerer
+		- Kackbatzen
+		- Kackstuhl
+		- Kanisterkopf
+		- Klapskalli
+		- Klitzmorchel
+		- Klufenmichel
+		- Knallarsch
+		- Knecht Huso
+		- Kotlutscher
+		- Kotzkannenfressbrett
+		- Kotzkrücke
+		- Krapfengesicht
+		- Kuttenluder
+		- Larve
+		- Lattenheinrich
+		- Lattenschreck
+		- Lällebäbbl
+		- Liam
+		- Loser
+		- mangelbegent
+		- Missi
+		- Mongo
+		- Mr. Grotte
+		- Muschischeps
+		- Nafti
+		- Napfwurst
+		- Nougatnutte
+		- Nuddebumber
+		- Ogerlurch
+		- Orgasmusbremse
+		- oshig
+		- Otzenfrosch
+		- Paragrafenschubse
+		- Partyopfer
+		- Paselacke
+		- Peniskopf
+		- Penisprothesenträger
+		- Pfeifenheini
+		- Pferdefresse
+		- Pfingstochse
+		- pickelgesichtiger Spritzbock
+		- Pimmel
+		- Pimmelfresse
+		- Pimmelkopf
+		- Pimmelpapagei
+		- Pisskajole
+		- Plempe
+		- Pleppo
+		- Pottmolch
+		- Rotzpupsi
+		- Sackfotze
+		- Schlampe
+		- Schlabberlappen
+		- schleimscheißender Bambusaffe
+		- Schmalzgrab
+		- Schmalztitte
+		- Schmongo
+		- Schmönkchen
+		- Schmudel
+		- schnarchzapfiger Rüsselsack
+		- Schüttler
+		- Senfgurke
+		- Sheamus
+		- Simbel
+		- Slut
+		- Spaltenspengler
+		- Spammailautor
+		- Spastard
+		- spastophil
+		- Späner
+		- Spoastie
+		- Spongebob
+		- Sponk
+		- Staubbeutel
+		- Steroidbeule
+		- Steroidmutant
+		- Swarowski-Möse
+		- Tapetengerippe
+		- Topmoppel
+		- Tüffel
+		- Unwerk
+		- Vollaffe
+		- vollgepisste Strumpfhose
+		- vollgeschissene Menschenhülle
+		- Vollmongo
+		- Vongo
+		- Wachsfresse
+		- Waldwichtel
+		- Wichsbazille
+		- Wichsfisch
+		- Wikidiot
+		- Wulfer
+		- wulffen
+		- Zahnspangenbettler
+		- zoologisches Abfallprodukt
+		- aasgeier
+		- abspritzer
+		- sdfds
+		- ackerfresse
+		- affenarsch
+		- affenhirn
+		- affenkotze
+		- afterlecker
+		- aktivex.info
+		- almosenarsch
+		- amazing
+		- am-sperma-riecher
+		- anal
+		- analadmiral
+		- analbesamer
+		- analbohrer
+		- analdrill
+		- analentjungferer
+		- analerotiker
+		- analfetischist
+		- analförster
+		- anal-frosch
+		- analnegerdildo
+		- analratte
+		- analritter
+		- aok-chopper
+		- armleuchter
+		- arsch
+		- arschaufreißer
+		- arschbackenschänder
+		- arschbesamer
+		- ärsche
+		- arschentjungferer
+		- arschficker
+		- arschgeburt
+		- arschgefickte gummifotze
+		- arschgeige
+		- arschgesicht
+		- arschhaarfetischist
+		- arschhaarrasierer
+		- arschhöhlenforscher
+		- arschkrampe
+		- arschkratzer
+		- arschlecker
+		- arschloch
+		- arschlöcher
+		- arschmade
+		- arschratte
+		- arschzapfen
+		- arsebandit
+		- arsehole
+		- arsejockey
+		- arselicker
+		- arsenuts
+		- arsewipe
+		- assel
+		- assfuck
+		- assfucking
+		- assgrabber
+		- asshol
+		- asshole
+		- asshole
+		- assi
+		- assrammer
+		- assreamer
+		- asswipe
+		- astlochficker
+		- auspufflutscher
+		- bad motherfucker
+		- badass
+		- badenutte
+		- bananenstecker
+		- bastard
+		- bastard
+		- bauernschlampe
+		- beating the meat
+		- beef curtains
+		- beef flaps
+		- behindis
+		- bekloppter
+		- muttergeficktes
+		- beklopter
+		- bettnässer
+		- bettpisser
+		- bettspaltenficker
+		- biatch
+		- bimbo
+		- bitch
+		- bitches
+		- bitchnutte
+		- bitsch
+		- bizzach
+		- blechfotze
+		- blödmann
+		- blogspoint
+		- blow job
+		- bohnenfresser
+		- boob
+		- boobes
+		- boobie
+		- boobies
+		- boobs
+		- booby
+		- boy love
+		- breasts
+		- brechfurz
+		- bückfleisch
+		- bückstück
+		- bückvieh
+		- buggery
+		- bullensohn
+		- bullshit
+		- bummsen
+		- bumsen
+		- bumsklumpen
+		- buschnutte
+		- busty
+		- butt pirate
+		- buttfuc
+		- buttfuck
+		- buttfucker
+		- buttfucking
+		- carpet muncher
+		- carpet munchers
+		- carpetlicker
+		- carpetlickers
+		- chausohn
+		- clitsuck
+		- clitsucker
+		- clitsucking
+		- cock
+		- cock sucker
+		- cockpouch
+		- cracka
+		- crap
+		- craper
+		- crapers
+		- crapping
+		- craps
+		- cunt
+		- cunt
+		- cunts
+		- dachlattengesicht
+		- dackelficker
+		- dickhead
+		- dicklicker
+		- diplomarschloch
+		- doofi
+		- douglette
+		- drecksack
+		- drecksau
+		- dreckschlitz
+		- dreckschüppengesicht
+		- drecksfotze
+		- drecksmösendagmar
+		- drecksnigger
+		- drecksnutte
+		- dreckspack
+		- dreckstürke
+		- dreckvotze
+		- dumbo
+		- dummschwätzer
+		- dumpfbacke
+		- dünnpfifftrinker
+		- eichellecker
+		- eierkopf
+		- eierlutscher
+		- eiswürfelpisser
+		- ejaculate
+		- entenfisterer
+		- epilepi
+		- epilepis
+		- epileppis
+		- fagette
+		- fagitt
+		- fäkalerotiker
+		- faltenficker
+		- fatass
+		- ferkelficker
+		- ferkel-ficker
+		- fettarsch
+		- fettsack
+		- fettsau
+		- feuchtwichser
+		- fick
+		- fick*
+		- fickarsch
+		- fickdreck
+		- ficken
+		- ficker
+		- fickfehler
+		- fickfetzen
+		- fickfresse
+		- fickfrosch
+		- fickfucker
+		- fickgelegenheit
+		- fickgesicht
+		- fickmatratze
+		- ficknudel
+		- ficksau
+		- fickschlitz
+		- fickschnitte
+		- fickschnitzel
+		- fingerfuck
+		- fingerfucking
+		- fisch-stinkender hodenfresser
+		- fistfuck
+		- fistfucking
+		- flachtitte
+		- flussfotze
+		- fotze
+		- fotzenforscher
+		- fotzenfresse
+		- fotzenknecht
+		- fotzenkruste
+		- fotzenkuchen
+		- fotzenlecker
+		- fotzenlöckchen
+		- fotzenpisser
+		- fotzenschmuser
+		- fotzhobel
+		- frisösenficker
+		- frisösenfotze
+		- fritzfink
+		- froschfotze
+		- froschfotzenficker
+		- froschfotzenleder
+		- fucked
+		- fucker
+		- fucker
+		- fucking
+		- fuckup
+		- fudgepacker
+		- futtgesicht
+		- gay lord
+		- geilriemen
+		- gesichtsfotze
+		- göring
+		- großmaul
+		- gummifotzenficker
+		- gummipuppenbumser
+		- gummisklave
+		- hackfresse
+		- hafensau
+		- hartgeldhure
+		- heil hitler
+		- hi hoper
+		- hinterlader
+		- hirni
+		- hitler
+		- hodenbeißer
+		- hodensohn
+		- homo
+		- hosenpisser
+		- hosenscheißer
+		- hühnerficker
+		- huhrensohn
+		- hundeficker
+		- hundesohn
+		- hurenlecker
+		- hurenpeter
+		- hurensohn
+		- hurentocher
+		- idiot
+		- idioten
+		- itakker
+		- ittaker
+		- jack off
+		- jackass
+		- jackshit
+		- jerk off
+		- jizz
+		- judensau
+		- kackarsch
+		- kacke
+		- kacken
+		- kackfass
+		- kackfresse
+		- kacknoob
+		- kaktusficker
+		- kanacke
+		- kanake
+		- kanaken
+		- kanaldeckelbefruchter
+		- kartoffelficker
+		- kinderficken
+		- kinderficker
+		- kinderporno
+		- kitzler fresser
+		- klapposkop
+		- klolecker
+		- klötenlutscher
+		- knoblauchfresser
+		- konzentrationslager
+		- kotgeburt
+		- kotnascher
+		- kümmeltürke
+		- kümmeltürken
+		- lackaffe
+		- lebensunwert
+		- lesbian
+		- lurchi
+		- lustbolzen
+		- lutscher
+		- magerschwanz
+		- manwhore
+		- masturbate
+		- meat puppet
+		- missgeburt
+		- mißgeburt
+		- mistsau
+		- miststück
+		- mitternachtsficker
+		- mohrenkopf
+		- mokkastübchenveredler
+		- mongo
+		- möse
+		- mösenficker
+		- mösenlecker
+		- mösenputzer
+		- möter
+		- mother fucker
+		- mother fucking
+		- motherfucker
+		- muschilecker
+		- muschischlitz
+		- mutterficker
+		- nazi
+		- nazis
+		- neger
+		- nigga
+		- nigger
+		- niggerlover
+		- niggers
+		- niggerschlampe
+		- nignog
+		- nippelsauger
+		- nutte
+		- nuttensohn
+		- nuttenstecher
+		- nuttentochter
+		- ochsenpimmel
+		- ölauge
+		- oral sex
+		- penis licker
+		- penis licking
+		- penis sucker
+		- penis sucking
+		- penis
+		- peniskopf
+		- penislecker
+		- penislutscher
+		- penissalat
+		- penner
+		- pferdearsch
+		- phentermine
+		- pimmel
+		- pimmelkopf
+		- pimmellutscher
+		- pimmelpirat
+		- pimmelprinz
+		- pimmelschimmel
+		- pimmelvinni
+		- pindick
+		- piss off
+		- piss
+		- pissbirne
+		- pissbotte
+		- pisse
+		- pisser
+		- pissetrinker
+		- pissfisch
+		- pissflitsche
+		- pissnelke
+		- polacke
+		- polacken
+		- poop
+		- popellfresser
+		- popostecker
+		- popunterlage
+		- porn
+		- porno
+		- pornografie
+		- pornoprengel
+		- pottsau
+		- prärieficker
+		- prick
+		- quiff
+		- randsteinwichser
+		- rasierte votzen
+		- rimjob
+		- rindsriemen
+		- ritzenfummler
+		- rollbrooden
+		- roseten putzer
+		- roseten schlemmer
+		- rosettenhengst
+		- rosettenkönig
+		- rosettenlecker
+		- rosettentester
+		- sackfalter
+		- sackgesicht
+		- sacklutscher
+		- sackratte
+		- saftarsch
+		- sakfalter
+		- schamhaarlecker
+		- schamhaarschädel
+		- schandmaul
+		- scheisse
+		- scheisser
+		- scheissgesicht
+		- scheisshaufen
+		- scheißhaufen
+		- schlammfotze
+		- schlampe
+		- schleimmöse
+		- schlitzpisser
+		- schmalspurficker
+		- schmeue
+		- schmuckbert
+		- schnuddelfresser
+		- schnurbeltatz
+		- schrumpelfotze
+		- schwanzlurch
+		- schwanzlutscher
+		- schweinepriester
+		- schweineschwanzlutscher
+		- schwuchtel
+		- schwutte
+		- sex
+		- shiter
+		- shiting
+		- shitlist
+		- shitomatic
+		- shits
+		- shitty
+		- shlong
+		- shut the fuckup
+		- sieg heil
+		- sitzpisser
+		- skullfuck
+		- skullfucker
+		- skullfucking
+		- slut
+		- smegmafresser
+		- spack
+		- spacko
+		- spaghettifresser
+		- spastard
+		- spasti
+		- spastis
+		- spermafresse
+		- spermarutsche
+		- spritzer
+		- stinkschlitz
+		- stricher
+		- suck my cock
+		- suck my dick
+		- threesome
+		- tittenficker
+		- tittenspritzer
+		- titties
+		- titty
+		- tunte
+		- untermensch
+		- vagina
+		- vergasen
+		- viagra
+		- volldepp
+		- volldeppen
+		- vollhorst
+		- vollidiot
+		- vollpfosten
+		- vollspack
+		- vollspacken
+		- vollspasti
+		- vorhaut
+		- votze
+		- votzenkopf
+		- wanker
+		- wankers
+		- weichei
+		- whoar
+		- whore
+		- wichsbart
+		- wichsbirne
+		- wichser
+		- wichsfrosch
+		- wichsgriffel
+		- wichsvorlage
+		- wickspickel
+		- wixa
+		- wixen
+		- wixer
+		- wixxer
+		- wixxxer
+		- wixxxxer
+		- wurstsemmelfresser
+		- yankee
+		- zappler
+		- zyclon
+		- zyklon
+    format:
+        # This is the style used when a message sent in guild chat.
+        # As of 3.4.7, this now supports {display-name} to show the display name of a player.
+        chat: '&8&l[&3Gildenchat&8&l]&r &8[&6&l{role}&8]&r [{prefix}] &6{player}: {message}'
+        # Similar to the one above, just for the admins spying.
+        spy: '&8&l[&3Gildenspion&8&l]&r &8[&4{guild}&8] &8[&6&l{role}&8]&r [{prefix}] &6{player}: {message}'
+        # Would you like to log the guild chat to console?
+        log-guild-chat: false
+        # Used for {GUILD_FORMATTED} and %guilds_formatted%
+        placeholder-design:
+            # The left bracket in the placeholder
+            left-bracket: '['
+            # The content of the placeholder. Either will be {name} or {prefix}
+            content: '{name}'
+            # What to show instead of the placeholder if there's no guild
+            no-guild: ''
+            # The right bracket in the placeholder
+            right-bracket: ']'
+    damage:
+        # Do we want people in the same guild to be able to damage each other?
+        guild: false
+        # Do we want allies to be able to damage each other?
+        ally: false
+        # Do we want to respect WorldGuard flags for PVP deny?
+        # This will be checked first before checking same guild and ally.
+        # This is ONLY needed if you have either of the above two options to set true.
+        # ONLY PUT THIS ON TRUE IF YOU HAVE WORLDGUARD INSTALLED OR YOU WILL BREAK STUFF
+        respect-wg-pvp-flag: false
+    # Would you like to send players their guild's motd on login?
+    motd-on-login: true
+war:
+    # How often (in minutes) can a guild be the defender in a war?
+    # This is to help prevent abuse from guilds fighting each other to farm rewards.
+    # This is defaulted to 1 day.
+    defend-cooldown: 1440
+    # Would you like to block commands while a player is in the war?
+    disable-commands: false
+    # How long does a defending guild have to accept a war challenge? (In seconds)
+    accept-time: 120
+    # What is the min number of players needed on each side for a war to start?
+    min-players: 3
+    # What is the max number of players allowed on each side for a war?
+    max-players: 8
+    # How long do players of both sides have to join the war? (In seconds)
+    join-time: 60
+    # How long should we wait to teleport the players and start the war after everyone joined?
+    ready-time: 60
+    post-challenge-commands:
+        # Would you like to enable running commands after a challenge ends? (such as broadcasting)
+        enabled: false
+        # What commands would you like to run after a challenge ends??
+        # Supports the following placeholder:
+        # {challenger} - The name of the challenging Guild
+        # {defender} - The name of the defending Guild
+        # {winner} - The winner of the challenge
+        # {loser} - The loser of the challenge
+        commands: 
+        - ''
+    rewards:
+        # Would you like to give rewards to the winning guild?
+        enabled: false
+        # What rewards (commands) would you like to run for the winning Guild?
+        # Current supports {player}.
+        rewards: 
+        - ''
+timers:
+    cooldowns:
+        # How often (in seconds) can a player set their guild home?
+        sethome: 60
+        # How often (in seconds) can a player go to their guild home?
+        home: 60
+        # How often (in seconds) can a player request to join a guild?
+        request: 60
+        # How often (in seconds) can a guild buy a buff?
+        buff: 60
+        # How long should a user have to wait before joining a new guild after leaving one?
+        join: 120
+    warmups:
+        home:
+            # Do you want to enable making players stand still before teleporting?
+            enabled: false
+            # How long should a user have to stand still before teleporting?
+            time: 3
+cost:
+    # How much should it cost to create a guild?
+    creation: 10000.0
+    # How much should it cost to set the cost of the guild home?
+    sethome: 50000.0
+# This section of the config will allow you to handle guild land claiming.
+# Remember that the enable / disable for this is the WorldGuard Hook at the TOP of the config.
+# There are multiple options when it comes to guild claims. For the time being, all guilds will only get one claim.
+claims:
+    # This is the number of blocks around the player it will try to create the region.
+    # Keep in mind this is the RADIUS, it will go this many blocks in both directions.
+    # For example, if you take the default 15, it'll do 30 total as it will go 15 blocks in both directions.
+    # This is a CUBOID region, not SPHERE.
+    radius: 30
+    # Customize the entrance and exit message of joining claims.
+    # Supports {prefix} for guild prefix and {guild} for guild name.
+    # Also supports color codes!
+    enter-message: '&aDu betrittst nun &d{guild}''s &aGebiet!'
+    exit-message: '&aDu verlässt nun &d{guild}''s &aGebiet!'
+    # Would you like to disable guild claiming in specific worlds?
+    disabled-worlds: 
+    - ''
+    # Would you like to enable claim signs?
+    # Format - 
+    # First Line: [Guild Claim]
+    # Second Line: WorldGuard Region Name
+    # Third Line: Price
+    claim-signs: false
+    # Would you like to make it so that claims can only be aquired through the purchasing with signs?
+    # This will disable the regular claim commands.
+    force-claim-signs: false
+tickets:
+    # What do you want the name of the upgrade ticket to be?
+    name: '&bGildenupgrade'
+    # What do you want the lore of the ticket to be?
+    lore: 
+    - '&dRechtsklicke auf den Vertrag um damit deinen Gildenrang zu erhöhen!'
+    # What do you want the material of the ticket to be?
+    material: PAPER
+codes:
+    # How long do you want the default length of guild codes to be?
+    length: 7
+    # Do you want inactive codes (no uses left) to display on the /guild code list?
+    list-inactive-codes: true
+    # What is the max amount of active codes you would like to allow per guild?
+    amount: 10
+# This section of the config will talk about various parts of upgrading a guild and allow you to choose how it works.
+# For "mob-xp-multiplier" the default is 1, meaning that it will drop the normal amount of XP for non-upgraded guilds.
+# DO NOT set it to 0, that will either throw errors or cause mobs to not drop XP.
+# Keep in mind for the damage-multiplier, it applies to players also, so by default it's set to normal for every tier.
+tiers:
+    # Should permissions carry over between tiers?
+    carry-over: true
+    list:
+        1:
+            # Which level tier is this? 1 is the default.
+            level: 1
+            # What is the name of this tier?
+            name: Kohle
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 0.0
+            # How many members can be in a guild of this tier?
+            max-members: 2
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 1
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 1.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 100000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 0
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        2:
+            # Which level tier is this? 1 is the default.
+            level: 2
+            # What is the name of this tier?
+            name: Eisen
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 5000.0
+            # How many members can be in a guild of this tier?
+            max-members: 5
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 2
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 2.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 150000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 5
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        3:
+            # Which level tier is this? 1 is the default.
+            level: 3
+            # What is the name of this tier?
+            name: Lapislazuli
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 10000.0
+            # How many members can be in a guild of this tier?
+            max-members: 10
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 3
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 3.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.2
+            # How much can this tier hold in the bank?
+            max-bank-balance: 200000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 10
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        4:
+            # Which level tier is this? 1 is the default.
+            level: 4
+            # What is the name of this tier?
+            name: Redstone
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 17500.0
+            # How many members can be in a guild of this tier?
+            max-members: 15
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 4
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 4.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.5
+            # How much can this tier hold in the bank?
+            max-bank-balance: 250000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 15
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        5:
+            # Which level tier is this? 1 is the default.
+            level: 5
+            # What is the name of this tier?
+            name: Redstone
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 25000.0
+            # How many members can be in a guild of this tier?
+            max-members: 20
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 5
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 5.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.75
+            # How much can this tier hold in the bank?
+            max-bank-balance: 500000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 20
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        6:
+            # Which level tier is this? 1 is the default.
+            level: 6
+            # What is the name of this tier?
+            name: Gold
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 40000.0
+            # How many members can be in a guild of this tier?
+            max-members: 30
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 6
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 6.0
+            # How much extra damage should be done?
+            damage-multiplier: 2.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 1000000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 30
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        7:
+            # Which level tier is this? 1 is the default.
+            level: 7
+            # What is the name of this tier?
+            name: Smaragd
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 60000.0
+            # How many members can be in a guild of this tier?
+            max-members: 50
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 7
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 7.0
+            # How much extra damage should be done?
+            damage-multiplier: 3.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 2000000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 50
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        8:
+            # Which level tier is this? 1 is the default.
+            level: 8
+            # What is the name of this tier?
+            name: Diamant
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 80000.0
+            # How many members can be in a guild of this tier?
+            max-members: 75
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 8
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 8.0
+            # How much extra damage should be done?
+            damage-multiplier: 3.5
+            # How much can this tier hold in the bank?
+            max-bank-balance: 4000000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 75
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        9:
+            # Which level tier is this? 1 is the default.
+            level: 9
+            # What is the name of this tier?
+            name: Adamant
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 100000.0
+            # How many members can be in a guild of this tier?
+            max-members: 100
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 9
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 9.0
+            # How much extra damage should be done?
+            damage-multiplier: 4.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 6000000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 100
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        10:
+            # Which level tier is this? 1 is the default.
+            level: 10
+            # What is the name of this tier?
+            name: Diamant
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 300000.0
+            # How many members can be in a guild of this tier?
+            max-members: 200
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 15
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 15.0
+            # How much extra damage should be done?
+            damage-multiplier: 10.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 1000000000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 200
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+roles:
+    0:
+        name: Oberhaupt
+        permission-node: guilds.roles.master
+        permissions:
+            activate-buff: true
+            add-ally: true
+            ally-chat: true
+            change-home: true
+            change-prefix: true
+            rename: true
+            chat: true
+            demote: true
+            deposit-money: true
+            invite: true
+            kick: true
+            open-vault: true
+            promote: true
+            remove-ally: true
+            remove-guild: true
+            toggle-guild: true
+            transfer-guild: true
+            upgrade-guild: true
+            withdraw-money: true
+            claim-land: true
+            unclaim-land: true
+            destroy: true
+            place: true
+            interact: true
+            create-code: true
+            delete-code: true
+            see-code-redeemers: true
+            modify-motd: true
+            initiate-war: true
+    1:
+        name: Ratsmitglied
+        permission-node: guilds.roles.councilor
+        permissions:
+            activate-buff: false
+            add-ally: true
+            ally-chat: true
+            change-home: true
+            change-prefix: false
+            rename: false
+            chat: true
+            demote: true
+            deposit-money: true
+            invite: true
+            kick: true
+            open-vault: true
+            promote: true
+            remove-ally: true
+            remove-guild: false
+            toggle-guild: false
+            transfer-guild: false
+            upgrade-guild: false
+            withdraw-money: true
+            claim-land: false
+            unclaim-land: false
+            destroy: true
+            place: true
+            interact: true
+            create-code: true
+            delete-code: true
+            see-code-redeemers: true
+            modify-motd: false
+            initiate-war: true
+    2:
+        name: Veteran
+        permission-node: guilds.roles.veteran
+        permissions:
+            activate-buff: false
+            add-ally: false
+            ally-chat: true
+            change-home: false
+            change-prefix: false
+            rename: false
+            chat: true
+            demote: false
+            deposit-money: true
+            invite: true
+            kick: false
+            open-vault: true
+            promote: false
+            remove-ally: false
+            remove-guild: false
+            toggle-guild: false
+            transfer-guild: false
+            upgrade-guild: false
+            withdraw-money: false
+            claim-land: false
+            unclaim-land: false
+            destroy: true
+            place: true
+            interact: true
+            create-code: false
+            delete-code: false
+            see-code-redeemers: false
+            modify-motd: false
+            initiate-war: false
+    3:
+        name: Mitglied
+        permission-node: guilds.roles.member
+        permissions:
+            activate-buff: false
+            add-ally: false
+            ally-chat: true
+            change-home: false
+            change-prefix: false
+            rename: false
+            chat: true
+            demote: false
+            deposit-money: true
+            invite: false
+            kick: false
+            open-vault: true
+            promote: false
+            remove-ally: false
+            remove-guild: false
+            toggle-guild: false
+            transfer-guild: false
+            upgrade-guild: false
+            withdraw-money: false
+            claim-land: false
+            unclaim-land: false
+            destroy: true
+            place: true
+            interact: true
+            create-code: false
+            delete-code: false
+            see-code-redeemers: false
+            modify-motd: false
+            initiate-war: false

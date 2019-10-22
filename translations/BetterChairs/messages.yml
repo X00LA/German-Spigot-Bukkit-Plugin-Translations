@@ -1,0 +1,9 @@
+# BlackScarx All right reserved
+
+Cant use message: '&cDafür hast du keine Erlaubnis.'
+Message to send when player toggle chairs to off: '&cDu kannst jetzt nicht sitzen.'
+Message to send when player toggle chairs to on: '&aDu kannst jetzt sitzen.'
+Message to send when player sit: '&aDu sitzt jetzt. Mach eine Pause.'
+Message to send if the word is disable: '&cDie Stühle sind in dieser Welt nicht verfügbar.'
+Message to send if the chairs is occupied: '&cDiese Stühl ist bereits belegt.'
+Message to send if the chairs need sign or chair: '&cWenn du auf dieser Treppe sitzen möchtest, musst du auf jeder Seite ein Schild oder weitere Treppen platzieren.'
