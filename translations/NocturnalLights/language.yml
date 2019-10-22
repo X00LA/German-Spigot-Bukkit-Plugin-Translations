@@ -1,0 +1,22 @@
+noPermission: '&cDir fehtl die nötige Berechtigung um das zu tun!'
+sensorSet: '&aRechtsklicke jetzt mir der Schale auf die unterstützten
+  Lampen um sie mit dem Sensor zu verbinden.'
+lampAdded: '&aDiese Lampe wurde deinem Tageslichtsensor hinzugefügt.'
+lampRemoved: '&aDiese Lampe wurde von deinem Tageslichtsensor entfernt.'
+lampNotOwned: '&cDu bist nicht der Besitzer dieser Lampe!'
+sensorNotOwned: '&cDu bist nicht der Besitzer dieses Sensors!'
+sensorSetManual: '&aDieser Sensor ist nun auf Manuell gestellt. Verwende
+  &6/nlights switch %id &aum die Lampen ein oder aus zu schalten.'
+sensorSetAuto: '&aDieser Sensor steht nun auf Auto.'
+sensorManualNotAllowed: '&cDir ist es nicht erlaubt, diesen Sensor umzustellen!'
+sensorNoManual: '&cDieser Sensor steht auf Auto. Er kann nciht manuell kontrolliert werden!'
+sensorNoControl: '&cDu kontrollierts keinen Sensor! Mache einen Rechtsklick
+  auf einen Sensor währen du einen Faden hälst um Lampen hinzuzufügen.'
+sensorControlNotOwned: '&cWarnung! &aDu kontrolleirst den Sensor eines anderen Spielers.
+  Um Probleme zu vermeiden, dürfst du keine Lampen hinzufügen oder entfernen, die bereits
+  zu anderen Sensoren gehören!'
+sensorOwnedNotRegistered: '&cDieser Sensor gehört einem anderen Spieler, ist aber
+  noch nicht registriert. Daher kannst die Einstellungen nicht ändern.'
+sensorRemoved: '&aAlle mit diesem Sensor verbundenen Lampen wurden entfernt.'
+noInteger: '&cStelle sicher, dass du eine Nummer angibst, wenn du versuchst, einen
+  Schalter manuell ein- oder auszuschalten.'

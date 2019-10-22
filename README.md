@@ -33,6 +33,7 @@ Als kleinen Bonus gibt es für Essentials die worth.yml dazu. Diese ist für MC 
 <a href="https://www.spigotmc.org/resources/guilds-new-mariadb-support-30-off.66176/" target="_blank">Guilds</a>             Version: 3.5.3.5-RELEASE  
 Als kleinen Bonus gibt es eine vorgefüllte bannedWords.txt dazu, welche Schimpfwörter in Englisch und Deutsch enthält. (gesamt über !1400! Wörter)  
 <a href="https://www.spigotmc.org/resources/light-cleaner.42469/" target="_blank">Light Cleaner</a>             Version: 1.14.4-v1  
+<a href="https://www.spigotmc.org/resources/nocturnal-lights.70749/" target="_blank">Nocturnal Lights</a>             Version: 0.0.3  
 <a href="https://dev.bukkit.org/projects/population-density" target="_blank">Population Density</a>             Version: 5.12  
 <a href="https://dev.bukkit.org/projects/prettysimpleshop" target="_blank">PrettySimpleShop</a>             Version: 1.6.0  
 <a href="https://www.spigotmc.org/resources/seashells.58990/" target="_blank">SeaShell</a>             Version: 1.5.0  
