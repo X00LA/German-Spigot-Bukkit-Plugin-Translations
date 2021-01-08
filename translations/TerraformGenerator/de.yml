@@ -1,0 +1,23 @@
+permissions:
+  insufficient: '&cDir fehlen die benötigten Berechtigungen um diese Aktion auszuführen!'
+  console-cannot-exec: '&cNur Spieler können diesen Befehl ausführen.'
+command:
+  wrong-arg-length: '&cZu viele oder zu wenige Argumente angegeben!'
+  unknown: '&cUnbekannter Subbefehl.'
+  help:
+    postive-pages: '&cDie angegebene Seite muss eine positive Zahl sein!'
+    desc: 'Zeigt eine Liste der Befehle für dieses Plugin an.'
+  locate:
+    novanilla: '&c&lVerwende für Terraformgenerator-Welten stattdessen &e&l/terra locate&c&l!'
+    structure:
+      not:
+        enabled: '&cDie angegebene Struktur wurde nicht aktiviert!'
+    locate:
+      coords: '&aBefindet sich X: ~%x% Z: ~%z%'
+    searching: '&bAsynchrone Suche nach Struktur. Bitte warten...'
+    list:
+      header: '&e-==[&bStrukturhandler&e]==-'
+      entry: '&e - &b%entry%'
+    completed:
+      task: '&aAufgabe "Suchen" abgeschlossen (%time%ms)'
+    desc: '&fFindet die nächstgelegenen TerraformGenerator-Strukturen. Tippe &5/terra &flocate für alle durchsuchbaren Strukturen.'

@@ -36,13 +36,15 @@ Als kleinen Bonus gibt es eine vorgefüllte bannedWords.txt dazu, welche Schimpf
 <a href="https://www.spigotmc.org/resources/nocturnal-lights.70749/" target="_blank">Nocturnal Lights</a>             Version: 0.0.3  
 <a href="https://dev.bukkit.org/projects/population-density" target="_blank">Population Density</a>             Version: 5.12  
 <a href="https://dev.bukkit.org/projects/prettysimpleshop" target="_blank">PrettySimpleShop</a>             Version: 1.6.0  
+<a href="https://www.spigotmc.org/resources/quickboard-free-scoreboard-plugin-scroller-changeable-text-placeholderapi-anti-flicker.15057/" target="_blank">QuickBoard</a>             Version: 3.5  
 <a href="https://www.spigotmc.org/resources/seashells.58990/" target="_blank">SeaShell</a>             Version: 1.5.0  
 <a href="https://www.spigotmc.org/resources/serverlistplus.241/" target="_blank">ServerListPlus</a>             Version: 3.4.8  
 <a href="https://www.spigotmc.org/resources/serverrestart-1-13-1-14.57570/" target="_blank">ServerRestart</a>             Version: 2.2.0  
+<a href="https://www.spigotmc.org/resources/1-16-ready-%E2%8D%9F-simple-portals-%E2%8D%9F-effective-regional-portals-bungeecord-compatible.56772/" target="_blank">SimplePortals</a>             Version: 1.5.5  
 <a href="https://hub.spigotmc.org/jenkins/job/spigot-essentials/" target="_blank">Spigot Essentials</a>             Version: 2.X  
 Als kleinen Bonus gibt es für Essentials die worth.yml dazu. Diese ist für MC 1.14.4 aktualisiert und man braucht sie nur einzufügen. Die Preise sind optimal kalkuliert und ermöglichen so, ein ausgewogenes Finanzsystem.  
-<a href="https://www.spigotmc.org/resources/quickboard-free-scoreboard-plugin-scroller-changeable-text-placeholderapi-anti-flicker.15057/" target="_blank">QuickBoard</a>             Version: 3.5  
 <a href="https://www.spigotmc.org/resources/tab.1448/" target="_blank">Tab</a>             Version: 5.14.0  
+<a href="https://www.spigotmc.org/resources/terraformgenerator-alpha.75132/" target="_blank">TerraformGenerator</a>             Version: Alpha 2.0.1  
 <a href="https://dev.bukkit.org/projects/worldborder" target="_blank">WorldBorder</a>             Version: 1.9.10 (beta)  
 
 # Direkt implementierte Übersetzungen
@@ -62,7 +64,7 @@ Hast du ein Plugin, welches du gerne übersetzt haben willst, oder bist du selbs
   
 # KOSTENLOSE VS. PREMIUM PLUGINS
   
-# Für die Übersetzung von kostenlosen Pkugins werde ich nie etwas verlangen. Kann aber auch nicht garantieren, dass die Übersetzung immer auf dem letzten Stand ist.  
+# Für die Übersetzung von kostenlosen Plugins werde ich nie etwas verlangen. Kann aber auch nicht garantieren, dass die Übersetzung immer auf dem letzten Stand ist.  
 # Für Premium Plugins verlange ich freien Zugang zum Plugin für mich selbst. So lange ich Zugang zum Plugin habe, werde ich die Übersetzung auf dem neuesten Stand halten.
   
    
