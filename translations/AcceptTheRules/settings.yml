@@ -1,0 +1,46 @@
+Menu:
+  BackButton: '&3<< &2Zurück'
+  NextButton: '&2Nächste &3>>'
+  AcceptButton: '&2>> Akzeptieren <<'
+  DenyButton: '&4>> Ablehnen <<'
+  Space: '               '
+Page:
+  RulesPerPage: 4
+  RulesCooldown: 3
+Parting:
+  Header: '&6__________________[ %page% / %maxpage% ]_____________________'
+  Footer: '&6_____________________________________________'
+  AcceptPageHeader: '&6_____________________________________________'
+  AcceptPageFooter: '&6_____________________________________________'
+  PlayerInfoHeader: '&6_____________________________________________'
+  PlayerInfoFooter: '&6_____________________________________________'
+  Default: '&6_____________________________________________'
+Commands:
+  AcceptedExecutes:
+  - atrpublic '&6%player% &fhat die Regeln akzeptiert!'
+  - kits newbie %player%
+  DenyExecutes:
+  - atrpublic '&3%player% &f hat die Regeln abgelehnt!'
+  AllowedCommands:
+  - rules
+  - rule
+  - atrnext
+  - atrback
+  - atraccept
+  - atrdeny
+StartMessage:
+  Enable: true
+  Delay: 0
+Freeze:
+  Enable: true
+  MessageCooldown: 3
+Options:
+  SetAdventureMode: false
+Prevent:
+  Chat: true
+  Commands: true
+  Interact: true
+  MessageCooldown: 3
+Period:
+  Enable: false
+  Days: 90

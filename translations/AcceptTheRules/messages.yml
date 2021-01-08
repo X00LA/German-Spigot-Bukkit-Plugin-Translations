@@ -1,0 +1,29 @@
+Info:
+  ReloadComplete: '&r[&4Accept&eThe&2Rules&r] &3Die Konfiguration wurde neu geladen!'
+  PlayerNotFound: '&r[&4Accept&eThe&2Rules&r] &4Spieler nicht gefunden!'
+  NoPermission: '&r[&4Accept&eThe&2Rules&r] &4Dir ist es nicht erlaubt diesen 
+    Befehl zu benutzen!'
+PlayerInfo:
+  Playername: '&2Spieler:&5 '
+  HasAccepted: '&2Hat akzeptiert:&3 '
+  Version: '&2Version:&6 '
+  Date: '&2Zustimmungsdatum:&5 '
+Message:
+  ResetPlayer: '&3Die Daten von &6%player% &3wurden zurückgesetzt. Nun muss der Spieler die Regeln 
+    erneut akteptieren.'
+  RulesCooldown: '&6>>> &4Bitte lies die Regeln sorgfältig durch und versuche nicht, sie zu 
+    überspringen!&6<<<'
+  StartMessage: 'Bitte tippe &6[''/rules''](/rules)&f um die Regeln zu lesen und akzeptieren. Du wirst 
+    einige Belohnungen erhalten!'
+  AcceptText: 'Bitte bestätige, dass du die Regeln gelesen und verstanden hast: '
+  FreezeText: 'Du kannst dich nicht bewegen. Bitte lies und akzeptiere die Regeln mit dem Befehl
+     ''/rules''!'
+  PreventChat: '&6Du musst zuerst die Regeln akzeptieren. Bitte gib ''&3/rules&6'' ein um die Regeln 
+    zu akzeptieren.'
+  PreventCommands: '&6Du musst zuerst die Regeln akzeptieren. Bitte gib ''&3/rules&6'' ein, um die 
+    Regeln zu akzeptieren.'
+  PreventInteract: '&6Du musst zuerst die Regeln akzeptieren. Bitte gib ''&3/rules&6'' ein, um die 
+    Regeln zu akzeptieren.'
+  Report: 'Alle Konfigurationsdateien und die letzte Protokolldatei wurden im ATR-Verzeichnis gespeichert
+     als "Report.zip"-Datei. Bitte sende die Datei an das ATR-Support-Team'
+  PrivatBypassInfoMessage: '&6%player% &fdie Regeln akzeptiert!'

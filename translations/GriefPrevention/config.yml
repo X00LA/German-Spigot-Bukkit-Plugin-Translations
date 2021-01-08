@@ -1,14 +1,14 @@
 # Default values are perfect for most servers.  If you want to customize and have a question, look for the answer here first: http://dev.bukkit.org/bukkit-plugins/grief-prevention/pages/setup-and-configuration/
 GriefPrevention:
   SeaLevelOverrides:
-    Ascavaria: -1
-    Ascavaria_nether: -1
-    Ascavaria_the_end: -1
+    Helarun: -1
+    Helarun_nether: -1
+    Helarun_the_end: -1
   Claims:
     Mode:
-      Ascavaria: Survival
-      Ascavaria_nether: Disabled
-      Ascavaria_the_end: Disabled
+      Helarun_the_end: Survival
+      Helarun_nether: Survival
+      Helarun: Survival
     PreventGlobalMonsterEggs: true
     PreventTheft: true
     ProtectCreatures: true
@@ -17,6 +17,7 @@ GriefPrevention:
     LockTrapDoors: true
     LockFenceGates: true
     EnderPearlsRequireAccessTrust: true
+    RaidTriggersRequireBuildTrust: true
     ProtectHorses: true
     ProtectDonkeys: true
     ProtectLlamas: true
@@ -29,6 +30,7 @@ GriefPrevention:
     AccruedIdlePercent: 0
     AbandonReturnRatio: 0.5
     AutomaticNewPlayerClaimsRadius: 6
+    AutomaticNewPlayerClaimsRadiusMinimum: 0
     ExtendIntoGroundDistance: 6
     MinimumWidth: 5
     MinimumArea: 100
@@ -69,9 +71,9 @@ GriefPrevention:
     Logout Message Delay In Seconds: 0
   PvP:
     RulesEnabledInWorld:
-      Ascavaria: false
-      Ascavaria_nether: false
-      Ascavaria_the_end: false
+      Helarun: false
+      Helarun_nether: false
+      Helarun_the_end: false
     ProtectFreshSpawns: true
     PunishLogout: true
     CombatTimeoutSeconds: 15
@@ -89,6 +91,7 @@ GriefPrevention:
       NonPvPWorlds: false
     ProtectPetsOutsideLandClaims: true
   Economy:
+    ClaimBlocksMaxBonus: 0
     ClaimBlocksPurchaseCost: 1500.0
     ClaimBlocksSellValue: 750.0
   ProtectItemsDroppedOnDeath:
@@ -99,7 +102,8 @@ GriefPrevention:
   BlockSurfaceOtherExplosions: true
   LimitSkyTrees: true
   LimitTreeGrowth: false
-  LimitPistonsToLandClaims: true
+  PistonMovement: CLAIMS_ONLY
+  PistonExplosionSound: true
   FireSpreads: false
   FireDestroys: false
   AdminsGetWhispers: true
@@ -110,22 +114,21 @@ GriefPrevention:
   Siege:
     Worlds: []
     BreakableBlocks:
-    - DIRT
     - GRASS_BLOCK
-    - GRASS
-    - FERN
-    - DEAD_BUSH
+    - DIRT
     - COBBLESTONE
-    - GRAVEL
-    - SAND
-    - GLASS
-    - GLASS_PANE
     - OAK_PLANKS
     - SPRUCE_PLANKS
     - BIRCH_PLANKS
     - JUNGLE_PLANKS
     - ACACIA_PLANKS
     - DARK_OAK_PLANKS
+    - SAND
+    - GRAVEL
+    - GLASS
+    - GRASS
+    - FERN
+    - DEAD_BUSH
     - WHITE_WOOL
     - ORANGE_WOOL
     - MAGENTA_WOOL
@@ -143,6 +146,7 @@ GriefPrevention:
     - RED_WOOL
     - BLACK_WOOL
     - SNOW
+    - GLASS_PANE
     DoorsOpenDelayInSeconds: 300
     CooldownEndInMinutes: 60
   EndermenMoveBlocks: false
@@ -151,7 +155,7 @@ GriefPrevention:
   RabbitsEatCrops: true
   HardModeZombiesBreakDoors: false
   Database:
-    URL: 'localhost'
+    URL: ''
     UserName: ''
     Password: ''
   UseBanCommand: false
@@ -161,7 +165,7 @@ GriefPrevention:
     ClaimExpirationCheckRate: 60
     OfflinePlayer_cache_days: 90
   Abridged Logs:
-    Days To Keep: 30
+    Days To Keep: 7
     Included Entry Types:
       Social Activity: true
       Suspicious Activity: true

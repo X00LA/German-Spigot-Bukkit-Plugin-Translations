@@ -4,7 +4,7 @@
 # Updated: 29.01.2019 // Escaping korrigiert.
 # By GH05TF4C3
 #########################
-# Last Edit: 2019/19/10 #
+# Last Edit: 2020/29/12 #
 #         X00LA         #
 #########################
 Messages:
@@ -68,6 +68,9 @@ Messages:
   InsufficientFunds:
     Text: Du hast nicht genügend Geld.  Du benötigst {0}, aber du hast nur {1}.
     Notes: '0: Gesamtkosten; 1: Kontostand des Spielers'
+  MaxBonusReached:
+    Text: '{0} weitere Claimblöcke können nicht gekauft werden. Der Server hat ein Limit von {1} Bonusclaimblöcken.'
+    Notes: '0: Blockanzahl; 1: Bonusblocklimit'
   PurchaseConfirmation:
     Text: Dein Konto wurde mit {0} belastet.  Du hast nun {1} Claimblöcke zur Verfügung.
     Notes: '0: Gesamtkosten; 1: Verfügbare Blöcke'
@@ -155,6 +158,8 @@ Messages:
   AbandonSuccess:
     Text: Claim aufgegeben.  Du hast nun {0} verfügbare Claimblöcke.
     Notes: '0: Verfügbare Blöcke'
+  ConfirmAbandonAllClaims:
+    Text: Bist du sicher, dass du ALLE deine Claims aufgeben möchtest? Bitte bestätige mit /AbandonAllClaims.
   CantGrantThatPermission:
     Text: Du kannst keine Rechte vergeben, die du selber nicht hast.
   GrantPermissionNoClaim:
@@ -201,6 +206,8 @@ Messages:
     Text: Diese Truhe ist geschützt.
   AutomaticClaimNotification:
     Text: Diese Truhe und angrenzende Blöcke sind gegen Zerstörung und Diebstahl geschützt.  Die temporären Gold und Glowstone Blöcke markieren das geschützte Areal.  Mit dem Stock kannst du sie durch rechtsklick ein- oder ausblenden.
+  AutomaticClaimOtherClaimTooClose:
+    Text: Es kann kein Claim für deine Truhe erstellt werden, da ein anderer Claim zu nahe ist!
   UnprotectedChestWarning:
     Text: Diese Truhe ist NICHT geschützt.  Denk darüber nach einen Claim anzulegen
       oder einen bestehenden zu vergrößern.
@@ -571,5 +578,6 @@ Messages:
   SubclaimUnrestricted:
     Text: Die Berechtigungen dieses Subclaims werden nun vom übergeordneten Claim übernommen.
   NetherPortalTrapDetectionMessage:
-    Text: Es sieht so aus, als ob du in einem Netherportal fest steckst. Wir werden dich in wenigen Sekunden retten, wenn dies der Fall ist!
+    Text: Es sieht so aus, als ob du in einem Netherportal fest steckst. Wir werden dich in wenigen Sekunden retten,
+     wenn dies der Fall ist!
     Notes: Wird beim Beitritt an den Spieler gesendet, wenn er sich in einem Netherportal befindet.
